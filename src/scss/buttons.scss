@@ -1,0 +1,113 @@
+.connect-btn {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    font-family: $mainFont;
+    font-weight: 7;
+    font-size: 20px;
+    line-height: 46px;
+    &__link {
+        color: white;
+        display: flex;
+        gap: 50px;
+    }
+}
+.square {
+    display: inline-block;
+    width: 46px;
+    transition: all .8s;
+    height: 46px;
+    border-radius: 3px;
+    z-index: 1;
+    position: relative;
+    background: url('../img/graphic/contact-us-btn.jpg');
+}
+
+
+.arrow::after {
+    content: '⟶';
+    transition: all .5s;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 46px;
+    z-index: 2;
+    font-weight: 300;
+    font-size: 32px;
+    color: #FFFFFF;
+}
+
+.connect-btn:hover .square{
+    transform-origin: right;
+    transform:  scale(1.5, 0.85);
+}
+.connect-btn:hover .arrow::after {
+    transform: translate(10%, -50%)  scale(1, 1);
+    transform-origin: left;
+}
+
+@media (max-width: 768px) {
+    .connect-btn {
+        font-size: 17px;
+        line-height: 46px;
+        &__link {
+            gap: 40px;
+        }
+    }
+    
+    .arrow::after {
+        content: '⟶';
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 35px;
+        line-height: 46px;
+    }
+    
+    .connect-btn:hover .square{
+
+        transform:  scale(1.5, 0.85);
+    }
+    .connect-btn:hover .arrow::after {
+        transform: translate(10%, -50%)  scale(0.9, 1);
+
+    }
+}
+
+@media (max-width: 400px) {
+    .connect-btn {
+        font-size: 14px;
+        line-height: 36px;
+        &__link {
+            gap: 30px;
+        }
+    }
+    .square {
+        width: 36px;
+        height: 36px;
+        
+    }
+    
+    .arrow::after {
+        content: '⟶';
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 30px;
+        line-height: 36px;
+
+    }
+    
+    .connect-btn:hover .square{
+
+        transform: scale(1.5, 0.85);
+    }
+    .connect-btn:hover .arrow::after {
+        transform: translate(6%, -50%)  scale(0.9, 1);
+
+    }
+}
+
+
+
+.button-block-link {
+    display: inline-block;
+}

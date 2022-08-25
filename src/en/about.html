@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <head>
+		@@include('../html/en/head.html', {
+			"title": "About us"
+		})
+        <style>
+
+            .head__logo img {
+                width: 300px;
+            }
+            @media (max-width: 400px) {
+                .head__logo img {
+                    width: 200px;
+                }
+            }
+        .map {
+            display: block;
+        }
+        .menu-block {
+            display: none;x
+        }
+        
+		.cost-calc {
+			display: block;
+		}
+            .it-text-add {
+                display: inline;
+            }
+
+        @media (max-width: 768px) {
+            .map {
+                display: none;
+            }
+            .menu-block {
+            display: flex;
+        }
+            .cost-calc {
+                display: none;
+            }
+            .contact-block {
+			display: block;
+		}
+        }
+        .map__portfolio,.map__about,.map__design,.map__marketing,.map__it,.map__copyright,.map__services {
+            display: none;
+        }
+        .map__about {
+            display: inline;
+        }
+        .cover {
+            display: none;
+        }
+        </style>
+	</head>
+</head>
+<body>
+    
+    <header class="header">
+        <div class="container">
+            @@include('../html/en/header.html')
+        </div>
+    </header>
+    <main>
+        <section class="about">
+            <div class="container">
+                <h1 class="about__title">Our team</h1>
+                <div class="about__content about-slider">
+                    <div class="about__item">
+                        <a href="">
+                            <img src="../img/about/1.jpg" alt="">
+                        </a>
+                        <div class="about__name">Timur</div>
+                        <div class="about__description">Web design</div>
+                    </div>
+                    <div class="about__item">
+                        <a href="">
+                            <img src="../img/about/2.jpg" alt="">
+                        </a>
+                        <div class="about__name">Timur</div>
+                        <div class="about__description">Web design</div>
+                    </div>
+                    <div class="about__item">
+                        <a href="">
+                            <img src="../img/about/3.jpg" alt="">
+                        </a>
+                        <div class="about__name">Timur</div>
+                        <div class="about__description">Web design</div>
+                    </div>
+                    <div class="about__item">
+                        <a href="">
+                            <img src="../img/about/4.jpg" alt="">
+                        </a>
+                        <div class="about__name">Timur</div>
+                        <div class="about__description">Web design</div>
+                    </div>
+                    <div class="about__item">
+                        <a href="">
+                            <img src="../img/about/5.jpg" alt="">
+                        </a>
+                        <div class="about__name">Timur</div>
+                        <div class="about__description">Web design</div>
+                    </div>
+                    <div class="about__item">
+                        <a href="">
+                            <img src="../img/about/6.jpg" alt="">
+                        </a>
+                        <div class="about__name">Timur</div>
+                        <div class="about__description">Web design</div>
+                    </div>
+                    <div class="about__item">
+                        <a href="">
+                            <img src="../img/about/7.jpg" alt="">
+                        </a>
+                        <div class="about__name">Timur</div>
+                        <div class="about__description">Web design</div>
+                    </div>
+                    <div class="about__item">
+                        <a href="">
+                            <img src="../img/about/8.jpg" alt="">
+                        </a>
+                        <div class="about__name">Timur</div>
+                        <div class="about__description">Web design</div>
+                    </div>
+                   
+                   
+                    <!-- <div class="about__item about__item-empty">
+                    </div> -->
+                    <div  class="about__item about__item-g ag-last-item">
+                        <div class="ag-last-item-container">
+                            <div  class="ag-last-item__content">
+                                <img data-goto="#gt-contacts" src="../img/portfolio/mask-group.svg" alt="">
+                            </div>
+                            <div data-goto="#gt-contacts" class="g-last-item__text">Хочу сюда!</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div  class="ag-last-item ag-mobile-item">
+                <div  class="ag-last-item__content">
+                    <img data-goto="#gt-contacts" src="../img/portfolio/mask-group.svg" alt="">
+                    
+                </div>
+                <div data-goto="#gt-contacts" class="ag-last-item__text">Хочу в команду!</div>
+            </div>
+        </section>
+
+       <div id="gt-contacts">
+        @@include('../html/en/contacts.html', {
+            "ctitle": "Leave a request and we will contact you within 30 minutes",
+            "csubtitle": "",
+            "sendbutton": "Send"
+        })
+       </div>
+    </main>
+    @@include('../html/en/footer.html')
+</body>
+</html>

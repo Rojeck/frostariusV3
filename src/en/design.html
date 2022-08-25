@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		@@include('../html/en/head.html', {
+			"title": "Design"
+		})
+        <style>
+           @media (min-width: 1100px) {
+                .head__logo img {
+                width: 320px;
+            }
+            }
+            .head__logo  {
+                padding-left: 10px;
+            }
+        .map {
+            display: block;
+            padding-right: 10px;
+        }
+    
+            .map__portfolio,.map__about,.map__design,.map__marketing,.map__it,.map__copyright {
+            display: none;
+        }
+        .map__design {
+            display: inline;
+        }
+            .map {
+            display: block;
+        }
+        .menu-block {
+            display: none;
+        }
+		.cost-calc {
+			display: block;
+		}
+            .design-text-add {
+                display: inline;
+            }
+            @media (max-width: 768px) {
+            .map {
+                display: none;
+            }
+            .menu-block {
+            display: flex;
+        }
+            .cost-calc {
+                display: none;
+            }
+            .contact-block {
+			display: block;
+		}
+        }
+        </style>
+	</head>
+    
+<body>
+    <div class="fullscreen">
+        <div class="fullscreen__title design">
+            <img  src="../img/fullscreen/design.svg" alt="fullscreen picture">
+        </div>
+            <div class="container">
+                <div class="fullscreen__header">
+                    <header class="header">
+                        @@include('../html/en/header.html')
+                    </header>
+                </div>
+                <div class="fullscreen__go-btn">
+                        @@include('../html/en/connect-btn.html')
+                </div>
+            </div>
+    </div>
+    <main>
+        <section class="advantages">
+            <div class="container">
+                <h1 class="advantages__title">What do you get by choosing us:</h1>
+                <ul class="advantages__list">
+                    <li class="advantages__item">
+                        <div class="advantages__item-img">
+                            <img src="../img/advantages/design/1.svg" alt="design picture">
+                        </div>
+                        <p class="advantages__item-text">
+									We endlessly generate new ideas, keep up with trends and create a unique design
+                        </p>
+                    </li>
+                    <li class="advantages__item">
+                        <div class="advantages__item-img">
+                            <img src="../img/advantages/design/2.svg" alt="design picture">
+                        </div>
+                        <p class="advantages__item-text">
+                           Proper placement of objects in the site structure, which allows you to highlight various information within one page
+                        </p>
+                    </li>
+                    <li class="advantages__item">
+                        <div class="advantages__item-img">
+                            <img src="../img/advantages/design/3.svg" alt="design picture">
+                        </div>
+                        <p class="advantages__item-text">
+									When developing a project, we take into account the scenarios of user actions. So we create interfaces in which you do not have to search for hours for the right page  
+                        </p>
+                    </li>
+                    <li class="advantages__item">
+                        <div class="advantages__item-img">
+                            <img src="../img/advantages/design/4.svg" alt="design picture">
+                        </div>
+                        <p class="advantages__item-text">
+									Simplifying the design so that the user is not distracted by unnecessary objects, instead absorbs the informative content of the site
+                        </p>
+                    </li>
+                    <li class="advantages__item">
+                        <div class="advantages__item-img">
+                            <img src="../img/advantages/design/5.svg" alt="design picture">
+                        </div>
+                        <p class="advantages__item-text">
+                           The process of creating a new design without using ready-made templates
+                        </p>
+                    </li>
+                    <li class="advantages__item">
+                        <div class="advantages__item-img">
+                            <img src="../img/advantages/design/6.svg" alt="design picture">
+                        </div>
+                        <p class="advantages__item-text">
+                           Proper selection of fonts allows you to customize the resources in each sentence.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="projects">
+            @@include('../html/en/projects.html')
+        </section>
+        
+        @@include('../html/en/contacts.html', {
+            "ctitle": "Leave a request to calculate",
+            "csubtitle": "the cost of your project",
+            "sendbutton": "Calculate"
+        })
+	</main>
+	@@include('../html/en/footer.html')
+
+</body> 
+
+</html>

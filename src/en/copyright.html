@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		@@include('../html/en/head.html', {
+			"title": "Copyright"
+		})
+        <style>
+            @media (min-width: 1100px) {
+                .head__logo img {
+                width: 320px;
+            }
+            }
+            .head__logo  {
+                padding-left: 10px;
+            }
+        .map {
+            display: block;
+            padding-right: 10px;
+        }
+            .map {
+            display: block;
+        }
+        .menu-block {
+            display: none;
+        }
+            .map__portfolio,.map__about,.map__design,.map__marketing,.map__it,.map__copyright {
+            display: none;
+        }
+        .map__copyright {
+            display: inline;
+        }
+		.cost-calc {
+			display: block;
+		}
+            .copyright-text-add {
+                display: inline;
+            }
+            @media (max-width: 768px) {
+            .map {
+                display: none;
+            }
+            .menu-block {
+            display: flex;
+        }
+            .cost-calc {
+                display: none;
+            }
+            .contact-block {
+			display: block;
+		}
+        }
+        </style>
+	</head>
+    
+<body>
+    <div class="fullscreen">
+        <img class="fullscreen__background copyright" src="../../img/fullscreen/copyright.svg" alt="fullscreen picture">
+
+            <div class="container">
+                <div class="fullscreen__header">
+                    <header class="header">
+                        @@include('../html/en/header.html')
+                    </header>
+                </div>
+                <div class="fullscreen__go-btn">
+                        @@include('../html/en/connect-btn.html')
+                </div>
+            </div>
+    </div>
+    <main>
+        <section class="advantages">
+            <div class="container">
+                <h1 class="advantages__title">What do you get by choosing us:</h1>
+                <ul class="advantages__list">
+                    <li class="advantages__item">
+                        <div class="advantages__item-img">
+                            <img src="../img/advantages/copyright/1.svg" alt="copyright picture">
+                        </div>
+                        <p class="advantages__item-text">
+									Creating demanded text that is meaningful, understandable and interesting for the audience in order to increase traffic
+                        </p>
+                    </li>
+                    <li class="advantages__item">
+                        <div class="advantages__item-img">
+                            <img src="../img/advantages/copyright/2.svg" alt="copyright picture">
+                        </div>
+                        <p class="advantages__item-text">
+                           Original text that will be interesting and understandable to the audience in order to increase traffic
+                        </p>
+                    </li>
+                    <li class="advantages__item">
+                        <div class="advantages__item-img">
+                            <img src="../img/advantages/copyright/3.svg" alt="copyright picture">
+                        </div>
+                        <p class="advantages__item-text">
+                           Competent and optimized articles written by professional authors will allow your site to take a leading position in search results.
+                        </p>
+                    </li>
+                    <li class="advantages__item">
+                        <div class="advantages__item-img">
+                            <img src="../img/advantages/copyright/4.svg" alt="copyright picture">
+                        </div>
+                        <p class="advantages__item-text">
+                           Unique texts and articles created by deep processing of materials of other authors in order to bring them to the level of original content.
+                        </p>
+                    </li>
+                    <li class="advantages__item">
+                        <div class="advantages__item-img">
+                            <img src="../img/advantages/copyright/5.svg" alt="copyright picture">
+                        </div>
+                        <p class="advantages__item-text">
+                           Creative approach with knowledge of effective marketing methods and techniques. Blog articles in a native style with high uniqueness to popularize the brand and channel.
+                        </p>
+                    </li>
+                    <li class="advantages__item">
+                        <div class="advantages__item-img">
+                            <img src="../img/advantages/copyright/6.svg" alt="copyright picture">
+                        </div>
+                        <p class="advantages__item-text">
+                           Text materials on almost any subject in English for placement on sites intended for an English-speaking audience.</p>
+                       
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+    <section class="projects">
+            @@include('../html/en/projects.html')
+        </section>
+        
+        @@include('../html/en/contacts.html', {
+            "ctitle": "Leave a request to calculate",
+            "csubtitle": "the cost of your project",
+            "sendbutton": "Calculate"
+        })
+	</main>
+	@@include('../html/en/footer.html')
+
+</body> 
+
+</html>

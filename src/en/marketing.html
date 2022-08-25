@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		@@include('../html/en/head.html', {
+			"title": "Marketing"
+		})
+    <style>
+         @media (min-width: 1100px) {
+                .head__logo img {
+                width: 320px;
+            }
+            }
+            .head__logo  {
+                padding-left: 10px;
+            }
+        .map {
+            display: block;
+            padding-right: 10px;
+        }
+        .map {
+            display: block;
+        }
+        .menu-block {
+            display: none;
+        }
+                .map__portfolio,.map__about,.map__design,.map__marketing,.map__it,.map__copyright {
+            display: none;
+        }
+        .map__marketing {
+            display: inline;
+        }
+		.cost-calc {
+			display: block;
+		}
+        .marketing-text-add {
+            display: inline;
+        }
+        @media (max-width: 768px) {
+            .map {
+                display: none;
+            }
+            .menu-block {
+            display: flex;
+        }
+            .cost-calc {
+                display: none;
+            }
+            .contact-block {
+			display: block;
+		}
+        }
+    </style>
+	</head>
+    
+<body>
+    <div class="fullscreen">
+        <img class="fullscreen__background marketing" src="../img/fullscreen/marketing.svg" alt="fullscreen picture">
+            <div class="container">
+                <div class="fullscreen__header">
+                    <header class="header">
+                        @@include('../html/en/header.html')
+                    </header>
+                </div>
+                <div class="fullscreen__go-btn">
+                        @@include('../html/en/connect-btn.html')
+                </div>
+            </div>
+    </div>
+    <main>
+        <section class="advantages">
+            <div class="container">
+                <h1 class="advantages__title">What do you get by choosing us:</h1>
+                <ul class="advantages__list">
+                    <li class="advantages__item">
+                        <div class="advantages__item-img">
+                            <img src="../img/advantages/marketing/1.svg" alt="marketing picture">
+                        </div>
+                        <p class="advantages__item-text">
+									Creating in-demand content in order to attract traffic that is meaningful, understandable and interesting for events
+                        </p>
+                    </li>
+                    <li class="advantages__item">
+                        <div class="advantages__item-img">
+                            <img src="../img/advantages/marketing/2.svg" alt="marketing picture">
+                        </div>
+                        <p class="advantages__item-text">
+                           Satisfying the requirements of search engines in order to promote the resource
+                        </p>
+                    </li>
+                    <li class="advantages__item">
+                        <div class="advantages__item-img">
+                            <img src="../img/advantages/marketing/3.svg" alt="marketing picture">
+                        </div>
+                        <p class="advantages__item-text">
+                           Market analysis, identification of the needs and problems of the target audience
+                        </p>
+                    </li>
+                    <li class="advantages__item">
+                        <div class="advantages__item-img">
+                            <img src="../img/advantages/marketing/4.svg" alt="marketing picture">
+                        </div>
+                        <p class="advantages__item-text">
+                           The most advantageous representation of the client against the background of competitors
+                        </p>
+                    </li>
+                    <li class="advantages__item">
+                        <div class="advantages__item-img">
+                            <img src="../img/advantages/marketing/5.svg" alt="marketing picture">
+                        </div>
+                        <p class="advantages__item-text">
+                           Assessment of the quality of resources and development
+                        </p>
+                    </li>
+                    <li class="advantages__item">
+                        <div class="advantages__item-img">
+                            <img src="../img/advantages/marketing/6.svg" alt="marketing picture">
+                        </div>
+                        <p class="advantages__item-text">
+                           Building an effective long-term business promotion strategy, taking into account the competent use of all available methods and means
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="projects">
+            @@include('../html/en/projects.html')
+        </section>
+        
+        @@include('../html/en/contacts.html', {
+            "ctitle": "Leave a request to calculate",
+            "csubtitle": "the cost of your project",
+            "sendbutton": "Calculate"
+        })
+	</main>
+	@@include('../html/en/footer.html')
+
+</body> 
+
+</html>

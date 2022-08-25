@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		@@include('../html/ru/head.html', {
+			"title": "Копирайтинг"
+		})
+        <style>
+     
+        .map {
+            display: flex;
+
+        }
+
+        .menu-block {
+            display: none;
+        }
+            .map__portfolio,.map__about,.map__design,.map__marketing,.map__it,.map__copyright {
+            display: none;
+        }
+        .map__copyright {
+            display: inline;
+        }
+
+            .copyright-text-add {
+                display: inline;
+            }
+            @media (max-width: 768px) {
+            .map {
+                display: none;
+            }
+            .menu-block {
+            display: flex;
+        }
+
+        }
+        .fullscreen__title img {
+            width: 100%;
+            height: 100%;
+            transform: scale(1.6);
+            
+        }
+        @media (max-width: 992px) {
+            .fullscreen__title img {
+                transform: scale(2);
+            }
+        }
+        @media (max-width: 768px) {
+            .fullscreen__title img {
+                transform: scale(2.1);
+            }
+        }
+        @media (max-width: 480px) {
+            .fullscreen__title img {
+                transform: scale(2.1);
+                
+            }
+        }
+        </style>
+	</head>
+    
+<body>
+   <div class="wrapper">
+    <div class="fullscreen">
+        <div class="fullscreen__title">
+            <img  src="../img/fullscreen/copyright-sign.svg" alt="Marketing лого">
+        </div>
+        <div class="fullscreen__header">
+            <div class="container">
+                <header class="header">
+                    @@include('../html/ru/header.html')
+                </header>
+            </div>
+        </div>
+    </div>
+    <main>
+        <section class="trust">
+            <div class="container">
+                <h2 class="trust__title section-title">Что вы получаете, когда выбираете нас?</h2>
+                <div class="trust__content">
+                    <div class="trust__items trust__items-left">
+                        <div class="trust__item left">
+                            <picture>
+                                <source srcset="../img/trust/copyright/1.png" media="(min-width: 768px)">
+                                <source srcset="../img/trust/copyright/1x480.png" media="(max-width: 480px)">
+                                <source srcset="../img/trust/copyright/1x768.png" media="(max-width: 768px)">
+                                <img src="../img/trust/copyright/1.png" alt="">
+                               </picture>
+                            <div class="trust__text-block">
+                                <p class="trust__item-text"><strong>Грамотные и оптимизированные статьи,</strong> написанные профессиональными авторами, <strong>позволят вашему сайту занять ведущие позиции в поисковой выдаче</strong> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="trust__items trust__items-right">
+                        <div class="trust__item right">
+                            <div class="trust__text-block">
+                                <p class="trust__item-text"><strong>Творческий подход</strong> со знанием эффективных маркетинговых методов и приемов. <strong>Блоговые статьи в нативном стиле с высокой уникальностью</strong> для популяризации бренда и канала </p>
+                            </div>
+                            <picture>
+                                <source srcset="../img/trust/copyright/2.png" media="(min-width: 768px)">
+                                <source srcset="../img/trust/copyright/2x480.png" media="(max-width: 480px)">
+                                <source srcset="../img/trust/copyright/2x768.png" media="(max-width: 768px)">
+                                <img src="../img/trust/copyright/2.png" alt="">
+                            </picture>
+                        </div>
+                    </div>
+                    <div class="trust__items trust__items-left">
+                        <div class="trust__item left">
+                            <picture>
+                                <source srcset="../img/trust/copyright/3.png" media="(min-width: 768px)">
+                                <source srcset="../img/trust/copyright/3x480.png" media="(max-width: 480px)">
+                                <source srcset="../img/trust/copyright/3x768.png" media="(max-width: 768px)">
+                                <img src="../img/trust/copyright/3.png" alt="">
+                               </picture>
+                            <div class="trust__text-block">
+                                <p class="trust__item-text"><strong>Оригинальный текст,</strong> который будет <strong>интересен и понятен</strong> для аудитории, с <strong>целью повышения трафика</strong> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="trust__items trust__items-right">
+                        <div class="trust__item right">
+                            <div class="trust__text-block">
+                                <p class="trust__item-text"><strong>Текстовые материалы практически любой тематики на английском языке</strong> для размещения на сайтах, предназначенных <strong>для англоговорящей аудитории</strong></p>
+                            </div>
+                            <picture>
+                                <source srcset="../img/trust/copyright/4.png" media="(min-width: 768px)">
+                                <source srcset="../img/trust/copyright/4x480.png" media="(max-width: 480px)">
+                                <source srcset="../img/trust/copyright/4x768.png" media="(max-width: 768px)">
+                                <img src="../img/trust/copyright/4.png" alt="">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <section class="projects">
+            @@include('../html/ru/projects.html')
+        </section>
+        
+        @@include('../html/ru/contacts.html', {
+            "ctitle": "Оставьте заявку для расчета",
+            "csubtitle": "стоимости вашего проекта",
+            "sendbutton": "Рассчитать стоимость"
+        })
+	</main>
+	@@include('../html/ru/footer.html')
+    <img src="../img/bumbles/copyright/Ellipse1_left.png" alt="" class="bundle-copyright bundle-copyright-1 bundle-left">
+    <img src="../img/bumbles/copyright/Ellipse1_right.png" alt="" class="bundle-copyright bundle-copyright-2 bundle-right">
+    <img src="../img/bumbles/copyright/Ellipse2_left.png" alt="" class="bundle-copyright bundle-copyright-3 bundle-left">
+    <img src="../img/bumbles/copyright/Ellipse2_right.png" alt="" class="bundle-copyright bundle-copyright-4 bundle-right">
+   </div>
+</body> 
+
+</html>

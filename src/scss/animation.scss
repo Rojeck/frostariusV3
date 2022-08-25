@@ -1,0 +1,145 @@
+// scale for 'web studio'
+
+.preview {
+    &__title {
+        span {
+            display: inline-block;
+            transition: 0.3s;
+        }
+        span:hover {
+            transform-origin: top left;
+            transform: scale(1.05);
+        }
+    }
+}
+
+// scale for social items
+
+.adress-block__social-item {
+    img {
+        transition: .3s;
+    }
+    a:hover img {
+        transform-origin: top left;
+        transform: scale(1.1);
+    }
+}
+
+body {
+    overflow-x: hidden;
+}
+
+// focus on inputs
+
+.request-form__item:focus {
+    box-shadow: 0px 0px 5px 0px rgba(255,255,255,0.35);
+}
+
+// menu item hover highlighted 
+
+.menu {
+    &__item a{
+        transition: .4s;
+    }
+    &__item:hover a{
+        opacity: 1;
+    }
+}
+
+// slider items highlighted
+
+.p-item {
+    transition: box-shadow .3s;
+}
+.p-item:hover {
+    box-shadow: 0px 0px 15px 0px rgba(255,255,255,0.65);
+}
+
+// map highlighted
+
+.map {
+    &__list {
+        a {
+            transition: .3s;
+        }
+        a:hover {
+            opacity: 1;
+        }
+    }
+}
+
+//buttons animation
+
+.request-form__button,  .cost-calc__button {
+    transition: 0.3s linear;
+    span {
+        display: inline-block;
+        padding-left: 4px;
+        transition: 0.3s;
+
+        position: relative;
+        left: 0;
+        top: 0;
+        font-size: 22px;
+    }
+    &:hover {
+        transform: scale(1.03, 1);
+        transform-origin: left ;
+
+        span {
+            left: 8px;
+        }
+        
+    }
+    
+}
+
+// increase picture in advantages block
+
+.advantages {
+  
+    &__item-img {
+        transition: .5s;
+        transform-origin: top left;
+    }
+    &__item-img:hover {
+        transform: scale(1.1);
+    }
+
+}
+
+// logo in header
+
+@media  (min-width: 1120px) {
+    .head__logo {
+        transition: .3s;
+        padding-top: 4px;
+        transform-origin: left top;
+        
+        animation: logo-increase .3s ease-in 0s forwards;
+        img {
+            transition: .3s;
+            transform-origin: top left;
+        }
+    }
+    .head__logo:hover {
+        img {
+            transform: scale(1.05);
+        }
+    }
+}
+
+// go up button
+
+
+
+
+@keyframes logo-increase {
+    0% {
+        transform: scale(0.4);
+    }
+
+    100% {
+        transform: scale(0.95);
+    }
+}

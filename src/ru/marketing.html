@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		@@include('../html/ru/head.html', {
+			"title": "Маркетинг"
+		})
+    <style>
+   
+
+        .map {
+            display: flex;
+
+        }
+
+        .menu-block {
+            display: none;
+        }
+                .map__portfolio,.map__about,.map__design,.map__marketing,.map__it,.map__copyright {
+            display: none;
+        }
+        .map__marketing {
+            display: inline;
+        }
+        .marketing-text-add {
+            display: inline;
+        }
+
+        @media (max-width: 768px) {
+            .map {
+                display: none;
+            }
+            .menu-block {
+            display: flex;
+        }
+
+        }
+        .fullscreen__title img {
+            width: 100%;
+            height: 100%;
+            transform: scale(1.5);
+            
+        }
+        @media (max-width: 768px) {
+            .fullscreen__title img {
+                transform: scale(2);
+            }
+        }
+        @media (max-width: 480px) {
+            .fullscreen__title img {
+                transform: scale(2.5);
+                
+            }
+        }
+    </style>
+	</head>
+    
+<body>
+   <div class="wrapper">
+    <div class="fullscreen">
+        <img class="fullscreen__background marketing" src="../img/video-stop/sphera stop.png" alt="картинка на весь экран">
+        <video autoplay muted loop class="fullscreen__background" preload="auto">
+            <source type="video/webm" src="../files/video/marketing.webm">
+        </video>
+        <div class="fullscreen__title">
+            <img  src="../img/fullscreen/marketing-sign.png" alt="Marketing лого">
+        </div>
+                <div class="fullscreen__header">
+                    <div class="container">
+                        <header class="header">
+                            @@include('../html/ru/header.html')
+                        </header>
+                    </div>
+                </div>
+    </div>
+    <main>
+        <section class="trust">
+            <div class="container">
+                <h2 class="trust__title section-title">Что вы получаете, когда выбираете нас?</h2>
+                <div class="trust__content">
+                    <div class="trust__items trust__items-left">
+                        <div class="trust__item left">
+                            <picture>
+                                <source srcset="../img/trust/marketing/1.png" media="(min-width: 768px)">
+                                <source srcset="../img/trust/marketing/1x480.png" media="(max-width: 480px)">
+                                <source srcset="../img/trust/marketing/1x768.png" media="(max-width: 768px)">
+                                <img src="../img/trust/marketing/1.png" alt="">
+                               </picture>
+                            <div class="trust__text-block">
+                                <p class="trust__item-text">Создание востребованного текста для аудитории, с целью повышения трафика</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="trust__items trust__items-right">
+                        <div class="trust__item right">
+                            <div class="trust__text-block">
+                                <p class="trust__item-text">Оптимизация поисковых систем для продвижения вашего ресурса</p>
+                            </div>
+                            <picture>
+                                <source srcset="../img/trust/marketing/2.png" media="(min-width: 768px)">
+                                <source srcset="../img/trust/marketing/2x480.png" media="(max-width: 480px)">
+                                <source srcset="../img/trust/marketing/2x768.png" media="(max-width: 768px)">
+                                <img src="../img/trust/marketing/2.png" alt="">
+                            </picture>
+                        </div>
+                    </div>
+                    <div class="trust__items trust__items-left">
+                        <div class="trust__item left">
+                            <picture>
+                                <source srcset="../img/trust/marketing/3.png" media="(min-width: 768px)">
+                                <source srcset="../img/trust/marketing/3x480.png" media="(max-width: 480px)">
+                                <source srcset="../img/trust/marketing/3x768.png" media="(max-width: 768px)">
+                                <img src="../img/trust/marketing/3.png" alt="">
+                               </picture>
+                            <div class="trust__text-block">
+                                <p class="trust__item-text">Оценка качества имеющегося контента и разработка  рекомендаций по его оптимизации </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="trust__items trust__items-right">
+                        <div class="trust__item right">
+                            <div class="trust__text-block">
+                                <p class="trust__item-text">Построение эффективной  стратегии продвижения бизнеса </p>
+                            </div>
+                            <picture>
+                                <source srcset="../img/trust/marketing/4.png" media="(min-width: 768px)">
+                                <source srcset="../img/trust/marketing/4x480.png" media="(max-width: 480px)">
+                                <source srcset="../img/trust/marketing/4x768.png" media="(max-width: 768px)">
+                                <img src="../img/trust/marketing/4.png" alt="">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="projects">
+            @@include('../html/ru/projects.html')
+        </section>
+        
+        @@include('../html/ru/contacts.html', {
+            "ctitle": "Оставьте заявку для расчета",
+            "csubtitle": "стоимости вашего проекта",
+            "sendbutton": "Рассчитать стоимость"
+        })
+	</main>
+	@@include('../html/ru/footer.html')
+
+   </div>
+</body> 
+
+</html>

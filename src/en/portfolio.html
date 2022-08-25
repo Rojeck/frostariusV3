@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <head>
+		@@include('../html/en/head.html', {
+			"title": "Potrfolio"
+		})
+        <style>
+
+            .head__logo img {
+                width: 300px;
+            }
+        .map {
+            display: block;
+        }
+        .menu-block {
+            display: none;
+        }
+        
+		.cost-calc {
+			display: block;
+		}
+            .it-text-add {
+                display: inline;
+            }
+
+        @media (max-width: 768px) {
+            .map {
+                display: none;
+            }
+            .menu-block {
+            display: flex;
+        }
+            .cost-calc {
+                display: none;
+            }
+            .contact-block {
+			display: block;
+		}
+        }
+        .map__portfolio,.map__about,.map__design,.map__marketing,.map__it,.map__copyright,.map__services {
+            display: none;
+        }
+        .map__portfolio {
+            display: inline;
+        }
+        .cover {
+            display: none;
+        }
+        </style>
+	</head>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            @@include('../html/ru/header.html')
+        </div>
+    </header>
+    <main>
+        <section class="portfolio">
+            <div class="container">
+                <h1 class="portfolio__title">Our portfolio</h1>
+                <div class="portfolio__content">
+                    <div class="portfolio__item">
+                        <a href="">
+                            <img src="../img/portfolio/1.png" alt="">
+                        </a>
+                    </div>
+                    <div class="portfolio__item">
+                        <a href="">
+                            <img src="../img/portfolio/2.png" alt="">
+                        </a>
+                    </div>
+                    <div class="portfolio__item">
+                        <a href="">
+                            <img src="../img/portfolio/3.png" alt="">
+                        </a>
+                    </div>
+                    <div class="portfolio__item">
+                        <a href="">
+                            <img src="../img/portfolio/4.png" alt="">
+                        </a>
+                    </div>
+                    <div class="portfolio__item">
+                        <a href="">
+                            <img src="../img/portfolio/5.png" alt="">
+                        </a>
+                    </div>
+                    <div class="portfolio__item">
+                        <a href="">
+                            <img src="../img/portfolio/6.png" alt="">
+                        </a>
+                    </div>
+                    <div class="portfolio__item">
+                        <a href="">
+                            <img src="../img/portfolio/7.png" alt="">
+                        </a>
+                    </div>
+                    <div class="portfolio__item">
+                        <a href="">
+                            <img src="../img/portfolio/8.png" alt="">
+                        </a>
+                    </div>
+                    <div class="portfolio__item">
+                        <a href="">
+                            <img src="../img/portfolio/9.png" alt="">
+                        </a>
+                    </div>
+                    <div class="portfolio__item">
+                        <a href="">
+                            <img src="../img/portfolio/10.png" alt="">
+                        </a>
+                    </div>
+                    <div class="portfolio__item portfolio__item-empty">
+                    </div>
+                    <div  class="portfolio__item g-last-item">
+                        <div  class="g-last-item__content">
+                            <img data-goto="#gt-contacts" src="../img/portfolio/mask-group.svg" alt="">
+                            
+                        </div>
+                        <div data-goto="#gt-contacts" class="g-last-item__text">want to be here</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+       <div id="gt-contacts">
+        @@include('../html/en/contacts.html', {
+            "ctitle": "Leave a request and we will contact you within 30 minutes",
+            "csubtitle": "",
+            "sendbutton": "Send"
+        })
+       </div>
+    </main>
+        @@include('../html/en/footer.html')
+   
+</body>
+</html>

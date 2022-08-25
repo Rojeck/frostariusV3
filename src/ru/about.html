@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <head>
+		@@include('../html/ru/head.html', {
+			"title": "О нас"
+		})
+        <style>
+        .map {
+            display: flex;
+        }
+        .menu-block {
+            display: none;
+        }
+        .it-text-add {
+            display: inline;
+        }
+        @media (max-width: 768px) {
+            .map {
+                display: none;
+            }
+            .menu-block {
+                display: flex;
+            }
+            .cost-calc {
+                display: none;
+            }
+            .contact-block {
+			    display: block;
+		    }
+        }
+        .map__portfolio,.map__about,.map__design,.map__marketing,.map__it,.map__copyright,.map__services {
+            display: none;
+        }
+        .map__about {
+            display: inline;
+        }
+        .cover {
+            display: none;
+        }
+        </style>
+	</head>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                @@include('../html/ru/header.html')
+            </div>
+        </header>
+        <main>
+            <section class="about">
+                <div class="container">
+                    <div class="swiper-container about__slider">
+                        <div class="about__content swiper-wrapper">
+                            <div class="about__item swiper-slide">
+                                    <img draggable="false" src="../img/people/copyright-sophiia.jpg" alt="">
+                                <div class="about__name">Sophiia</div>
+                                <div class="about__description">Copyright</div>
+                                <div class="color-line-member"></div>
+    
+                            </div>
+                            <div class="about__item swiper-slide">
+                               
+                                    <img draggable="false" src="../img/people/co_founder-timur.jpg" alt="">
+                                
+                                <div class="about__name">Timur</div>
+                                <div class="about__description">Co-Founder
+                                    
+                                </div>
+                                <div class="color-line-member"></div>
+                                
+                            </div>
+                            <div class="about__item swiper-slide">
+                               
+                                    <img draggable="false" src="../img/people/graphic_design-leonid.jpg" alt="">
+                                
+                                <div class="about__name">Leonid</div>
+                                <div class="about__description">Graphic Design</div>
+                                <div class="color-line-member"></div>
+    
+                            </div>
+                            <div class="about__item swiper-slide">
+                              
+                                    <img draggable="false" src="../img/people/qa-nikita.jpg" alt="">
+                                
+                                <div class="about__name">Nikita</div>
+                                <div class="about__description">QA Engineer</div>
+                                <div class="color-line-member"></div>
+    
+                            </div>
+                            <div class="about__item swiper-slide">
+                              
+                                    <img draggable="false" src="../img/people/smm-alina.jpg" alt="">
+                                
+                                <div class="about__name">Alina</div>
+                                <div class="about__description">SMM specialist</div>
+                                <div class="color-line-member"></div>
+    
+                            </div>
+                            <div class="about__item swiper-slide">
+                                
+                                    <img draggable="false" src="../img/people/smm-julia.jpg" alt="">
+                                
+                                <div class="about__name">Julia</div>
+                                <div class="about__description">SMM specialist</div>
+                                <div class="color-line-member"></div>
+    
+                            </div>
+                            <div class="about__item swiper-slide">
+                               
+                                    <img draggable="false" src="../img/people/graphic_design-greg.jpg" alt="">
+                                
+                                <div class="about__name">Greg</div>
+                                <div class="about__description">Graphic Design</div>
+                                <div class="color-line-member"></div>
+    
+                            </div>
+    
+                        </div>
+                    </div>
+                    <div  class="want-to-team">
+                        <div  class="want-to-team__content">
+                            <img data-goto="#gt-contacts" src="../img/buttons/plus-btn.png" alt="">
+                            
+                        </div>
+                        <div data-goto="#gt-contacts" class="want-to-team__text">Стать частью команды</div>
+                    </div>
+                </div>
+                
+    
+                
+            </section>
+            
+    
+           <div id="gt-contacts">
+            @@include('../html/ru/contacts.html', {
+                "ctitle": "Оставьте заявку и мы свяжемся с вами в течении 30 минут",
+                "csubtitle": "",
+                "sendbutton": "Отправить"
+            })
+           </div>
+        </main>
+        @@include('../html/ru/footer.html')
+    </div>
+</body>
+</html>

@@ -1,0 +1,225 @@
+.cover {
+    width: 100%;
+    height: 100%;
+    
+}
+html {
+    height: 100%;
+}
+body {
+    font-family: $mainFont;
+    background-color: $blackBlue;
+    height: 100%;
+    width: 100%;
+}
+.wrapper {
+    width: 100%;
+}
+
+a {
+    color: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+    font-family: inherit;
+}
+
+.container, .cards__control-container, .portfolit-title-container {
+    max-width: 1340px;
+    padding: 0 70px;
+    position: relative;
+    z-index: 2;
+    margin: 0 auto;
+    @media (max-width: 920px) {
+        padding: 0 50px;
+    }
+    @media (max-width: 768px) {
+        padding: 0 30px;
+    }
+    @media (max-width: 500px) {
+        padding: 0 20px;
+    }
+    @media (max-width: 400px) {
+        padding: 0 10px;
+    }
+}
+
+.color-line {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(0,41,255,1) 0%, rgba(20,128,174,1) 50%);
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.25);
+}
+.color-line-member {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 2px;
+    
+    background: radial-gradient(circle, rgba(0,41,255,1) 10%, rgba(29,107,178,0.8379726890756303) 26%, rgba(73,23,81,0) 95%);
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.25);
+   
+}
+
+.full-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    main {
+        flex: 1 1 auto;
+
+    }
+}
+// general styles for forms
+
+.form {
+    &__item {
+        height: 51.31px;
+        width: 100%;
+        background: transparent;
+        border-radius: 3px;
+        font-family: $secondaryFont;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 162%;
+        align-items: center;
+        color: #FFFFFF;
+        padding: 0 15px;
+    }
+
+    &__item::placeholder {
+        font-family: $secondaryFont;
+        font-weight: 300;
+        color: #FFFFFF;
+    }
+
+    &__button {
+        width: 100%;
+        height: 48px;
+        border-radius: 3px;
+        font-family: $openSans;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        color: #FFFFFF;
+        background: url("../img/graphic/contact-form-btn.jpg");
+        background-size: cover;
+    }
+}
+
+.form-title { // our contacts and so on
+font-family: $openSans;
+font-weight: 700;
+font-size: 34px;
+line-height: 110%;
+color: #FFFFFF;
+}
+
+.note { // copyright
+font-family: $openSans;
+font-weight: 300;
+font-size: 14px;
+line-height: 122%;
+color: rgba(255, 255, 255, 0.7);
+}
+
+.back-filter {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    animation: back-filter .5s ease-in-out forwards;
+}
+
+@keyframes back-filter {
+    0% {
+        background-color: rgba(0, 0, 0, 0.0);
+    }
+    100% {
+        background-color: rgba(0, 0, 0, 0.329);
+    }
+}
+@keyframes form-fixed {
+    0% {
+        top: 1000%;
+    }
+    100% {
+        top: 50%;
+    }
+}
+
+
+.hidden {
+    display: none;
+}
+
+.highlited-item {
+    color: white;
+}
+
+// menu burger move
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.red-highlighted {
+    box-shadow: 1px 4px 8px 0px rgba(255, 0, 0, 0.733);
+}
+
+.btn-inactive {
+    opacity: 0.7;
+    &:hover {
+        transform: scale(1);
+    }
+    span {
+        position: static;
+    }
+}
+
+.btn-loading {
+    position: relative;
+    font-size: 0px;
+    z-index: 3;
+    span {
+        font-size: 0;
+    }
+}
+.btn-loading::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%,-50%);
+    width: 34px;
+    height: 34px;
+    background: url('../img/animations/dots_spiner.gif');
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 5;
+}
+
+.form-fixed {
+    position: fixed;
+    top: 1000%;
+    left: 0;
+    width: 100%;
+    transform: translate(0,-50%);
+    animation: form-fixed .5s ease-in-out forwards;
+    z-index: 30;
+    
+  
+    
+    @media (max-width: 768px) {
+        height: 100%;
+        overflow: auto;
+           
+    }
+    .request-form {
+        background: linear-gradient(180deg, #2666A2 0%, rgba(37, 108, 175, 0) 100%);
+        filter: drop-shadow(0px 15px 20px rgba(23, 29, 38, 0.4));
+
+    }
+    
+}
+

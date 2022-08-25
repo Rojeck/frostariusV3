@@ -1,0 +1,206 @@
+
+
+//---------------------------Переменные--------------------------------//
+
+$cardFontFamily: $mainFont;
+$cardTitleFontFamily: $mainFont;
+$cardTitleFontSize: 30px;
+$minWidth: 320px;
+$maxWidth: 1920;
+$maxWidthContainer: 1170;
+$md1: $maxWidthContainer + 12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+$mainColor: #fff;
+
+//-----------------------------------------------------------//
+
+
+//---------------------------Миксины--------------------------------//
+
+@mixin adaptiv-value($property, $startSize, $minSize, $type) {
+	$addSize: $startSize - $minSize;
+	@if $type==1 {
+		#{$property}: $startSize + px;
+		@media (max-width: #{$maxWidthContainer + px}) {
+			#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}));
+		}
+	} @else if $type==2 {
+		#{$property}: $startSize + px;
+		@media (min-width: #{$maxWidthContainer + px}) {
+			#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+		}
+	} @else {
+		#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+	}
+}
+
+//-----------------------------------------------------------//
+
+
+.proposals__title {
+    text-align: center;
+}
+
+
+//---------------------------Карточки--------------------------------//
+
+.cards {
+	color: $mainColor;
+	font-family: 'Copperplate';
+	min-width: 0;
+	&__control {
+		display: flex;
+		justify-content: flex-end;
+		gap: 15px;
+		padding-top: 20px;
+		margin: 0;
+		transition: .2s;
+	}
+	&__left:active,&__right:active {
+		opacity: 0.5;
+	}
+	@media (max-width: 480px) {
+		&__control {
+			gap: 5px;
+		}
+	}
+}
+.cards-noslider {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	gap: 15px;
+	padding: 5px;
+}
+.cards-container {
+	overflow: hidden;
+	padding: 5px;
+	@media (max-width: 1199px) {
+		padding: 0;
+		max-width: none;
+	}
+}
+
+.proposals {
+	.container {
+	
+	margin: 0 auto;
+	min-width: 0;
+	max-width: 1340px;
+	overflow: hidden;
+	@media (max-width: 1199px) {
+		padding: 0;
+		margin: 0;
+	}
+	}
+}
+
+.card {
+
+	cursor: pointer;
+	@include adaptiv-value(width, 280, 250, 1);
+	@include adaptiv-value(padding-top, 40, 40, 40);
+	@include adaptiv-value(padding-bottom, 40, 40, 40);
+  
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		border-radius: 35px; 
+		border: 5px solid transparent;
+
+		//---------------------------------Цвета бордера
+		background: linear-gradient(-45deg, rgba(109,50,164,1) 0%, rgba(73,23,81,0) 50%, rgba(29,88,177,1) 100%) border-box;
+		-webkit-mask:
+		  linear-gradient(#fff 0 0) padding-box, 
+		  linear-gradient(#fff 0 0);
+		-webkit-mask-composite: destination-out;
+		mask-composite: exclude;
+	 }
+	padding-left: 35px;
+	padding-right: 35px;
+
+	//----------------------------------------------------Цвета самой карточки
+	background: linear-gradient(112.22deg, rgba(58, 129, 191, 0.08) 1.84%, rgba(65, 48, 90, 0.03) 99.17%);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	border-radius: 35px; 
+	position: relative;
+	@media (min-width: 1200px) {
+		min-height: 380px;
+	}
+	@media (max-width: 1199px) {
+		min-height: 400px;
+	}
+	@media (max-width: 980px) {
+		min-height: 380px;
+	}
+	@media (max-width: 375px) {
+		min-height: 350px;
+
+	}
+
+}
+.cards-slider {
+	display: none;
+	
+}
+
+@media (max-width: 1199px) {
+	.cards-noslider {
+		display: none;
+	}
+	.cards-slider {
+		display: block;
+	}
+}
+
+.card__title {
+	font-size: $cardTitleFontSize;
+	display: flex;
+	justify-content: center;
+	font-family: $mainFont;
+	letter-spacing: 2px;
+	margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.card__item {
+	
+	padding: 8px 0;
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+
+.card-item__img {
+
+	width: 20px;
+	height: 20px;
+}
+.card-item__circle {
+	
+	display: none;
+	min-width: 10px;
+	min-height: 10px;
+	background: #DB0CBA;
+	border-radius: 50%;
+}
+.card-item__text {
+	@include adaptiv-value(font-size, 18, 14, 1);
+}
+
+.cards {
+	.swiper-slide-prev, .swiper-slide-next {
+		opacity: 0.6;
+		
+	}
+}
+//-----------------------------------------------------------//

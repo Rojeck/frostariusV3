@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		@@include('../html/en/head.html', {
+			"title": "IT"
+		})
+        <style>
+          @media (min-width: 1100px) {
+                .head__logo img {
+                width: 320px;
+            }
+            }
+            .head__logo  {
+                padding-left: 10px;
+            }
+        .map {
+            display: block;
+            padding-right: 10px;
+        }
+        .map {
+            display: block;
+        }
+        .menu-block {
+            display: none;
+        }
+        
+		.cost-calc {
+			display: block;
+		}
+            .it-text-add {
+                display: inline;
+            }
+
+        @media (max-width: 768px) {
+            .map {
+                display: none;
+            }
+            .menu-block {
+            display: flex;
+        }
+            .cost-calc {
+                display: none;
+            }
+            .contact-block {
+			display: block;
+		}
+        }
+         
+        .map__portfolio,.map__about,.map__design,.map__marketing,.map__it,.map__copyright {
+            display: none;
+        }
+        .map__it {
+            display: inline;
+        }
+        </style>
+	</head>
+<body>
+    <div class="fullscreen">
+        <img class="fullscreen__background" src="../img/fullscreen/ITbackground.svg" alt="fullscreen picture">
+        <div class="fullscreen__title">
+            <img  src="../img/fullscreen/ITtext.svg" alt="IT лого">
+        </div>
+            <div class="container">
+                <div class="fullscreen__header">
+                    <header class="header">
+                        @@include('../html/en/header.html')
+                    </header>
+                </div>
+                <div class="fullscreen__go-btn">
+                        @@include('../html/en/connect-btn.html')
+                </div>
+            </div>
+    </div>
+    <main>
+        <section class="advantages">
+            <div class="container">
+                <h1 class="advantages__title">What do you get by choosing us:</h1>
+                <ul class="advantages__list">
+                    <li class="advantages__item">
+                        <div class="advantages__item-img">
+                            <img src="../img/advantages/it/1.svg" alt="IT picture">
+                        </div>
+                        <p class="advantages__item-text">
+                            A clear selection of tools to work with your requests
+                        </p>
+                    </li>
+                    <li class="advantages__item">
+                        <div class="advantages__item-img">
+                            <img src="../img/advantages/it/2.svg" alt="IT picture">
+                        </div>
+                        <p class="advantages__item-text">
+                            Deep customization of each element of your network, for a specific product functionality
+                        </p>
+                    </li>
+                    <li class="advantages__item">
+                        <div class="advantages__item-img">
+                            <img src="../img/advantages/it/3.svg" alt="IT picture">
+                        </div>
+                        <p class="advantages__item-text">
+                            Implementation of advanced IT technologies and programming languages to achieve the greatest efficiency
+                        </p>
+                    </li>
+                    <li class="advantages__item">
+                        <div class="advantages__item-img">
+                            <img src="../img/advantages/it/4.svg" alt="IT picture">
+                        </div>
+                        <p class="advantages__item-text">
+                            Interaction of a specialist with a client throughout the entire cycle of work on a project
+                        </p>
+                    </li>
+                    <li class="advantages__item">
+                        <div class="advantages__item-img">
+                            <img src="../img/advantages/it/5.svg" alt="IT picture">
+                        </div>
+                        <p class="advantages__item-text">
+                            The use of cloud storage services, which increases the security of your resource
+                        </p>
+                    </li>
+                    <li class="advantages__item">
+                        <div class="advantages__item-img">
+                            <img src="../img/advantages/it/6.svg" alt="IT picture">
+                        </div>
+                        <p class="advantages__item-text">
+                            Using the most up-to-date security methods when working with customer data
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="projects">
+            @@include('../html/en/projects.html')
+        </section>
+        
+        @@include('../html/en/contacts.html', {
+            "ctitle": "Leave a request to calculate",
+            "csubtitle": "the cost of your project",
+            "sendbutton": "Calculate"
+        })
+	</main>
+	@@include('../html/en/footer.html')
+    
+</body> 
+
+</html>
+	
