@@ -8,10 +8,10 @@ function redirect (lang) {
 
 switch (userLang) {
     case 'ru': {
-        redirect('en');
+        redirect('ru');
     }
     default: {
-        redirect('en');
+        redirect('ru');
     }
 }
 
