@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="../css/style.min.css">
+	<title>Главная</title>
+	<link rel="shortcut icon" type="image/png" href="../img/logo/favico.png">
+	<script defer src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+	<script defer src="../js/app.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+	<script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
+	<script>
+	function mshow() {
+		const	mview = document.querySelector('.menu-block');
+				mview.style.left = '0';
+			}
+	function mclose() {
+		const	mview = document.querySelector('.menu-block');
+				mview.style.left = '-1000px';
+			}
+	</script>
+	
+    <style>
+      .map {
+        display: none;
+      }
+      .trust {
+        padding-top: 0;
+      }
+      .trust .container {
+        max-width: 1340px;
+      }
+    </style>
+    <script defer src="../js/titl.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="container"><div class="header__block">
+    <nav class="nav">
+        <div class="head">
+            <a href="main.html"><div class="head__logo">
+                <img src="../img/logo/logo.svg" alt="logo">
+            </div></a>
+            <div class="head__burger-button" onclick="mshow()">
+                <img src="../img/buttons/menu-burger.svg" alt="меню">
+            </div>
+        </div>
+        
+        <div class="map">
+            <div class="map__list">
+                <a href="main.html">Главная</a>
+                <a class="highlited-item map__portfolio" style="opacity: 1;" href="">/ Порфолио</a>
+                <a class="highlited-item map__about" style="opacity: 1;" href="">/ О компании</a>
+                <span class="map__services">
+                    <span class="map__slash">/</span>
+                    <a href="main.html#proposals" name="proposals" class=""> Услуги </a>
+                    <span class="map__slash">/</span>
+                </span>
+                <a class="highlited-item map__design" style="opacity: 1;" href="">Дизайн</a>
+                <a class="highlited-item map__marketing" style="opacity: 1;" href="">Маркетинг</a>
+                <a class="highlited-item map__it" style="opacity: 1;" href="">IT</a>
+                <a class="highlited-item map__copyright" style="opacity: 1;" href="">Копирайтинг</a>
+            </div>
+            <div class="color-line"></div>
+        </div>
+        
+        <div class="menu-block">
+                    <div class="container">
+                        <div class="head">
+                            <div class="head__logo">
+                                <img src="../img/logo/logo.svg" alt="logo">
+                            </div>
+                            <div class="head__burger-button" onclick="mclose()">
+                                <img src="../img/buttons/menu-burger-close.svg" alt="меню">
+                            </div>
+                        </div>
+                    </div>
+                <div class="menu ">
+                    <div class="container">
+                        <ul class="menu__list">
+                            <li class="menu__item"><a data-goto = '.proposals-gt' href="main.html#proposals" onclick="mclose()">Услуги</a></li>
+                            <li class="menu__item"><a href="portfolio.html">Портфолио</a></li>
+                            <li class="menu__item"><a href="about.html">О компании</a></li>
+                            <li class="menu__item"><a data-goto='.contacts-gt' href="#" onclick="mclose()">Контакты</a></li>
+                        </ul>
+                        <div class="color-line"></div>
+                    </div>
+                </div>
+               
+                <!-- additional block for mobile view-->
+                <div class="mview ">
+
+                        <div class="container">
+                            <address class="mview__adress">
+                                <div class="mview__adress-description">Наши контакты</div>
+                                <div class="mview__adress-number"><a href="tel:+995 558 92 54 73">+995 558 92 54 73</a></div>
+                                <div class="mview__adress-email"><a href="mailto:frostarius@workmail.com">frostarius@workmail.com</a></div>
+                            </address>
+            
+                            <div class="mview__social">
+                                <ul class="mview__social-list">
+                                    <li class="mview__social-item"><a target="_blank" href="https://www.behance.net/Frostarius">BEHANCE</a></li>
+                                    <li class="mview__social-item"><a target="_blank" href="https://www.instagram.com/frostarius/">INSTAGRAM</a></li>
+                                    <li class="mview__social-item"><a target="_blank" href="#">WHATSAPP</a></li>
+                                    <li class="mview__social-item"><a target="_blank" href="https://www.facebook.com/frostarius">FACEBOOK</a></li>
+                                    <li class="mview__social-item"><a target="_blank" href="https://www.linkedin.com/in/frostarius/">LINKEDIN</a></li>
+                                    <li class="mview__social-item"><a target="_blank" href="https://t.me/Frostarius">TELEGRAM</a></li>
+                                </ul>
+                            </div>  
+                        </div>
+                </div>
+        </div>
+        
+        <!-- additional block for mobile view //-->
+    </nav>
+</div>
+</div>
+      </header>
+      <main class="main">
+        <section class="preview">
+          <div class="container">
+            <div class="preview__content">
+              <div class="preview__title-block">
+                <h1 class="preview__title">
+                  <span>Web</span> <span>studio</span>
+                </h1>
+                <div class="color-line"></div>
+              </div>
+              <p class="preview__desc-thick">
+                это отлаженная машина по производству качественного контента для
+                всех видов медиа бизнеса в любом формате: текстовом, аудио,
+                видео, анимационном.
+              </p>
+            </div>
+            <div class="preview__btn-block">
+              <div
+                class="button-block-link go-up-blink"
+                data-goto="#gt-contacts"
+              >
+                <div  class="connect-btn go-up-btn " >  
+    <span class = 'connect-btn__link' href="#">
+        <span data-goto="#gt-contacts" >СВЯЗАТЬСЯ С НАМИ</span>
+        <span  data-goto="#gt-contacts" class="square">
+            <span data-goto="#gt-contacts"  class="arrow"></span>
+        </span>
+    </span>
+</div>
+
+
+              </div>
+            </div>
+            <p class="preview__desc-wide">
+              Если Вы хотите вывести бизнес на рынок, сделать качественный
+              ребрендинг, оптимизировать работу ресурса, создать бизнес с нуля
+              или просто получить дополнительные конкурентные преимущества,
+              <br />
+              тогда нам по пути.
+            </p>
+          </div>
+        </section>
+        <section class="proposals proposals-gt" id="proposals">
+          <div class="container">
+            <h2 class="proposals__title section-title">
+              Что мы вам предлагаем?
+            </h2>
+            <div class="cards-container cards-slider swiper-container">
+              <div class="cards swiper-wrapper">
+                <a href="./it.html" class="card swiper-slide">
+                  <h2 class="card__title">IT</h2>
+                  <div class="card__item">
+                    <img
+                      loading="lazy"
+                      src="../img/cards/0/card-item__img.svg"
+                      alt=""
+                      class="card-item__img"
+                    />
+                    <div class="card-item__circle"></div>
+                    <p class="card-item__text">Сайты под ключ</p>
+                  </div>
+                  <div class="card__item">
+                    <img
+                      loading="lazy"
+                      src="../img/cards/0/card-item__img.svg"
+                      alt=""
+                      class="card-item__img"
+                    />
+                    <div class="card-item__circle"></div>
+                    <p class="card-item__text">Приложения для ios и android</p>
+                  </div>
+                  <div class="card__item">
+                    <img
+                      loading="lazy"
+                      src="../img/cards/0/card-item__img.svg"
+                      alt=""
+                      class="card-item__img"
+                    />
+                    <div class="card-item__circle"></div>
+                    <p class="card-item__text">Боты</p>
+                  </div>
+                  <div class="card__item">
+                    <img
+                      loading="lazy"
+                      src="../img/cards/0/card-item__img.svg"
+                      alt=""
+                      class="card-item__img"
+                    />
+                    <div class="card-item__circle"></div>
+                    <p class="card-item__text">Парсинг данных</p>
+                  </div>
+                  <div class="card__item">
+                    <img
+                      loading="lazy"
+                      src="../img/cards/0/card-item__img.svg"
+                      alt=""
+                      class="card-item__img"
+                    />
+                    <div class="card-item__circle"></div>
+                    <p class="card-item__text">Софт</p>
+                  </div>
+                  <div class="card__item">
+                    <img
+                      loading="lazy"
+                      src="../img/cards/0/card-item__img.svg"
+                      alt=""
+                      class="card-item__img"
+                    />
+                    <div class="card-item__circle"></div>
+                    <p class="card-item__text">Цифровые системы</p>
+                  </div>
+                </a>
+                <a href="./marketing.html" class="card swiper-slide">
+                  <h2 class="card__title">Marketing</h2>
+                  <div class="card__item">
+                    <img
+                      loading="lazy"
+                      src="../img/cards/1/card-item__img.svg"
+                      alt=""
+                      class="card-item__img"
+                    />
+                    <div class="card-item__circle"></div>
+                    <p class="card-item__text">SMM</p>
+                  </div>
+                  <div class="card__item">
+                    <img
+                      loading="lazy"
+                      src="../img/cards/1/card-item__img.svg"
+                      alt=""
+                      class="card-item__img"
+                    />
+                    <div class="card-item__circle"></div>
+                    <p class="card-item__text">SEO</p>
+                  </div>
+                  <div class="card__item">
+                    <img
+                      loading="lazy"
+                      src="../img/cards/1/card-item__img.svg"
+                      alt=""
+                      class="card-item__img"
+                    />
+                    <div class="card-item__circle"></div>
+                    <p class="card-item__text">Продажа и генерация лидов</p>
+                  </div>
+                  <div class="card__item">
+                    <img
+                      loading="lazy"
+                      src="../img/cards/1/card-item__img.svg"
+                      alt=""
+                      class="card-item__img"
+                    />
+                    <div class="card-item__circle"></div>
+                    <p class="card-item__text">
+                      Комплексное продвижение бренда
+                    </p>
+                  </div>
+                  <div class="card__item">
+                    <img
+                      loading="lazy"
+                      src="../img/cards/1/card-item__img.svg"
+                      alt=""
+                      class="card-item__img"
+                    />
+                    <div class="card-item__circle"></div>
+                    <p class="card-item__text">Контекстная реклама</p>
+                  </div>
+                </a>
+                <a href="./design.html" class="card swiper-slide">
+                  <h2 class="card__title">Design</h2>
+                  <div class="card__item">
+                    <img
+                      loading="lazy"
+                      src="../img/cards/2/card-item__img.svg"
+                      alt=""
+                      class="card-item__img"
+                    />
+                    <div class="card-item__circle"></div>
+                    <p class="card-item__text">Сайты</p>
+                  </div>
+                  <div class="card__item">
+                    <img
+                      loading="lazy"
+                      src="../img/cards/2/card-item__img.svg"
+                      alt=""
+                      class="card-item__img"
+                    />
+                    <div class="card-item__circle"></div>
+                    <p class="card-item__text">Логотипы</p>
+                  </div>
+                  <div class="card__item">
+                    <img
+                      loading="lazy"
+                      src="../img/cards/2/card-item__img.svg"
+                      alt=""
+                      class="card-item__img"
+                    />
+                    <div class="card-item__circle"></div>
+                    <p class="card-item__text">Мобильные приложения</p>
+                  </div>
+                  <div class="card__item">
+                    <img
+                      loading="lazy"
+                      src="../img/cards/2/card-item__img.svg"
+                      alt=""
+                      class="card-item__img"
+                    />
+                    <div class="card-item__circle"></div>
+                    <p class="card-item__text">BrandBook</p>
+                  </div>
+                  <div class="card__item">
+                    <img
+                      loading="lazy"
+                      src="../img/cards/2/card-item__img.svg"
+                      alt=""
+                      class="card-item__img"
+                    />
+                    <div class="card-item__circle"></div>
+                    <p class="card-item__text">Лендинги</p>
+                  </div>
+                  <div class="card__item">
+                    <img
+                      loading="lazy"
+                      src="../img/cards/2/card-item__img.svg"
+                      alt=""
+                      class="card-item__img"
+                    />
+                    <div class="card-item__circle"></div>
+                    <p class="card-item__text">Product дизайн</p>
+                  </div>
+                </a>
+                <a href="./copyright.html" class="card swiper-slide">
+                  <h2 class="card__title">Copyright</h2>
+                  <div class="card__item">
+                    <img
+                      loading="lazy"
+                      src="../img/cards/3/card-item__img.svg"
+                      alt=""
+                      class="card-item__img"
+                    />
+                    <div class="card-item__circle"></div>
+                    <p class="card-item__text">Продающий</p>
+                  </div>
+                  <div class="card__item">
+                    <img
+                      loading="lazy"
+                      src="../img/cards/3/card-item__img.svg"
+                      alt=""
+                      class="card-item__img"
+                    />
+                    <div class="card-item__circle"></div>
+                    <p class="card-item__text">Маркетинговый</p>
+                  </div>
+                  <div class="card__item">
+                    <img
+                      loading="lazy"
+                      src="../img/cards/3/card-item__img.svg"
+                      alt=""
+                      class="card-item__img"
+                    />
+                    <div class="card-item__circle"></div>
+                    <p class="card-item__text">Креативный</p>
+                  </div>
+                  <div class="card__item">
+                    <img
+                      loading="lazy"
+                      src="../img/cards/3/card-item__img.svg"
+                      alt=""
+                      class="card-item__img"
+                    />
+                    <div class="card-item__circle"></div>
+                    <p class="card-item__text">SEO Ключи</p>
+                  </div>
+                  <div class="card__item">
+                    <img
+                      loading="lazy"
+                      src="../img/cards/3/card-item__img.svg"
+                      alt=""
+                      class="card-item__img"
+                    />
+                    <div class="card-item__circle"></div>
+                    <p class="card-item__text">Технический</p>
+                  </div>
+                  <div class="card__item">
+                    <img
+                      loading="lazy"
+                      src="../img/cards/3/card-item__img.svg"
+                      alt=""
+                      class="card-item__img"
+                    />
+                    <div class="card-item__circle"></div>
+                    <p class="card-item__text">LSI</p>
+                  </div>
+                </a>
+              </div>
+              <div class="cards__control-container">
+                <div class="cards__control">
+                  <picture class="cards__left">
+                    <source
+                      srcset="../img/buttons/left38x.png"
+                      media="(max-width: 480px)"
+                    />
+                    <img
+                      loading="lazy"
+                      src="../img/buttons/left48x.png"
+                      alt="MDN"
+                    />
+                  </picture>
+                  <picture class="cards__right">
+                    <source
+                      srcset="../img/buttons/right38x.png"
+                      media="(max-width: 480px)"
+                    />
+                    <img
+                      loading="lazy"
+                      src="../img/buttons/right48x.png"
+                      alt="MDN"
+                    />
+                  </picture>
+                </div>
+              </div>
+            </div>
+            <div class="cards cards-noslider">
+              <a href="./it.html" class="card" data-tilt>
+                <h2 class="card__title">IT</h2>
+                <div class="card__item">
+                  <img
+                    loading="lazy"
+                    src="../img/cards/0/card-item__img.svg"
+                    alt=""
+                    class="card-item__img"
+                  />
+                  <div class="card-item__circle"></div>
+                  <p class="card-item__text">Сайты под ключ</p>
+                </div>
+                <div class="card__item">
+                  <img
+                    loading="lazy"
+                    src="../img/cards/0/card-item__img.svg"
+                    alt=""
+                    class="card-item__img"
+                  />
+                  <div class="card-item__circle"></div>
+                  <p class="card-item__text">Приложения для ios и android</p>
+                </div>
+                <div class="card__item">
+                  <img
+                    loading="lazy"
+                    src="../img/cards/0/card-item__img.svg"
+                    alt=""
+                    class="card-item__img"
+                  />
+                  <div class="card-item__circle"></div>
+                  <p class="card-item__text">Боты</p>
+                </div>
+                <div class="card__item">
+                  <img
+                    loading="lazy"
+                    src="../img/cards/0/card-item__img.svg"
+                    alt=""
+                    class="card-item__img"
+                  />
+                  <div class="card-item__circle"></div>
+                  <p class="card-item__text">Парсинг данных</p>
+                </div>
+                <div class="card__item">
+                  <img
+                    loading="lazy"
+                    src="../img/cards/0/card-item__img.svg"
+                    alt=""
+                    class="card-item__img"
+                  />
+                  <div class="card-item__circle"></div>
+                  <p class="card-item__text">Софт</p>
+                </div>
+                <div class="card__item">
+                  <img
+                    loading="lazy"
+                    src="../img/cards/0/card-item__img.svg"
+                    alt=""
+                    class="card-item__img"
+                  />
+                  <div class="card-item__circle"></div>
+                  <p class="card-item__text">Цифровые системы</p>
+                </div>
+              </a>
+              <a href="./marketing.html" class="card" data-tilt>
+                <h2 class="card__title">Marketing</h2>
+                <div class="card__item">
+                  <img
+                    loading="lazy"
+                    src="../img/cards/1/card-item__img.svg"
+                    alt=""
+                    class="card-item__img"
+                  />
+                  <div class="card-item__circle"></div>
+                  <p class="card-item__text">SMM</p>
+                </div>
+                <div class="card__item">
+                  <img
+                    loading="lazy"
+                    src="../img/cards/1/card-item__img.svg"
+                    alt=""
+                    class="card-item__img"
+                  />
+                  <div class="card-item__circle"></div>
+                  <p class="card-item__text">SEO</p>
+                </div>
+                <div class="card__item">
+                  <img
+                    loading="lazy"
+                    src="../img/cards/1/card-item__img.svg"
+                    alt=""
+                    class="card-item__img"
+                  />
+                  <div class="card-item__circle"></div>
+                  <p class="card-item__text">Продажа и генерация лидов</p>
+                </div>
+                <div class="card__item">
+                  <img
+                    loading="lazy"
+                    src="../img/cards/1/card-item__img.svg"
+                    alt=""
+                    class="card-item__img"
+                  />
+                  <div class="card-item__circle"></div>
+                  <p class="card-item__text">Комплексное продвижение бренда</p>
+                </div>
+                <div class="card__item">
+                  <img
+                    loading="lazy"
+                    src="../img/cards/1/card-item__img.svg"
+                    alt=""
+                    class="card-item__img"
+                  />
+                  <div class="card-item__circle"></div>
+                  <p class="card-item__text">Контекстная реклама</p>
+                </div>
+              </a>
+              <a href="./design.html" class="card" data-tilt>
+                <h2 class="card__title">Design</h2>
+                <div class="card__item">
+                  <img
+                    loading="lazy"
+                    src="../img/cards/2/card-item__img.svg"
+                    alt=""
+                    class="card-item__img"
+                  />
+                  <div class="card-item__circle"></div>
+                  <p class="card-item__text">Сайты</p>
+                </div>
+                <div class="card__item">
+                  <img
+                    loading="lazy"
+                    src="../img/cards/2/card-item__img.svg"
+                    alt=""
+                    class="card-item__img"
+                  />
+                  <div class="card-item__circle"></div>
+                  <p class="card-item__text">Логотипы</p>
+                </div>
+                <div class="card__item">
+                  <img
+                    loading="lazy"
+                    src="../img/cards/2/card-item__img.svg"
+                    alt=""
+                    class="card-item__img"
+                  />
+                  <div class="card-item__circle"></div>
+                  <p class="card-item__text">Мобильные приложения</p>
+                </div>
+                <div class="card__item">
+                  <img
+                    loading="lazy"
+                    src="../img/cards/2/card-item__img.svg"
+                    alt=""
+                    class="card-item__img"
+                  />
+                  <div class="card-item__circle"></div>
+                  <p class="card-item__text">BrandBook</p>
+                </div>
+                <div class="card__item">
+                  <img
+                    loading="lazy"
+                    src="../img/cards/2/card-item__img.svg"
+                    alt=""
+                    class="card-item__img"
+                  />
+                  <div class="card-item__circle"></div>
+                  <p class="card-item__text">Лендинги</p>
+                </div>
+                <div class="card__item">
+                  <img
+                    loading="lazy"
+                    src="../img/cards/2/card-item__img.svg"
+                    alt=""
+                    class="card-item__img"
+                  />
+                  <div class="card-item__circle"></div>
+                  <p class="card-item__text">Product дизайн</p>
+                </div>
+              </a>
+              <a href="./copyright.html" class="card" data-tilt>
+                <h2 class="card__title">Copyright</h2>
+                <div class="card__item">
+                  <img
+                    loading="lazy"
+                    src="../img/cards/3/card-item__img.svg"
+                    alt=""
+                    class="card-item__img"
+                  />
+                  <div class="card-item__circle"></div>
+                  <p class="card-item__text">Продающий</p>
+                </div>
+                <div class="card__item">
+                  <img
+                    loading="lazy"
+                    src="../img/cards/3/card-item__img.svg"
+                    alt=""
+                    class="card-item__img"
+                  />
+                  <div class="card-item__circle"></div>
+                  <p class="card-item__text">Маркетинговый</p>
+                </div>
+                <div class="card__item">
+                  <img
+                    loading="lazy"
+                    src="../img/cards/3/card-item__img.svg"
+                    alt=""
+                    class="card-item__img"
+                  />
+                  <div class="card-item__circle"></div>
+                  <p class="card-item__text">Креативный</p>
+                </div>
+                <div class="card__item">
+                  <img
+                    loading="lazy"
+                    src="../img/cards/3/card-item__img.svg"
+                    alt=""
+                    class="card-item__img"
+                  />
+                  <div class="card-item__circle"></div>
+                  <p class="card-item__text">SEO Ключи</p>
+                </div>
+                <div class="card__item">
+                  <img
+                    loading="lazy"
+                    src="../img/cards/3/card-item__img.svg"
+                    alt=""
+                    class="card-item__img"
+                  />
+                  <div class="card-item__circle"></div>
+                  <p class="card-item__text">Технический</p>
+                </div>
+                <div class="card__item">
+                  <img
+                    loading="lazy"
+                    src="../img/cards/3/card-item__img.svg"
+                    alt=""
+                    class="card-item__img"
+                  />
+                  <div class="card-item__circle"></div>
+                  <p class="card-item__text">LSI</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+        <section class="projects">
+          <div class="container">
+  <div class="our-projects-block">
+    <h2 class="our-projects-block-text our-projects-block-text-top section-title">Наши работы
+       
+    </h2>
+    <div class="our-projects-block-component our-projects-block-top">
+    
+      <div class="our-projects-block-images our-projects-block-images-top">
+        <a href="./portfolio.html#p-1" class="our-projects-picture-block picture-small">
+          <img  data-src="../img/our-projects/1.jpg"  src="../img/lazy/lazy.png"  alt="картинка проект"/>
+        </a>
+        <a href="./portfolio.html#p-10" class="our-projects-picture-block picture-big">
+          <img  data-src="../img/our-projects/2.jpg"  src="../img/lazy/lazy.png"  alt="картинка проект"/>
+        </a>
+      </div>
+      <div class="our-projects-block-images our-projects-block-images-bottom">
+        <a href="./portfolio.html#p-3" class="our-projects-picture-block picture-big">
+          <img  data-src="../img/our-projects/3.jpg"  src="../img/lazy/lazy.png"  alt="картинка проект"/>
+        </a>
+        <a href="./portfolio.html#p-9" class="our-projects-picture-block picture-small">
+          <img  data-src="../img/our-projects/4.jpg" src="../img/lazy/lazy.png" alt="картинка проект"/>
+        </a>
+      </div>
+    </div>
+    <div class="our-projects-block-component our-projects-block-bottom">
+      
+      <a href="portfolio.html">
+        <div class="our-projects-block-text our-projects-block-text-bottom"> 
+          
+            <div class="button-block-link">
+              <a href="./portfolio.html">
+                <div  class="connect-btn go-up-btn " >  
+    <span class = 'connect-btn__link' href="#">
+        <span>ПОСМОТРЕТЬ НАШИ РАБОТЫ</span>
+        <span class="square">
+            <span class="arrow"></span>
+        </span>
+    </span>
+</div>
+              </a>
+            </div>
+
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+        </section>
+        <!-- Another content for each page -->
+        <section class="trust">
+          <div class="container">
+            <h2 class="trust__title section-title">Почему нам доверяют?</h2>
+            <div class="trust__content">
+              <div class="trust__items trust__items-left">
+                <div class="trust__item left">
+                  <img loading="lazy" class='trust__main-1' src="../img/trust/main_1.svg" alt="">
+                  <div class="trust__text-block">
+                    <p class="trust__item-text">
+                      Разрабатываем максимально
+                      <strong
+                        >алгоритмизированную и автоматизированную тактику
+                        продвижения</strong
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="trust__items trust__items-right">
+                <div class="trust__item right">
+                  <div class="trust__text-block">
+                    <p class="trust__item-text">
+                      Проводим <strong>анализ целевой аудитории</strong> и
+                      долгосрочной стратегии
+                    </p>
+                  </div>
+                  <img loading="lazy" class='trust__main-2' src="../img/trust/main_2.svg" alt="">
+                </div>
+              </div>
+              <div class="trust__items trust__items-left">
+                <div class="trust__item left">
+                  <img loading="lazy" class='trust__main-3' src="../img/trust/main_3.svg" alt="">
+                  <div class="trust__text-block">
+                    <p class="trust__item-text">
+                      Помогаем разработать
+                      <strong
+                        >узнаваемый имидж, вникаем в ваш бизнес, чтобы получить
+                        максимальный результат</strong
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="trust__items trust__items-right">
+                <div class="trust__item right">
+                  <div class="trust__text-block">
+                    <p class="trust__item-text">
+                      Выявляем самые
+                      <strong>эффективные методы работы</strong> с клиентами
+                    </p>
+                  </div>
+                  <img loading="lazy" class='trust__main-4' src="../img/trust/main_4.svg" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="guarantees">
+          <div class="container">
+            <div class="description">
+              <div class="description__graphic-block">
+                <div class="description__graphic">
+                  <div class="description__arrow">⟶</div>
+                </div>
+              </div>
+              <div class="description__content-block">
+                <p class="description__p-hide">
+                  <strong>Frostarius </strong>на рынке недавно, но качество
+                  нашей работы непрерывно растет, с каждым заказом мы
+                  увеличиваем свою продуктивность и снижаем временной
+                  показатель.
+                </p>
+                <p>
+                  Frostarius Studio окажет Вам услуги полного цикла по
+                  маркетингу, проектированию IТ-решений, информационную помощь
+                  на этапе их внедрения. А также по разработке функциональных
+                  веб-сайтов мобильных приложений, проектированию грамотных
+                  интерфейсов, реализации и автоматизации сложных
+                  бизнес-процессов.
+                </p>
+                <p><strong>Сделай свой успех неизбежным !</strong></p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div id="gt-contacts">
+          <section  class="contact-block contacts-gt" id="contacts">
+    <span class="contact-block__background-line"></span>
+    <div class="container">
+        <div  class="contacts">
+            <div class="adress-block">
+                <h3 class="adress-block__title form-title">Наши контакты</h3>
+                <address class="adress-block__adress">
+                    <p class="tel"><a href="tel:+995558925473">+995 (558) 92 54 73</a></p>
+                    <p class="tel"><a href="tel:+995556748987">+995 (568) 74 89 87</a></p>
+                    <p class="tel"><a href="tel:+380997217015">+380 (99) 721 7015</a></p>
+                    <p class="mail"><a href="mailto:frostarius@workmail.com">frostarius@workmail.com</a></p>
+                </address>
+                <div class="adress-block__social">
+                    <ul class="adress-block__social-list">
+                        <li class="adress-block__social-item"><a target="_blank" href="https://www.instagram.com/frostarius/"><img src="../img/svgicons/instagram.svg" alt="instagram"></a></li>
+                        <li class="adress-block__social-item"><a target="_blank" href="https://www.facebook.com/frostarius"><img src="../img/svgicons/facebook.svg" alt="facebook"></a></li>
+                        <li class="adress-block__social-item"><a target="_blank" href="https://www.linkedin.com/in/frostarius/"><img src="../img/svgicons/linkedin.svg" alt="linkedin"></a></li>
+                        <li class="adress-block__social-item"><a target="_blank" href="https://t.me/Frostarius"><img src="../img/svgicons/telegram.svg" alt="telegram"></a></li>
+                        <li class="adress-block__social-item"><a target="_blank" href="https://instagram.com"><img src="../img/svgicons/whatsup.svg" alt="whatsup"></a></li>
+                        <li class="adress-block__social-item"><a target="_blank" href="https://www.behance.net/Frostarius"><img src="../img/svgicons/be.svg" alt="behance"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="request-form">
+                <div class="request-form__content">
+                    <div class="request-form__title _form-title">Оставьте заявку</div>
+                    <div class="request-form__sub-title _form-sub-title">И мы свяжемся с вами в течение 30 минут</div>
+                    <div class="request-form__form">
+                        <form action="request-form" class="form" id="contact-form">
+                            <input	class="request-form__item form__item _req" placeholder="Имя *" type="text" name="username" id="username">
+                            <input	class="request-form__item form__item _req" placeholder="Телефон *" type="tel" name="usertel" id="usertel">
+                            <input	class="request-form__item form__item" style="box-shadow: 0 5px 5px rgba(207, 15, 24, 0.75)" placeholder="E-mail"type="email" name="usermail" id="usermail">
+                            <button class="request-form__button form__button" type="submit">Отправить заявку<!-- <span> ⟶</span> --></button>
+                        </form>
+                    </div>
+                    <div class="request-form__note note">Нажимая на кнопку Вы соглашаетесь с политикой конфиденциальности </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+        </div>
+      </main>
+      <footer class="footer">
+    <div class="container">
+        <div class="footer__content">
+            <div class="footer__logo">
+                <img src="../img/logo/logo_small.svg" alt="logo">
+            </div>
+            <nav class="footer__menu">
+                <ul class="footer__menu-list">
+                    <li class="footer__menu-item">
+                        <a href="it.html">IT</a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a href="marketing.html">Маркетинг</a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a href="design.html">Дизайн</a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a href="copyright.html">Копирайтинг</a>
+                    </li>
+                    <li class="footer__menu-itemc">
+                        <select name="lang-select" id="lang-select">
+                            <option value="RU">RU</option>
+                            <option value="EN">EN</option>
+                        </select>
+                    </li>
+                </ul>
+            </nav>
+            <div class="footer__confidential">
+                Политика конфиденциальности<br />
+                Copyright © 2022  «Frostarius Studio»
+            </div>
+        </div>
+    </div>
+    <div class="cover"></div>
+</footer>
+
+      <img
+        src="../img/bumbles/main/Ellipce1_left.svg"
+        alt="graphic ellipse"
+        class="bundle bundle-main-1 bundle-left"
+      />
+      <img
+        src="../img/bumbles/main/Ellipce2_right.svg"
+        alt="graphic ellipse"
+        class="bundle bundle-main-2 bundle-right"
+      />
+      <img
+        src="../img/bumbles/main/Ellipse3_right.svg"
+        alt="graphic ellipse"
+        class="bundle bundle-main-3 bundle-right"
+      />
+      <img
+        src="../img/bumbles/main/Ellipse4_right.svg"
+        alt="graphic ellipse"
+        class="bundle bundle-main-4 bundle-right"
+      />
+      <img
+        src="../img/bumbles/main/Ellipse5_left.svg"
+        alt="graphic ellipse"
+        class="bundle bundle-main-5 bundle-left"
+      />
+      <img
+        src="../img/bumbles/main/Ellipse6_right.svg"
+        alt="graphic ellipse"
+        class="bundle bundle-main-6 bundle-right"
+      />
+    </div>
+  </body>
+</html>

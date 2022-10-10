@@ -1,0 +1,378 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../css/style.min.css">
+	<title>Copyright</title>
+	<script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+	<script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<script defer src="../js/app.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+	<script type="text/javascript">
+		
+
+        (function() {
+            emailjs.init('xYfxmlDugTPe5ZvtX');
+        })();
+    </script>
+
+	<script>
+	function mshow() {
+		const	mview = document.querySelector('.menu-block');
+				mview.style.left = '0';
+			}
+	function mclose() {
+		const	mview = document.querySelector('.menu-block');
+				mview.style.left = '-1000px';
+			}
+	</script>
+	
+        <style>
+            @media (min-width: 1100px) {
+                .head__logo img {
+                width: 320px;
+            }
+            }
+            .head__logo  {
+                padding-left: 10px;
+            }
+        .map {
+            display: block;
+            padding-right: 10px;
+        }
+            .map {
+            display: block;
+        }
+        .menu-block {
+            display: none;
+        }
+            .map__portfolio,.map__about,.map__design,.map__marketing,.map__it,.map__copyright {
+            display: none;
+        }
+        .map__copyright {
+            display: inline;
+        }
+		.cost-calc {
+			display: block;
+		}
+            .copyright-text-add {
+                display: inline;
+            }
+            @media (max-width: 768px) {
+            .map {
+                display: none;
+            }
+            .menu-block {
+            display: flex;
+        }
+            .cost-calc {
+                display: none;
+            }
+            .contact-block {
+			display: block;
+		}
+        }
+        </style>
+	</head>
+    
+<body>
+    <div class="fullscreen">
+        <img class="fullscreen__background copyright" src="../../img/fullscreen/copyright.svg" alt="fullscreen picture">
+
+            <div class="container">
+                <div class="fullscreen__header">
+                    <header class="header">
+                        <div class="header__block">
+    <nav class="nav">
+        
+        <div class="head">
+            <a href="main.html"><div class="head__logo">
+                <img src="../img/logo/logo.svg" alt="logo">
+            </div></a>
+            <div class="head__burger-button" onclick="mshow()">
+                <img src="../img/buttons/menu-burger.svg" alt="menu">
+            </div>
+        </div>
+        
+        <div class="map">
+            <div class="map__list">
+                <a href="main.html">Main</a>
+                <a class="highlited-item map__portfolio" style="opacity: 1;" href="">/ Portfolio</a>
+                <a class="highlited-item map__about" style="opacity: 1;" href="">/ About Us</a>
+                <span class="map__services">
+                    <span class="map__slash">/</span>
+                    <a href="main.html#proposals" name="proposals" class=""> Services </a>
+                    <span class="map__slash">/</span>
+                </span>
+                <a class="highlited-item map__design" style="opacity: 1;" href="">Design</a>
+                <a class="highlited-item map__marketing" style="opacity: 1;" href="">Marketing</a>
+                <a class="highlited-item map__it" style="opacity: 1;" href="">IT</a>
+                <a class="highlited-item map__copyright" style="opacity: 1;" href="">Copyright</a>
+            </div>
+            <div class="color-line"></div>
+        </div>
+        <div class="menu-block">
+
+            <div class="head">
+                <div class="head__logo">
+                    <img src="../img/logo/logo.svg" alt="logo">
+                </div>
+                <div class="head__burger-button" onclick="mclose()">
+                    <img src="../img/buttons/menu-burger-close.svg" alt="menu">
+                </div>
+            </div>
+
+            <div class="menu ">
+                <ul class="menu__list">
+                    <li class="menu__item"><a data-goto = '.proposals-gt' href="#" onclick="mclose()">Services</a></li>
+                    <li class="menu__item"><a href="portfolio.html">Portfolio</a></li>
+                    <li class="menu__item"><a href="about.html">About Us</a></li>
+                    <li class="menu__item"><a data-goto='.contacts-gt' href="#" onclick="mclose()">Contact Us</a></li>
+                </ul>
+                <div class="color-line"></div>
+            </div>
+           
+            <!-- additional block for mobile view-->
+            <div class="mview ">
+                
+                <address class="mview__adress">
+                    <div class="mview__adress-description">Our contacts</div>
+                    <div class="mview__adress-number"><a href="tel:+995 558 92 54 73">+995 558 92 54 73</a></div>
+                    <div class="mview__adress-email"><a href="mailto:frostarius@workmail.com">frostarius@workmail.com</a></div>
+                </address>
+
+                <div class="mview__social">
+                    <ul class="mview__social-list">
+                        <li class="mview__social-item"><a target="_blank" href="https://www.behance.net/Frostarius">BEHANCE</a></li>
+                        <li class="mview__social-item"><a target="_blank" href="https://www.instagram.com/frostarius/">INSTAGRAM</a></li>
+                        <li class="mview__social-item"><a target="_blank" href="#">WHATSAPP</a></li>
+                        <li class="mview__social-item"><a target="_blank" href="https://www.facebook.com/frostarius">FACEBOOK</a></li>
+                        <li class="mview__social-item"><a target="_blank" href="https://www.linkedin.com/in/frostarius/">LINKEDIN</a></li>
+                        <li class="mview__social-item"><a target="_blank" href="https://t.me/Frostarius">TELEGRAM</a></li>
+                    </ul>
+                </div>
+
+                <div class="mview__footer">
+                    <div class="mview__logo">
+                        <img src="../img/logo/logo_small.svg" alt="logo">
+                    </div>
+                    <div class="mview__footer-description">
+                        <div class="mview__confidencial">Privacy Policy</div>
+                        <div class="mview__confidencial">Copyright @2022 "Frostarius studio"</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- additional block for mobile view //-->
+    </nav>
+</div>
+
+                    </header>
+                </div>
+                <div class="fullscreen__go-btn">
+                        <div  class="connect-btn">  
+    <a class = 'connect-btn__link' href="#">
+        <span >CONTACT US</span>
+        
+        <span  class="square">
+            <span  class="arrow"></span>
+        </span>
+    </a>
+</div>
+                </div>
+            </div>
+    </div>
+    <main>
+        <section class="advantages">
+            <div class="container">
+                <h1 class="advantages__title">What do you get by choosing us:</h1>
+                <ul class="advantages__list">
+                    <li class="advantages__item">
+                        <div class="advantages__item-img">
+                            <img src="../img/advantages/copyright/1.svg" alt="copyright picture">
+                        </div>
+                        <p class="advantages__item-text">
+									Creating demanded text that is meaningful, understandable and interesting for the audience in order to increase traffic
+                        </p>
+                    </li>
+                    <li class="advantages__item">
+                        <div class="advantages__item-img">
+                            <img src="../img/advantages/copyright/2.svg" alt="copyright picture">
+                        </div>
+                        <p class="advantages__item-text">
+                           Original text that will be interesting and understandable to the audience in order to increase traffic
+                        </p>
+                    </li>
+                    <li class="advantages__item">
+                        <div class="advantages__item-img">
+                            <img src="../img/advantages/copyright/3.svg" alt="copyright picture">
+                        </div>
+                        <p class="advantages__item-text">
+                           Competent and optimized articles written by professional authors will allow your site to take a leading position in search results.
+                        </p>
+                    </li>
+                    <li class="advantages__item">
+                        <div class="advantages__item-img">
+                            <img src="../img/advantages/copyright/4.svg" alt="copyright picture">
+                        </div>
+                        <p class="advantages__item-text">
+                           Unique texts and articles created by deep processing of materials of other authors in order to bring them to the level of original content.
+                        </p>
+                    </li>
+                    <li class="advantages__item">
+                        <div class="advantages__item-img">
+                            <img src="../img/advantages/copyright/5.svg" alt="copyright picture">
+                        </div>
+                        <p class="advantages__item-text">
+                           Creative approach with knowledge of effective marketing methods and techniques. Blog articles in a native style with high uniqueness to popularize the brand and channel.
+                        </p>
+                    </li>
+                    <li class="advantages__item">
+                        <div class="advantages__item-img">
+                            <img src="../img/advantages/copyright/6.svg" alt="copyright picture">
+                        </div>
+                        <p class="advantages__item-text">
+                           Text materials on almost any subject in English for placement on sites intended for an English-speaking audience.</p>
+                       
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+    <section class="projects">
+            <div class="container">
+  <div class="our-projects-block">
+    <div class="our-projects-block-component our-projects-block-top">
+      <span class="our-projects-block-text our-projects-block-text-top">Our works
+       
+    </span>
+      <div class="our-projects-block-images our-projects-block-images-top">
+        <img src="../img/ourwork/1.svg" width="54%" alt="картинка проект"/>
+        <img src="../img/ourwork/2.svg" width="42%" alt="картинка проект"/>
+      </div>
+    </div>
+    <div class="our-projects-block-component our-projects-block-bottom">
+      <div class="our-projects-block-images our-projects-block-images-bottom">
+        <img src="../img/ourwork/3.svg" width="42%" alt="картинка проект"/>
+        <img src="../img/ourwork/4.svg" width="54%" alt="картинка проект"/>
+      </div>
+      <a href="portfolio.html">
+        <div class="our-projects-block-text our-projects-block-text-bottom"> 
+          <a href="portfolio.html">
+            <span class="our-projects-block-text-span">View our works</span> </a>
+          <button class="our-projects-block-watch-button">→</button>
+          
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+        </section>
+        
+        <section  class="contact-block contacts-gt">
+    <div class="container">
+        <div  class="contacts">
+            <div class="adress-block">
+                <h3 class="adress-block__title form-title">Contact Us</h3>
+                <address class="adress-block__adress">
+                    <p class="tel"><a href="tel:+995558925473">+995 558 92 54 73</a></p>
+                    <p class="tel"><a href="tel:+995556748987">+995 556 74 89 87</a></p>
+                    <p class="mail"><a href="mailto:frostarius@workmail.com">frostarius@workmail.com</a></p>
+                </address>
+                <div class="adress-block__social">
+                    <ul class="adress-block__social-list">
+                        <li class="adress-block__social-item"><a href="https://www.instagram.com/frostarius/"><img src="../img/svgicons/instagram.svg" alt="instagram"></a></li>
+                        <li class="adress-block__social-item"><a href="https://www.facebook.com/frostarius"><img src="../img/svgicons/facebook.svg" alt="facebook"></a></li>
+                        <li class="adress-block__social-item"><a href="https://www.linkedin.com/in/frostarius/"><img src="../img/svgicons/linkedin.svg" alt="linkedin"></a></li>
+                        <li class="adress-block__social-item"><a href="https://t.me/Frostarius"><img src="../img/svgicons/telegram.svg" alt="telegram"></a></li>
+                        <li class="adress-block__social-item"><a href="https://instagram.com"><img src="../img/svgicons/whatsup.svg" alt="whatsup"></a></li>
+                        <li class="adress-block__social-item"><a href="https://www.behance.net/Frostarius"><img src="../img/svgicons/be.svg" alt="behance"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="request-form">
+                <div class="request-form__close-btn hidden">
+                    <img src="../img/buttons/close-square.svg" alt="close">
+                </div>
+                <div class="request-form__content">
+                    <div class="request-form__title _form-title">Leave a request</div>
+                    <div class="request-form__sub-title _form-sub-title">And we will contact you within 30 minutes</div>
+                    <div class="request-form__form">
+                        <form action="request-form" class="form" id="contact-form">
+                            <input	class="request-form__item form__item _req" placeholder="Name *" type="text" name="username" id="username">
+                            <input	class="request-form__item form__item _req" placeholder="Telephone number *" type="tel" name="usertel" id="usertel">
+                            <input	class="request-form__item form__item" placeholder="E-mail"type="email" name="usermail" id="usermail">
+                            <button class="request-form__button form__button" type="submit">Send</button>
+                        </form>
+                    </div>
+                    <div class="request-form__note note">By clicking on the button you agree with the privacy policy </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+<section class="cost-calc contacts-gt">
+    <div class="container">
+        <h3 class="cost-calc__title _form-title">
+            Leave a request to calculate<br/><span class="_form-sub-title">the cost of your project</span>
+        </h3>
+        <div class="cost-calc__form ">
+            <form action="#" class="form">
+                <input	class="cost-calc__item form__item _req" placeholder="Name *" type="text" name="userName" id="username">
+                <input	class="cost-calc__item form__item _req" placeholder="Telephone number *" type="number" name="userTel" id="usertel">
+                <input	class="cost-calc__item form__item" placeholder="E-mail"type="email" name="userMail" id="usermail">
+                <button class="cost-calc__button form__button" type="submit">Calculate</button>
+            </form>
+        </div>
+        <div class="request-form__note note">By clicking on the button you agree with the privacy policy </div>
+    </div>
+</section>
+	</main>
+	<footer class="footer">
+    <div class="container">
+        <div class="footer__content">
+            <div class="footer__logo">
+                <img src="../img/logo/logo_small.svg" alt="logo">
+            </div>
+            <nav class="footer__menu">
+                <ul class="footer__menu-list">
+                    <li class="footer__menu-item">
+                        <a href="it.html">IT</a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a href="marketing.html">Marketing</a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a href="design.html">Design</a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a href="copyright.html">Copyright</a>
+                    </li>
+                    <li class="footer__menu-itemc">
+                        <select name="lang-select" id="lang-select">
+                            <option value="EN">EN</option>
+                            <option value="RU">RU</option>
+                        </select>
+                    </li>
+                </ul>
+            </nav>
+            <div class="footer__confidential">
+                Privacy Policy<br />
+                Copyright © 2022  «Frostarius Studio»
+            </div>
+        </div>
+    </div>
+    <div class="cover"></div>
+</footer>
+
+</body> 
+
+</html>

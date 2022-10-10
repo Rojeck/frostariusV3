@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../css/style.min.css">
+	<title>Main</title>
+	<script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+	<script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<script defer src="../js/app.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+	<script type="text/javascript">
+		
+
+        (function() {
+            emailjs.init('xYfxmlDugTPe5ZvtX');
+        })();
+    </script>
+
+	<script>
+	function mshow() {
+		const	mview = document.querySelector('.menu-block');
+				mview.style.left = '0';
+			}
+	function mclose() {
+		const	mview = document.querySelector('.menu-block');
+				mview.style.left = '-1000px';
+			}
+	</script>
+	
+		<style>
+			.map {
+				display: none;
+			}
+			.projects {
+				padding: 90px 0;
+			}
+			@media (max-width: 670px) {
+				.projects {
+					padding: 50px 0;
+				}
+			}
+			.contact-block {
+				display: block;
+			}
+			.cost-calc {
+				display: none;
+			}
+		</style>
+	</head>
+	
+	
+	
+	
+<body >
+	
+	<header class="header">
+		<div class="container">
+			<div class="header__block">
+    <nav class="nav">
+        
+        <div class="head">
+            <a href="main.html"><div class="head__logo">
+                <img src="../img/logo/logo.svg" alt="logo">
+            </div></a>
+            <div class="head__burger-button" onclick="mshow()">
+                <img src="../img/buttons/menu-burger.svg" alt="menu">
+            </div>
+        </div>
+        
+        <div class="map">
+            <div class="map__list">
+                <a href="main.html">Main</a>
+                <a class="highlited-item map__portfolio" style="opacity: 1;" href="">/ Portfolio</a>
+                <a class="highlited-item map__about" style="opacity: 1;" href="">/ About Us</a>
+                <span class="map__services">
+                    <span class="map__slash">/</span>
+                    <a href="main.html#proposals" name="proposals" class=""> Services </a>
+                    <span class="map__slash">/</span>
+                </span>
+                <a class="highlited-item map__design" style="opacity: 1;" href="">Design</a>
+                <a class="highlited-item map__marketing" style="opacity: 1;" href="">Marketing</a>
+                <a class="highlited-item map__it" style="opacity: 1;" href="">IT</a>
+                <a class="highlited-item map__copyright" style="opacity: 1;" href="">Copyright</a>
+            </div>
+            <div class="color-line"></div>
+        </div>
+        <div class="menu-block">
+
+            <div class="head">
+                <div class="head__logo">
+                    <img src="../img/logo/logo.svg" alt="logo">
+                </div>
+                <div class="head__burger-button" onclick="mclose()">
+                    <img src="../img/buttons/menu-burger-close.svg" alt="menu">
+                </div>
+            </div>
+
+            <div class="menu ">
+                <ul class="menu__list">
+                    <li class="menu__item"><a data-goto = '.proposals-gt' href="#" onclick="mclose()">Services</a></li>
+                    <li class="menu__item"><a href="portfolio.html">Portfolio</a></li>
+                    <li class="menu__item"><a href="about.html">About Us</a></li>
+                    <li class="menu__item"><a data-goto='.contacts-gt' href="#" onclick="mclose()">Contact Us</a></li>
+                </ul>
+                <div class="color-line"></div>
+            </div>
+           
+            <!-- additional block for mobile view-->
+            <div class="mview ">
+                
+                <address class="mview__adress">
+                    <div class="mview__adress-description">Our contacts</div>
+                    <div class="mview__adress-number"><a href="tel:+995 558 92 54 73">+995 558 92 54 73</a></div>
+                    <div class="mview__adress-email"><a href="mailto:frostarius@workmail.com">frostarius@workmail.com</a></div>
+                </address>
+
+                <div class="mview__social">
+                    <ul class="mview__social-list">
+                        <li class="mview__social-item"><a target="_blank" href="https://www.behance.net/Frostarius">BEHANCE</a></li>
+                        <li class="mview__social-item"><a target="_blank" href="https://www.instagram.com/frostarius/">INSTAGRAM</a></li>
+                        <li class="mview__social-item"><a target="_blank" href="#">WHATSAPP</a></li>
+                        <li class="mview__social-item"><a target="_blank" href="https://www.facebook.com/frostarius">FACEBOOK</a></li>
+                        <li class="mview__social-item"><a target="_blank" href="https://www.linkedin.com/in/frostarius/">LINKEDIN</a></li>
+                        <li class="mview__social-item"><a target="_blank" href="https://t.me/Frostarius">TELEGRAM</a></li>
+                    </ul>
+                </div>
+
+                <div class="mview__footer">
+                    <div class="mview__logo">
+                        <img src="../img/logo/logo_small.svg" alt="logo">
+                    </div>
+                    <div class="mview__footer-description">
+                        <div class="mview__confidencial">Privacy Policy</div>
+                        <div class="mview__confidencial">Copyright @2022 "Frostarius studio"</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- additional block for mobile view //-->
+    </nav>
+</div>
+
+		</div>
+	</header>
+		<main class="main">
+			<section class="preview">
+				<div class="container">
+					<div class="preview__content">
+						<div class="preview__title-block">
+							<h1 class="preview__title"><span>Web</span> <span>studio</span></h1>
+							<div class="color-line"></div>
+						</div>
+						<p class="preview__desc-thick">
+							is a well-established machine for the production of high-quality content for all types of media businesses in any format: text, audio, video, animation. </p>
+						</div>
+						<div class="preview__btn-block ">
+							<div  class="connect-btn">  
+    <a class = 'connect-btn__link' href="#">
+        <span >CONTACT US</span>
+        
+        <span  class="square">
+            <span  class="arrow"></span>
+        </span>
+    </a>
+</div>
+						</div>
+						<p class="preview__desc-wide">If you want to bring your business to the market, make a high-quality rebranding, optimise the operation of a resource, create a business from scratch, or gain additional competitive advantages,
+then we are the ones you need.</span>
+							</p>
+					</div>
+				</div>
+			</section>
+			
+			<section class="proposals proposals-gt" id="proposals">
+				<div class="container">
+					<h2 class="proposals__title">What do we offer?</h2>
+				<div class="proposals__content">
+					<ul class="proposals__list slider">
+						<li class="p-item"><a href="design.html">
+							<div class="p-item__content">
+								<div class="p-item__title">Design</div>
+								<ul class="p-item__list ">
+									<li class="p-item__list-item">
+										Websites
+									</li>
+									<li class="p-item__list-item">
+										Logos
+									</li>
+									<li class="p-item__list-item">
+										Product design
+									</li>
+									<li class="p-item__list-item">
+										Mobile apps
+									</li>
+									<li class="p-item__list-item">
+										BrandBook
+									</li>
+									<li class="p-item__list-item">
+										Landings
+									</li>
+								</ul>
+							</div>
+						</a></li>
+						<li class="p-item"><a href="marketing.html">
+							<div class="p-item__content">
+								<div class="p-item__title">Marketing</div>
+								<ul class="p-item__list">
+									<li class="p-item__list-item">
+										SMM
+									</li>
+									<li class="p-item__list-item">
+										SEO
+									</li>
+									<li class="p-item__list-item">
+										Sales and lead generation
+									</li>
+									<li class="p-item__list-item">
+										Comprehensive brand promotion
+									</li>
+									<li class="p-item__list-item">
+										contextual advertising
+									</li>
+								</ul>
+							</div>
+						</a></li>
+						<li class="p-item"><a href="it.html">
+							<div class="p-item__content">
+								<div class="p-item__title">IT</div>
+								<ul class="p-item__list">
+									<li class="p-item__list-item">
+										Turnkey websites
+									</li>
+									<li class="p-item__list-item">
+										Applications for ios and android
+									</li>
+									<li class="p-item__list-item">
+										Bots
+									</li>
+									<li class="p-item__list-item">
+										Data parsing
+									</li>
+									<li class="p-item__list-item">
+										Soft
+									</li>
+									<li class="p-item__list-item">
+										Digital systems
+									</li>
+								</ul>
+							</div>
+						</a></li>
+						<li class="p-item"><a href="copyright.html">
+							<div class="p-item__content">
+								<div class="p-item__title">COPYRIGHT</div>
+								<ul class="p-item__list">
+									<li class="p-item__list-item">
+										Selling
+									</li>
+									<li class="p-item__list-item">
+										Marketing
+									</li>
+									<li class="p-item__list-item">
+										creative
+									</li>
+									<li class="p-item__list-item">
+										SEO
+									</li>
+									<li class="p-item__list-item">
+										LSI 
+									</li>
+									<li class="p-item__list-item">
+										Technical
+									</li>
+								</ul>
+							</div>
+						</a></li>
+					</ul>
+				</div></div>
+			</section>
+			<section class="projects">
+				<div class="container">
+  <div class="our-projects-block">
+    <div class="our-projects-block-component our-projects-block-top">
+      <span class="our-projects-block-text our-projects-block-text-top">Our works
+       
+    </span>
+      <div class="our-projects-block-images our-projects-block-images-top">
+        <img src="../img/ourwork/1.svg" width="54%" alt="картинка проект"/>
+        <img src="../img/ourwork/2.svg" width="42%" alt="картинка проект"/>
+      </div>
+    </div>
+    <div class="our-projects-block-component our-projects-block-bottom">
+      <div class="our-projects-block-images our-projects-block-images-bottom">
+        <img src="../img/ourwork/3.svg" width="42%" alt="картинка проект"/>
+        <img src="../img/ourwork/4.svg" width="54%" alt="картинка проект"/>
+      </div>
+      <a href="portfolio.html">
+        <div class="our-projects-block-text our-projects-block-text-bottom"> 
+          <a href="portfolio.html">
+            <span class="our-projects-block-text-span">View our works</span> </a>
+          <button class="our-projects-block-watch-button">→</button>
+          
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+			</section>
+			<section class="guarantees">
+				<div class="container">
+					<h3 class="guarantees__title">Why do they trust us?</h3>
+					<div class="pros">
+						
+						<ul class="pros__list">
+							<li class="pros__item">
+								<span class="number">1</span>
+								<p class="text">
+									We analyze the target audience and long-term strategy
+								</p>
+							</li>
+							<li class="pros__item">
+								<span class="number">2</span>
+								<p class="text">We develop the most algorithmic and automated promotion tactics </p>
+							</li>
+							<li class="pros__item">
+								<span class="number">3</span>
+								<p class="text">We help to develop a recognizable image, delve into your business to get the maximum result</p>
+							</li>
+							<li class="pros__item">
+								<span class="number">4</span>
+								<p class="text">We identify the most effective methods of working with clients</p>
+							</li>
+						</ul>
+					</div>
+					<div class="sub-description">
+						<div class="color-line"></div>
+						<div class="sub-description__content">
+							<p class="sub-description__content-item" >We find a comprehensive solution for each project.</p> 
+							<p class="sub-description__content-item item-left">All this helps the client to unlock the commercial potential and reach new heights.</p>
+						</div>
+						<div class="color-line"></div>
+					</div>
+					<div class="description">
+						<div class="description__graphic-block">
+							<div class="description__graphic">
+								<div class="description__arrow">⟶</div>
+							</div>
+						</div>
+						<div class="description__content-block">
+							<p><strong>Frostarius </strong>is on the market recently, but the quality of our work is constantly growing, with each order we increase our productivity and reduce the time indicator.</p>
+							<p>Frostarius Studio provides you with full cycle services for marketing, designing IT solutions, information assistance at the stage of their implementation. As well as developing functional websites for mobile applications, designing competent interfaces, implementing and automating complex business processes. 
+							</p>
+							<p><strong>Make your success inevitable !</strong></p>
+						</div>
+					</div>
+				</div>
+			</section>
+		<section  class="contact-block contacts-gt">
+    <div class="container">
+        <div  class="contacts">
+            <div class="adress-block">
+                <h3 class="adress-block__title form-title">Contact Us</h3>
+                <address class="adress-block__adress">
+                    <p class="tel"><a href="tel:+995558925473">+995 558 92 54 73</a></p>
+                    <p class="tel"><a href="tel:+995556748987">+995 556 74 89 87</a></p>
+                    <p class="mail"><a href="mailto:frostarius@workmail.com">frostarius@workmail.com</a></p>
+                </address>
+                <div class="adress-block__social">
+                    <ul class="adress-block__social-list">
+                        <li class="adress-block__social-item"><a href="https://www.instagram.com/frostarius/"><img src="../img/svgicons/instagram.svg" alt="instagram"></a></li>
+                        <li class="adress-block__social-item"><a href="https://www.facebook.com/frostarius"><img src="../img/svgicons/facebook.svg" alt="facebook"></a></li>
+                        <li class="adress-block__social-item"><a href="https://www.linkedin.com/in/frostarius/"><img src="../img/svgicons/linkedin.svg" alt="linkedin"></a></li>
+                        <li class="adress-block__social-item"><a href="https://t.me/Frostarius"><img src="../img/svgicons/telegram.svg" alt="telegram"></a></li>
+                        <li class="adress-block__social-item"><a href="https://instagram.com"><img src="../img/svgicons/whatsup.svg" alt="whatsup"></a></li>
+                        <li class="adress-block__social-item"><a href="https://www.behance.net/Frostarius"><img src="../img/svgicons/be.svg" alt="behance"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="request-form">
+                <div class="request-form__close-btn hidden">
+                    <img src="../img/buttons/close-square.svg" alt="close">
+                </div>
+                <div class="request-form__content">
+                    <div class="request-form__title _form-title">Leave a request</div>
+                    <div class="request-form__sub-title _form-sub-title">And we will contact you within 30 minutes</div>
+                    <div class="request-form__form">
+                        <form action="request-form" class="form" id="contact-form">
+                            <input	class="request-form__item form__item _req" placeholder="Name *" type="text" name="username" id="username">
+                            <input	class="request-form__item form__item _req" placeholder="Telephone number *" type="tel" name="usertel" id="usertel">
+                            <input	class="request-form__item form__item" placeholder="E-mail"type="email" name="usermail" id="usermail">
+                            <button class="request-form__button form__button" type="submit">Send</button>
+                        </form>
+                    </div>
+                    <div class="request-form__note note">By clicking on the button you agree with the privacy policy </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+<section class="cost-calc contacts-gt">
+    <div class="container">
+        <h3 class="cost-calc__title _form-title">
+            @@ctitle<br/><span class="_form-sub-title">@@csubtitle</span>
+        </h3>
+        <div class="cost-calc__form ">
+            <form action="#" class="form">
+                <input	class="cost-calc__item form__item _req" placeholder="Name *" type="text" name="userName" id="username">
+                <input	class="cost-calc__item form__item _req" placeholder="Telephone number *" type="number" name="userTel" id="usertel">
+                <input	class="cost-calc__item form__item" placeholder="E-mail"type="email" name="userMail" id="usermail">
+                <button class="cost-calc__button form__button" type="submit">@@sendbutton</button>
+            </form>
+        </div>
+        <div class="request-form__note note">By clicking on the button you agree with the privacy policy </div>
+    </div>
+</section>
+		</main>
+		<footer class="footer">
+    <div class="container">
+        <div class="footer__content">
+            <div class="footer__logo">
+                <img src="../img/logo/logo_small.svg" alt="logo">
+            </div>
+            <nav class="footer__menu">
+                <ul class="footer__menu-list">
+                    <li class="footer__menu-item">
+                        <a href="it.html">IT</a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a href="marketing.html">Marketing</a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a href="design.html">Design</a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a href="copyright.html">Copyright</a>
+                    </li>
+                    <li class="footer__menu-itemc">
+                        <select name="lang-select" id="lang-select">
+                            <option value="EN">EN</option>
+                            <option value="RU">RU</option>
+                        </select>
+                    </li>
+                </ul>
+            </nav>
+            <div class="footer__confidential">
+                Privacy Policy<br />
+                Copyright © 2022  «Frostarius Studio»
+            </div>
+        </div>
+    </div>
+    <div class="cover"></div>
+</footer>
+	
+		
+</body>
+</html>
