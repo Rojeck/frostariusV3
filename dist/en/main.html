@@ -1,71 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		
+<html lang="ru">
+  <head>
+    
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<link rel="stylesheet" href="../css/style.min.css">
 	<title>Main</title>
-	<script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
+	<link rel="shortcut icon" type="image/png" href="../img/logo/favico.png">
 	<script defer src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-	<script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 	<script defer src="../js/app.min.js"></script>
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
-	<script type="text/javascript">
-		
-
-        (function() {
-            emailjs.init('xYfxmlDugTPe5ZvtX');
-        })();
-    </script>
-
+	<script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
 	<script>
 	function mshow() {
 		const	mview = document.querySelector('.menu-block');
-				mview.style.left = '0';
+				document.querySelector('.wrapper').classList.add('overflow-hidden');
+				mview.style.left = '0%';
+				
 			}
 	function mclose() {
 		const	mview = document.querySelector('.menu-block');
-				mview.style.left = '-1000px';
+				document.querySelector('.wrapper').classList.remove('overflow-hidden');
+				mview.style.left = '-100%';
 			}
 	</script>
 	
-		<style>
-			.map {
-				display: none;
-			}
-			.projects {
-				padding: 90px 0;
-			}
-			@media (max-width: 670px) {
-				.projects {
-					padding: 50px 0;
-				}
-			}
-			.contact-block {
-				display: block;
-			}
-			.cost-calc {
-				display: none;
-			}
-		</style>
-	</head>
-	
-	
-	
-	
-<body >
-	
-	<header class="header">
-		<div class="container">
-			<div class="header__block">
+    <style>
+      .map {
+        display: none;
+      }
+      .trust {
+        padding-top: 0;
+      }
+      .trust .container {
+        max-width: 1340px;
+      }
+      .swiper-slide {
+  height: auto;
+}
+    </style>
+    <script defer src="../js/titl.js"></script>
+  </head>
+  <body>
+    
+    <div class="wrapper overflow-hidden">
+      <div class="preloader">
+        <div class="loadingio-spinner-rolling-pqw8hj4rez">
+          <div class="ldio-rklc9w8a3r7">
+            <div></div>
+          </div>
+        </div>
+      </div>
+      <header class="header">
+        <div class="container"><div class="header__block">
     <nav class="nav">
-        
         <div class="head">
             <a href="main.html"><div class="head__logo">
-                <img src="../img/logo/logo.svg" alt="logo">
+                <img src="../img/logo/logo.webp" alt="logo">
             </div></a>
             <div class="head__burger-button" onclick="mshow()">
                 <img src="../img/buttons/menu-burger.svg" alt="menu">
@@ -74,357 +66,875 @@
         
         <div class="map">
             <div class="map__list">
-                <a href="main.html">Main</a>
-                <a class="highlited-item map__portfolio" style="opacity: 1;" href="">/ Portfolio</a>
-                <a class="highlited-item map__about" style="opacity: 1;" href="">/ About Us</a>
+                <a href="main.html">Главная</a>
+                <a class="highlited-item map__portfolio" style="opacity: 1;" href="">/ Порфолио</a>
+                <a class="highlited-item map__about" style="opacity: 1;" href="">/ О компании</a>
                 <span class="map__services">
                     <span class="map__slash">/</span>
-                    <a href="main.html#proposals" name="proposals" class=""> Services </a>
+                    <a href="main.html#proposals" name="proposals" class=""> Услуги </a>
                     <span class="map__slash">/</span>
                 </span>
-                <a class="highlited-item map__design" style="opacity: 1;" href="">Design</a>
-                <a class="highlited-item map__marketing" style="opacity: 1;" href="">Marketing</a>
+                <a class="highlited-item map__design" style="opacity: 1;" href="">Дизайн</a>
+                <a class="highlited-item map__marketing" style="opacity: 1;" href="">Маркетинг</a>
                 <a class="highlited-item map__it" style="opacity: 1;" href="">IT</a>
-                <a class="highlited-item map__copyright" style="opacity: 1;" href="">Copyright</a>
+                <a class="highlited-item map__copyright" style="opacity: 1;" href="">Копирайтинг</a>
             </div>
             <div class="color-line"></div>
         </div>
+        
         <div class="menu-block">
-
-            <div class="head">
-                <div class="head__logo">
-                    <img src="../img/logo/logo.svg" alt="logo">
-                </div>
-                <div class="head__burger-button" onclick="mclose()">
-                    <img src="../img/buttons/menu-burger-close.svg" alt="menu">
-                </div>
-            </div>
-
-            <div class="menu ">
-                <ul class="menu__list">
-                    <li class="menu__item"><a data-goto = '.proposals-gt' href="#" onclick="mclose()">Services</a></li>
-                    <li class="menu__item"><a href="portfolio.html">Portfolio</a></li>
-                    <li class="menu__item"><a href="about.html">About Us</a></li>
-                    <li class="menu__item"><a data-goto='.contacts-gt' href="#" onclick="mclose()">Contact Us</a></li>
-                </ul>
-                <div class="color-line"></div>
-            </div>
-           
-            <!-- additional block for mobile view-->
-            <div class="mview ">
-                
-                <address class="mview__adress">
-                    <div class="mview__adress-description">Our contacts</div>
-                    <div class="mview__adress-number"><a href="tel:+995 558 92 54 73">+995 558 92 54 73</a></div>
-                    <div class="mview__adress-email"><a href="mailto:frostarius@workmail.com">frostarius@workmail.com</a></div>
-                </address>
-
-                <div class="mview__social">
-                    <ul class="mview__social-list">
-                        <li class="mview__social-item"><a target="_blank" href="https://www.behance.net/Frostarius">BEHANCE</a></li>
-                        <li class="mview__social-item"><a target="_blank" href="https://www.instagram.com/frostarius/">INSTAGRAM</a></li>
-                        <li class="mview__social-item"><a target="_blank" href="#">WHATSAPP</a></li>
-                        <li class="mview__social-item"><a target="_blank" href="https://www.facebook.com/frostarius">FACEBOOK</a></li>
-                        <li class="mview__social-item"><a target="_blank" href="https://www.linkedin.com/in/frostarius/">LINKEDIN</a></li>
-                        <li class="mview__social-item"><a target="_blank" href="https://t.me/Frostarius">TELEGRAM</a></li>
-                    </ul>
-                </div>
-
-                <div class="mview__footer">
-                    <div class="mview__logo">
-                        <img src="../img/logo/logo_small.svg" alt="logo">
+                    <div class="container">
+                        <div class="head">
+                            <div class="head__logo">
+                                <img src="../img/logo/logo.webp" alt="logo">
+                            </div>
+                            <div class="head__burger-button" onclick="mclose()">
+                                <img src="../img/buttons/menu-burger-close.svg" alt="menu">
+                            </div>
+                        </div>
                     </div>
-                    <div class="mview__footer-description">
-                        <div class="mview__confidencial">Privacy Policy</div>
-                        <div class="mview__confidencial">Copyright @2022 "Frostarius studio"</div>
+                <div class="menu ">
+                    <div class="container">
+                        <ul class="menu__list">
+                            <li class="menu__item"><a data-goto = '.proposals-gt' href="main.html#proposals" onclick="mclose()">Услуги</a></li>
+                            <li class="menu__item"><a href="portfolio.html">Портфолио</a></li>
+                            <li class="menu__item"><a href="about.html">О компании</a></li>
+                            <li class="menu__item"><a data-goto='.contacts-gt' href="#" onclick="mclose()">Контакты</a></li>
+                        </ul>
+                        <div class="color-line"></div>
                     </div>
-
                 </div>
-            </div>
+               
+                <!-- additional block for mobile view-->
+                <div class="mview ">
+
+                        <div class="container">
+                            <address class="mview__adress">
+                                <div class="mview__adress-description">Наши контакты</div>
+                                <div class="mview__adress-number"><a href="tel:+995 558 92 54 73">+995 558 92 54 73</a></div>
+                                <div class="mview__adress-email"><a href="mailto:frostarius@workmail.com">frostarius@workmail.com</a></div>
+                            </address>
+            
+                            <div class="mview__social">
+                                <ul class="mview__social-list">
+                                    <li class="mview__social-item"><a target="_blank" href="https://www.behance.net/Frostarius">BEHANCE</a></li>
+                                    <li class="mview__social-item"><a target="_blank" href="https://www.instagram.com/frostarius/">INSTAGRAM</a></li>
+                                    <li class="mview__social-item"><a target="_blank" href="#">WHATSAPP</a></li>
+                                    <li class="mview__social-item"><a target="_blank" href="https://www.facebook.com/frostarius">FACEBOOK</a></li>
+                                    <li class="mview__social-item"><a target="_blank" href="https://www.linkedin.com/in/frostarius/">LINKEDIN</a></li>
+                                    <li class="mview__social-item"><a target="_blank" href="https://t.me/Frostarius">TELEGRAM</a></li>
+                                </ul>
+                            </div>  
+                        </div>
+                </div>
         </div>
+        
         <!-- additional block for mobile view //-->
     </nav>
 </div>
-
-		</div>
-	</header>
-		<main class="main">
-			<section class="preview">
-				<div class="container">
-					<div class="preview__content">
-						<div class="preview__title-block">
-							<h1 class="preview__title"><span>Web</span> <span>studio</span></h1>
-							<div class="color-line"></div>
-						</div>
-						<p class="preview__desc-thick">
-							is a well-established machine for the production of high-quality content for all types of media businesses in any format: text, audio, video, animation. </p>
-						</div>
-						<div class="preview__btn-block ">
-							<div  class="connect-btn">  
-    <a class = 'connect-btn__link' href="#">
-        <span >CONTACT US</span>
-        
-        <span  class="square">
-            <span  class="arrow"></span>
-        </span>
-    </a>
 </div>
-						</div>
-						<p class="preview__desc-wide">If you want to bring your business to the market, make a high-quality rebranding, optimise the operation of a resource, create a business from scratch, or gain additional competitive advantages,
-then we are the ones you need.</span>
-							</p>
-					</div>
-				</div>
-			</section>
-			
-			<section class="proposals proposals-gt" id="proposals">
-				<div class="container">
-					<h2 class="proposals__title">What do we offer?</h2>
-				<div class="proposals__content">
-					<ul class="proposals__list slider">
-						<li class="p-item"><a href="design.html">
-							<div class="p-item__content">
-								<div class="p-item__title">Design</div>
-								<ul class="p-item__list ">
-									<li class="p-item__list-item">
-										Websites
-									</li>
-									<li class="p-item__list-item">
-										Logos
-									</li>
-									<li class="p-item__list-item">
-										Product design
-									</li>
-									<li class="p-item__list-item">
-										Mobile apps
-									</li>
-									<li class="p-item__list-item">
-										BrandBook
-									</li>
-									<li class="p-item__list-item">
-										Landings
-									</li>
-								</ul>
-							</div>
-						</a></li>
-						<li class="p-item"><a href="marketing.html">
-							<div class="p-item__content">
-								<div class="p-item__title">Marketing</div>
-								<ul class="p-item__list">
-									<li class="p-item__list-item">
-										SMM
-									</li>
-									<li class="p-item__list-item">
-										SEO
-									</li>
-									<li class="p-item__list-item">
-										Sales and lead generation
-									</li>
-									<li class="p-item__list-item">
-										Comprehensive brand promotion
-									</li>
-									<li class="p-item__list-item">
-										contextual advertising
-									</li>
-								</ul>
-							</div>
-						</a></li>
-						<li class="p-item"><a href="it.html">
-							<div class="p-item__content">
-								<div class="p-item__title">IT</div>
-								<ul class="p-item__list">
-									<li class="p-item__list-item">
-										Turnkey websites
-									</li>
-									<li class="p-item__list-item">
-										Applications for ios and android
-									</li>
-									<li class="p-item__list-item">
-										Bots
-									</li>
-									<li class="p-item__list-item">
-										Data parsing
-									</li>
-									<li class="p-item__list-item">
-										Soft
-									</li>
-									<li class="p-item__list-item">
-										Digital systems
-									</li>
-								</ul>
-							</div>
-						</a></li>
-						<li class="p-item"><a href="copyright.html">
-							<div class="p-item__content">
-								<div class="p-item__title">COPYRIGHT</div>
-								<ul class="p-item__list">
-									<li class="p-item__list-item">
-										Selling
-									</li>
-									<li class="p-item__list-item">
-										Marketing
-									</li>
-									<li class="p-item__list-item">
-										creative
-									</li>
-									<li class="p-item__list-item">
-										SEO
-									</li>
-									<li class="p-item__list-item">
-										LSI 
-									</li>
-									<li class="p-item__list-item">
-										Technical
-									</li>
-								</ul>
-							</div>
-						</a></li>
-					</ul>
-				</div></div>
-			</section>
-			<section class="projects">
-				<div class="container">
-  <div class="our-projects-block">
-    <div class="our-projects-block-component our-projects-block-top">
-      <span class="our-projects-block-text our-projects-block-text-top">Our works
-       
+      </header>
+      <main class="main">
+        <section class="preview">
+          <div class="container">
+            <div class="preview__content">
+              <div class="preview__title-block">
+                <h1 class="preview__title">
+                  <span>Web</span> <span>studio</span>
+                </h1>
+                <div class="color-line"></div>
+              </div>
+              <p class="preview__desc-thick">
+                это отлаженная машина по производству качественного контента для
+                всех видов медиа бизнеса в любом формате: текстовом, аудио,
+                видео, анимационном.
+              </p>
+            </div>
+            <div class="preview__btn-block">
+              <div
+                class="button-block-link go-up-blink"
+                data-goto="#gt-contacts"
+              >
+                <div  class="connect-btn go-up-btn " >  
+    <span class = 'connect-btn__link' href="#">
+        <span data-goto="#gt-contacts" >СВЯЗАТЬСЯ С НАМИ</span>
+        <span  data-goto="#gt-contacts" class="square">
+            <span data-goto="#gt-contacts"  class="arrow"></span>
+        </span>
     </span>
+</div>
+
+
+              </div>
+            </div>
+            <p class="preview__desc-wide">
+              Если Вы хотите вывести бизнес на рынок, сделать качественный
+              ребрендинг, оптимизировать работу ресурса, создать бизнес с нуля
+              или просто получить дополнительные конкурентные преимущества,
+              <br />
+              тогда нам по пути.
+            </p>
+          </div>
+        </section>
+        <section class="proposals proposals-gt" id="proposals">
+          <div class="container">
+            <h2 class="proposals__title section-title">
+              Что мы вам предлагаем?
+            </h2>
+            <div class="cards-container cards-slider swiper-container">
+              <div class="cards swiper-wrapper">
+                <a href="./it.html" class="card swiper-slide">
+                  <div class="card__body">
+                    <div class="card__background-wrapper">
+                      <div class="card__content">
+                        <h2 class="card__title">IT</h2>
+                  <div class="card__item">
+                    <img
+                      loading="lazy"
+                      src="../img/cards/0/card-item__img.png"
+                      alt="picture"
+                      class="card-item__img"
+                    />
+                    <div class="card-item__circle"></div>
+                    <p class="card-item__text">Сайты под ключ</p>
+                  </div>
+                  <div class="card__item">
+                    <img
+                      loading="lazy"
+                      src="../img/cards/0/card-item__img.png"
+                      alt="picture"
+                      class="card-item__img"
+                    />
+                    <div class="card-item__circle"></div>
+                    <p class="card-item__text">Приложения для ios и android</p>
+                  </div>
+                  <div class="card__item">
+                    <img
+                      loading="lazy"
+                      src="../img/cards/0/card-item__img.png"
+                      alt="picture"
+                      class="card-item__img"
+                    />
+                    <div class="card-item__circle"></div>
+                    <p class="card-item__text">Боты</p>
+                  </div>
+                  <div class="card__item">
+                    <img
+                      loading="lazy"
+                      src="../img/cards/0/card-item__img.png"
+                      alt="picture"
+                      class="card-item__img"
+                    />
+                    <div class="card-item__circle"></div>
+                    <p class="card-item__text">Парсинг данных</p>
+                  </div>
+                  <div class="card__item">
+                    <img
+                      loading="lazy"
+                      src="../img/cards/0/card-item__img.png"
+                      alt="picture"
+                      class="card-item__img"
+                    />
+                    <div class="card-item__circle"></div>
+                    <p class="card-item__text">Софт</p>
+                  </div>
+                  <div class="card__item">
+                    <img
+                      loading="lazy"
+                      src="../img/cards/0/card-item__img.png"
+                      alt="picture"
+                      class="card-item__img"
+                    />
+                    <div class="card-item__circle"></div>
+                    <p class="card-item__text">Цифровые системы</p>
+                  </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <a href="./marketing.html" class="card swiper-slide">
+                  <div class="card__body">
+                    <div class="card__background-wrapper">
+                      <div class="card__content">
+                        <h2 class="card__title">Marketing</h2>
+                  <div class="card__item">
+                    <img
+                      loading="lazy"
+                      src="../img/cards/1/card-item__img.png"
+                      alt="picture"
+                      class="card-item__img"
+                    />
+                    <div class="card-item__circle"></div>
+                    <p class="card-item__text">SMM</p>
+                  </div>
+                  <div class="card__item">
+                    <img
+                      loading="lazy"
+                      src="../img/cards/1/card-item__img.png"
+                      alt="picture"
+                      class="card-item__img"
+                    />
+                    <div class="card-item__circle"></div>
+                    <p class="card-item__text">SEO</p>
+                  </div>
+                  <div class="card__item">
+                    <img
+                      loading="lazy"
+                      src="../img/cards/1/card-item__img.png"
+                      alt="picture"
+                      class="card-item__img"
+                    />
+                    <div class="card-item__circle"></div>
+                    <p class="card-item__text">Продажа и генерация лидов</p>
+                  </div>
+                  <div class="card__item">
+                    <img
+                      loading="lazy"
+                      src="../img/cards/1/card-item__img.png"
+                      alt="picture"
+                      class="card-item__img"
+                    />
+                    <div class="card-item__circle"></div>
+                    <p class="card-item__text">
+                      Комплексное продвижение бренда
+                    </p>
+                  </div>
+                  <div class="card__item">
+                    <img
+                      loading="lazy"
+                      src="../img/cards/1/card-item__img.png"
+                      alt="picture"
+                      class="card-item__img"
+                    />
+                    <div class="card-item__circle"></div>
+                    <p class="card-item__text">Контекстная реклама</p>
+                  </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <a href="./design.html" class="card swiper-slide">
+                  <div class="card__body">
+                    <div class="card__background-wrapper">
+                      <div class="card__content">
+                        <h2 class="card__title">Design</h2>
+                  <div class="card__item">
+                    <img
+                      loading="lazy"
+                      src="../img/cards/2/card-item__img.png"
+                      alt="picture"
+                      class="card-item__img"
+                    />
+                    <div class="card-item__circle"></div>
+                    <p class="card-item__text">Сайты</p>
+                  </div>
+                  <div class="card__item">
+                    <img
+                      loading="lazy"
+                      src="../img/cards/2/card-item__img.png"
+                      alt="picture"
+                      class="card-item__img"
+                    />
+                    <div class="card-item__circle"></div>
+                    <p class="card-item__text">Логотипы</p>
+                  </div>
+                  <div class="card__item">
+                    <img
+                      loading="lazy"
+                      src="../img/cards/2/card-item__img.png"
+                      alt="picture"
+                      class="card-item__img"
+                    />
+                    <div class="card-item__circle"></div>
+                    <p class="card-item__text">Мобильные приложения</p>
+                  </div>
+                  <div class="card__item">
+                    <img
+                      loading="lazy"
+                      src="../img/cards/2/card-item__img.png"
+                      alt="picture"
+                      class="card-item__img"
+                    />
+                    <div class="card-item__circle"></div>
+                    <p class="card-item__text">BrandBook</p>
+                  </div>
+                  <div class="card__item">
+                    <img
+                      loading="lazy"
+                      src="../img/cards/2/card-item__img.png"
+                      alt="picture"
+                      class="card-item__img"
+                    />
+                    <div class="card-item__circle"></div>
+                    <p class="card-item__text">Лендинги</p>
+                  </div>
+                  <div class="card__item">
+                    <img
+                      loading="lazy"
+                      src="../img/cards/2/card-item__img.png"
+                      alt="picture"
+                      class="card-item__img"
+                    />
+                    <div class="card-item__circle"></div>
+                    <p class="card-item__text">Product дизайн</p>
+                  </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <a href="./copyright.html" class="card swiper-slide">
+                  <div class="card__body">
+                    <div class="card__background-wrapper">
+                      <div class="card__content">
+                        <h2 class="card__title">Copyright</h2>
+                  <div class="card__item">
+                    <img
+                      loading="lazy"
+                      src="../img/cards/3/card-item__img.png"
+                      alt="picture"
+                      class="card-item__img"
+                    />
+                    <div class="card-item__circle"></div>
+                    <p class="card-item__text">Продающий</p>
+                  </div>
+                  <div class="card__item">
+                    <img
+                      loading="lazy"
+                      src="../img/cards/3/card-item__img.png"
+                      alt="picture"
+                      class="card-item__img"
+                    />
+                    <div class="card-item__circle"></div>
+                    <p class="card-item__text">Маркетинговый</p>
+                  </div>
+                  <div class="card__item">
+                    <img
+                      loading="lazy"
+                      src="../img/cards/3/card-item__img.png"
+                      alt="picture"
+                      class="card-item__img"
+                    />
+                    <div class="card-item__circle"></div>
+                    <p class="card-item__text">Креативный</p>
+                  </div>
+                  <div class="card__item">
+                    <img
+                      loading="lazy"
+                      src="../img/cards/3/card-item__img.png"
+                      alt="picture"
+                      class="card-item__img"
+                    />
+                    <div class="card-item__circle"></div>
+                    <p class="card-item__text">SEO Ключи</p>
+                  </div>
+                  <div class="card__item">
+                    <img
+                      loading="lazy"
+                      src="../img/cards/3/card-item__img.png"
+                      alt="picture"
+                      class="card-item__img"
+                    />
+                    <div class="card-item__circle"></div>
+                    <p class="card-item__text">Технический</p>
+                  </div>
+                  <div class="card__item">
+                    <img
+                      loading="lazy"
+                      src="../img/cards/3/card-item__img.png"
+                      alt="picture"
+                      class="card-item__img"
+                    />
+                    <div class="card-item__circle"></div>
+                    <p class="card-item__text">LSI</p>
+                  </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="cards__control-container">
+                <div class="cards__control">
+                  <picture class="cards__left">
+                    <source
+                      srcset="../img/buttons/left38x.png"
+                      media="(max-width: 480px)"
+                    />
+                    <img
+                      loading="lazy"
+                      src="../img/buttons/left48x.png"
+                      alt="MDN"
+                    />
+                  </picture>
+                  <picture class="cards__right">
+                    <source
+                      srcset="../img/buttons/right38x.png"
+                      media="(max-width: 480px)"
+                    />
+                    <img
+                      loading="lazy"
+                      src="../img/buttons/right48x.png"
+                      alt="MDN"
+                    />
+                  </picture>
+                </div>
+              </div>
+            </div>
+            <div class="cards cards-noslider">
+              <a href="./it.html" class="card" data-tilt>
+                <div class="card__body">
+                  <div class="card__background-wrapper">
+                    <div class="card__content">
+                      <h2 class="card__title">IT</h2>
+                      <div class="card__item">
+                        <img
+                          loading="lazy"
+                          src="../img/cards/0/card-item__img.png"
+                          alt="picture"
+                          class="card-item__img"
+                        />
+                        <div class="card-item__circle"></div>
+                        <p class="card-item__text">Сайты под ключ</p>
+                      </div>
+                      <div class="card__item">
+                        <img
+                          loading="lazy"
+                          src="../img/cards/0/card-item__img.png"
+                          alt="picture"
+                          class="card-item__img"
+                        />
+                        <div class="card-item__circle"></div>
+                        <p class="card-item__text">Приложения для ios и android</p>
+                      </div>
+                      <div class="card__item">
+                        <img
+                          loading="lazy"
+                          src="../img/cards/0/card-item__img.png"
+                          alt="picture"
+                          class="card-item__img"
+                        />
+                        <div class="card-item__circle"></div>
+                        <p class="card-item__text">Боты</p>
+                      </div>
+                      <div class="card__item">
+                        <img
+                          loading="lazy"
+                          src="../img/cards/0/card-item__img.png"
+                          alt="picture"
+                          class="card-item__img"
+                        />
+                        <div class="card-item__circle"></div>
+                        <p class="card-item__text">Парсинг данных</p>
+                      </div>
+                      <div class="card__item">
+                        <img
+                          loading="lazy"
+                          src="../img/cards/0/card-item__img.png"
+                          alt="picture"
+                          class="card-item__img"
+                        />
+                        <div class="card-item__circle"></div>
+                        <p class="card-item__text">Софт</p>
+                      </div>
+                      <div class="card__item">
+                        <img
+                          loading="lazy"
+                          src="../img/cards/0/card-item__img.png"
+                          alt="picture"
+                          class="card-item__img"
+                        />
+                        <div class="card-item__circle"></div>
+                        <p class="card-item__text">Цифровые системы</p>
+                      </div>
+                     </div>
+                  </div>
+                </div>
+              </a>
+              <a href="./marketing.html" class="card" data-tilt>
+                <div class="card__body">
+                  <div class="card__background-wrapper">
+                    <div class="card__content">
+                      <h2 class="card__title">Marketing</h2>
+                <div class="card__item">
+                  <img
+                    loading="lazy"
+                    src="../img/cards/1/card-item__img.png"
+                    alt="picture"
+                    class="card-item__img"
+                  />
+                  <div class="card-item__circle"></div>
+                  <p class="card-item__text">SMM</p>
+                </div>
+                <div class="card__item">
+                  <img
+                    loading="lazy"
+                    src="../img/cards/1/card-item__img.png"
+                    alt="picture"
+                    class="card-item__img"
+                  />
+                  <div class="card-item__circle"></div>
+                  <p class="card-item__text">SEO</p>
+                </div>
+                <div class="card__item">
+                  <img
+                    loading="lazy"
+                    src="../img/cards/1/card-item__img.png"
+                    alt="picture"
+                    class="card-item__img"
+                  />
+                  <div class="card-item__circle"></div>
+                  <p class="card-item__text">Продажа и генерация лидов</p>
+                </div>
+                <div class="card__item">
+                  <img
+                    loading="lazy"
+                    src="../img/cards/1/card-item__img.png"
+                    alt="picture"
+                    class="card-item__img"
+                  />
+                  <div class="card-item__circle"></div>
+                  <p class="card-item__text">Комплексное продвижение бренда</p>
+                </div>
+                <div class="card__item">
+                  <img
+                    loading="lazy"
+                    src="../img/cards/1/card-item__img.png"
+                    alt="picture"
+                    class="card-item__img"
+                  />
+                  <div class="card-item__circle"></div>
+                  <p class="card-item__text">Контекстная реклама</p>
+                </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a href="./design.html" class="card" data-tilt>
+                <div class="card__body">
+                  <div class="card__background-wrapper">
+                    <div class="card__content">
+                      <h2 class="card__title">Design</h2>
+                <div class="card__item">
+                  <img
+                    loading="lazy"
+                    src="../img/cards/2/card-item__img.png"
+                    alt="picture"
+                    class="card-item__img"
+                  />
+                  <div class="card-item__circle"></div>
+                  <p class="card-item__text">Сайты</p>
+                </div>
+                <div class="card__item">
+                  <img
+                    loading="lazy"
+                    src="../img/cards/2/card-item__img.png"
+                    alt="picture"
+                    class="card-item__img"
+                  />
+                  <div class="card-item__circle"></div>
+                  <p class="card-item__text">Логотипы</p>
+                </div>
+                <div class="card__item">
+                  <img
+                    loading="lazy"
+                    src="../img/cards/2/card-item__img.png"
+                    alt="picture"
+                    class="card-item__img"
+                  />
+                  <div class="card-item__circle"></div>
+                  <p class="card-item__text">Мобильные приложения</p>
+                </div>
+                <div class="card__item">
+                  <img
+                    loading="lazy"
+                    src="../img/cards/2/card-item__img.png"
+                    alt="picture"
+                    class="card-item__img"
+                  />
+                  <div class="card-item__circle"></div>
+                  <p class="card-item__text">BrandBook</p>
+                </div>
+                <div class="card__item">
+                  <img
+                    loading="lazy"
+                    src="../img/cards/2/card-item__img.png"
+                    alt="picture"
+                    class="card-item__img"
+                  />
+                  <div class="card-item__circle"></div>
+                  <p class="card-item__text">Лендинги</p>
+                </div>
+                <div class="card__item">
+                  <img
+                    loading="lazy"
+                    src="../img/cards/2/card-item__img.png"
+                    alt="picture"
+                    class="card-item__img"
+                  />
+                  <div class="card-item__circle"></div>
+                  <p class="card-item__text">Product дизайн</p>
+                </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a href="./copyright.html" class="card" data-tilt>
+                <div class="card__body">
+                  <div class="card__background-wrapper">
+                    <div class="card__content">
+                      <h2 class="card__title">Copyright</h2>
+                <div class="card__item">
+                  <img
+                    loading="lazy"
+                    src="../img/cards/3/card-item__img.png"
+                    alt="picture"
+                    class="card-item__img"
+                  />
+                  <div class="card-item__circle"></div>
+                  <p class="card-item__text">Продающий</p>
+                </div>
+                <div class="card__item">
+                  <img
+                    loading="lazy"
+                    src="../img/cards/3/card-item__img.png"
+                    alt="picture"
+                    class="card-item__img"
+                  />
+                  <div class="card-item__circle"></div>
+                  <p class="card-item__text">Маркетинговый</p>
+                </div>
+                <div class="card__item">
+                  <img
+                    loading="lazy"
+                    src="../img/cards/3/card-item__img.png"
+                    alt="picture"
+                    class="card-item__img"
+                  />
+                  <div class="card-item__circle"></div>
+                  <p class="card-item__text">Креативный</p>
+                </div>
+                <div class="card__item">
+                  <img
+                    loading="lazy"
+                    src="../img/cards/3/card-item__img.png"
+                    alt="picture"
+                    class="card-item__img"
+                  />
+                  <div class="card-item__circle"></div>
+                  <p class="card-item__text">SEO Ключи</p>
+                </div>
+                <div class="card__item">
+                  <img
+                    loading="lazy"
+                    src="../img/cards/3/card-item__img.png"
+                    alt="picture"
+                    class="card-item__img"
+                  />
+                  <div class="card-item__circle"></div>
+                  <p class="card-item__text">Технический</p>
+                </div>
+                <div class="card__item">
+                  <img
+                    loading="lazy"
+                    src="../img/cards/3/card-item__img.png"
+                    alt="picture"
+                    class="card-item__img"
+                  />
+                  <div class="card-item__circle"></div>
+                  <p class="card-item__text">LSI</p>
+                </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+        <section class="projects">
+          <div class="container">
+  <div class="our-projects-block">
+    <h2 class="our-projects-block-text our-projects-block-text-top section-title">Наши работы
+       
+    </h2>
+    <div class="our-projects-block-component our-projects-block-top">
+    
       <div class="our-projects-block-images our-projects-block-images-top">
-        <img src="../img/ourwork/1.svg" width="54%" alt="картинка проект"/>
-        <img src="../img/ourwork/2.svg" width="42%" alt="картинка проект"/>
+        <a href="./portfolio.html#p-2" class="our-projects-picture-block picture-small">
+          <img  data-src="../img/our-projects/1.jpg"  src="../img/lazy/lazy.png"  alt="picture project"/>
+        </a>
+        <a href="./portfolio.html#p-10" class="our-projects-picture-block picture-big">
+          <img  data-src="../img/our-projects/2.jpg"  src="../img/lazy/lazy.png"  alt="picture project"/>
+        </a>
+      </div>
+      <div class="our-projects-block-images our-projects-block-images-bottom">
+        <a href="./portfolio.html#p-13" class="our-projects-picture-block picture-big">
+          <img  data-src="../img/our-projects/3.jpg"  src="../img/lazy/lazy.png"  alt="picture project"/>
+        </a>
+        <a href="./portfolio.html#p-9" class="our-projects-picture-block picture-small">
+          <img  data-src="../img/our-projects/4.jpg" src="../img/lazy/lazy.png" alt="picture project"/>
+        </a>
       </div>
     </div>
     <div class="our-projects-block-component our-projects-block-bottom">
-      <div class="our-projects-block-images our-projects-block-images-bottom">
-        <img src="../img/ourwork/3.svg" width="42%" alt="картинка проект"/>
-        <img src="../img/ourwork/4.svg" width="54%" alt="картинка проект"/>
-      </div>
+      
       <a href="portfolio.html">
         <div class="our-projects-block-text our-projects-block-text-bottom"> 
-          <a href="portfolio.html">
-            <span class="our-projects-block-text-span">View our works</span> </a>
-          <button class="our-projects-block-watch-button">→</button>
           
+            <div class="button-block-link">
+              <a href="./portfolio.html">
+                <div  class="connect-btn go-up-btn " >  
+    <span class = 'connect-btn__link' href="#">
+        <span>ПОСМОТРЕТЬ НАШИ РАБОТЫ</span>
+        <span class="square">
+            <span class="arrow"></span>
+        </span>
+    </span>
+</div>
+              </a>
+            </div>
+
         </div>
       </a>
     </div>
   </div>
 </div>
-			</section>
-			<section class="guarantees">
-				<div class="container">
-					<h3 class="guarantees__title">Why do they trust us?</h3>
-					<div class="pros">
-						
-						<ul class="pros__list">
-							<li class="pros__item">
-								<span class="number">1</span>
-								<p class="text">
-									We analyze the target audience and long-term strategy
-								</p>
-							</li>
-							<li class="pros__item">
-								<span class="number">2</span>
-								<p class="text">We develop the most algorithmic and automated promotion tactics </p>
-							</li>
-							<li class="pros__item">
-								<span class="number">3</span>
-								<p class="text">We help to develop a recognizable image, delve into your business to get the maximum result</p>
-							</li>
-							<li class="pros__item">
-								<span class="number">4</span>
-								<p class="text">We identify the most effective methods of working with clients</p>
-							</li>
-						</ul>
-					</div>
-					<div class="sub-description">
-						<div class="color-line"></div>
-						<div class="sub-description__content">
-							<p class="sub-description__content-item" >We find a comprehensive solution for each project.</p> 
-							<p class="sub-description__content-item item-left">All this helps the client to unlock the commercial potential and reach new heights.</p>
-						</div>
-						<div class="color-line"></div>
-					</div>
-					<div class="description">
-						<div class="description__graphic-block">
-							<div class="description__graphic">
-								<div class="description__arrow">⟶</div>
-							</div>
-						</div>
-						<div class="description__content-block">
-							<p><strong>Frostarius </strong>is on the market recently, but the quality of our work is constantly growing, with each order we increase our productivity and reduce the time indicator.</p>
-							<p>Frostarius Studio provides you with full cycle services for marketing, designing IT solutions, information assistance at the stage of their implementation. As well as developing functional websites for mobile applications, designing competent interfaces, implementing and automating complex business processes. 
-							</p>
-							<p><strong>Make your success inevitable !</strong></p>
-						</div>
-					</div>
-				</div>
-			</section>
-		<section  class="contact-block contacts-gt">
+        </section>
+        <!-- Another content for each page -->
+        <section class="trust">
+          <div class="container">
+            <h2 class="trust__title section-title">Почему нам доверяют?</h2>
+            <div class="trust__content">
+              <div class="trust__items trust__items-left">
+                <div class="trust__item left">
+                  <img loading="lazy" class='trust__main-1' src="../img/trust/main_1.svg" alt="picture">
+                  <div class="trust__text-block">
+                    <p class="trust__item-text">
+                      Разрабатываем максимально
+                      <strong
+                        >алгоритмизированную и автоматизированную тактику
+                        продвижения</strong
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="trust__items trust__items-right">
+                <div class="trust__item right">
+                  <div class="trust__text-block">
+                    <p class="trust__item-text">
+                      Проводим <strong>анализ целевой аудитории</strong> и
+                      долгосрочной стратегии
+                    </p>
+                  </div>
+                  <img loading="lazy" class='trust__main-2' src="../img/trust/main_2.svg" alt="picture">
+                </div>
+              </div>
+              <div class="trust__items trust__items-left">
+                <div class="trust__item left">
+                  <img loading="lazy" class='trust__main-3' src="../img/trust/main_3.svg" alt="picture">
+                  <div class="trust__text-block">
+                    <p class="trust__item-text">
+                      Помогаем разработать
+                      <strong
+                        >узнаваемый имидж, вникаем в ваш бизнес, чтобы получить
+                        максимальный результат</strong
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="trust__items trust__items-right">
+                <div class="trust__item right">
+                  <div class="trust__text-block">
+                    <p class="trust__item-text">
+                      Выявляем самые
+                      <strong>эффективные методы работы</strong> с клиентами
+                    </p>
+                  </div>
+                  <img loading="lazy" class='trust__main-4' src="../img/trust/main_4.svg" alt="picture">
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="guarantees">
+          <div class="container">
+            <div class="description">
+              <div class="description__graphic-block">
+                <div class="description__graphic">
+                  <div class="description__arrow">⟶</div>
+                </div>
+              </div>
+              <div class="description__content-block">
+                <p class="description__p-hide">
+                  <strong>Frostarius </strong>на рынке недавно, но качество
+                  нашей работы непрерывно растет, с каждым заказом мы
+                  увеличиваем свою продуктивность и снижаем временной
+                  показатель.
+                </p>
+                <p>
+                  Frostarius Studio окажет Вам услуги полного цикла по
+                  маркетингу, проектированию IТ-решений, информационную помощь
+                  на этапе их внедрения. А также по разработке функциональных
+                  веб-сайтов мобильных приложений, проектированию грамотных
+                  интерфейсов, реализации и автоматизации сложных
+                  бизнес-процессов.
+                </p>
+                <p><strong>Сделай свой успех неизбежным !</strong></p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div id="gt-contacts">
+          <section  class="contact-block contacts-gt" id="contacts">
+    <span class="contact-block__background-line"></span>
     <div class="container">
         <div  class="contacts">
             <div class="adress-block">
-                <h3 class="adress-block__title form-title">Contact Us</h3>
+                <h3 class="adress-block__title form-title">Наши контакты</h3>
                 <address class="adress-block__adress">
-                    <p class="tel"><a href="tel:+995558925473">+995 558 92 54 73</a></p>
-                    <p class="tel"><a href="tel:+995556748987">+995 556 74 89 87</a></p>
+                    <p class="tel"><a href="tel:+995558925473">+995 (558) 92 54 73</a></p>
+                    <p class="tel"><a href="tel:+995556748987">+995 (568) 74 89 87</a></p>
+                    <p class="tel"><a href="tel:+380997217015">+380 (99) 721 7015</a></p>
                     <p class="mail"><a href="mailto:frostarius@workmail.com">frostarius@workmail.com</a></p>
                 </address>
                 <div class="adress-block__social">
                     <ul class="adress-block__social-list">
-                        <li class="adress-block__social-item"><a href="https://www.instagram.com/frostarius/"><img src="../img/svgicons/instagram.svg" alt="instagram"></a></li>
-                        <li class="adress-block__social-item"><a href="https://www.facebook.com/frostarius"><img src="../img/svgicons/facebook.svg" alt="facebook"></a></li>
-                        <li class="adress-block__social-item"><a href="https://www.linkedin.com/in/frostarius/"><img src="../img/svgicons/linkedin.svg" alt="linkedin"></a></li>
-                        <li class="adress-block__social-item"><a href="https://t.me/Frostarius"><img src="../img/svgicons/telegram.svg" alt="telegram"></a></li>
-                        <li class="adress-block__social-item"><a href="https://instagram.com"><img src="../img/svgicons/whatsup.svg" alt="whatsup"></a></li>
-                        <li class="adress-block__social-item"><a href="https://www.behance.net/Frostarius"><img src="../img/svgicons/be.svg" alt="behance"></a></li>
+                        <li class="adress-block__social-item"><a target="_blank" href="https://www.instagram.com/frostarius/"><img src="../img/svgicons/instagram.svg" alt="instagram"></a></li>
+                        <li class="adress-block__social-item"><a target="_blank" href="https://www.facebook.com/frostarius"><img src="../img/svgicons/facebook.svg" alt="facebook"></a></li>
+                        <li class="adress-block__social-item"><a target="_blank" href="https://www.linkedin.com/in/frostarius/"><img src="../img/svgicons/linkedin.svg" alt="linkedin"></a></li>
+                        <li class="adress-block__social-item"><a target="_blank" href="https://t.me/Frostarius"><img src="../img/svgicons/telegram.svg" alt="telegram"></a></li>
+                        <li class="adress-block__social-item"><a target="_blank" href="https://instagram.com"><img src="../img/svgicons/whatsup.svg" alt="whatsup"></a></li>
+                        <li class="adress-block__social-item"><a target="_blank" href="https://www.behance.net/Frostarius"><img src="../img/svgicons/be.svg" alt="behance"></a></li>
                     </ul>
                 </div>
             </div>
             <div class="request-form">
-                <div class="request-form__close-btn hidden">
-                    <img src="../img/buttons/close-square.svg" alt="close">
-                </div>
                 <div class="request-form__content">
-                    <div class="request-form__title _form-title">Leave a request</div>
-                    <div class="request-form__sub-title _form-sub-title">And we will contact you within 30 minutes</div>
+                    <div class="request-form__title _form-title">Оставьте заявку</div>
+                    <div class="request-form__sub-title _form-sub-title">И мы свяжемся с вами в течение 30 минут</div>
                     <div class="request-form__form">
                         <form action="request-form" class="form" id="contact-form">
-                            <input	class="request-form__item form__item _req" placeholder="Name *" type="text" name="username" id="username">
-                            <input	class="request-form__item form__item _req" placeholder="Telephone number *" type="tel" name="usertel" id="usertel">
-                            <input	class="request-form__item form__item" placeholder="E-mail"type="email" name="usermail" id="usermail">
-                            <button class="request-form__button form__button" type="submit">Send</button>
+                            <input	class="request-form__item form__item _req" placeholder="Имя *" type="text" name="username" id="username">
+                            <input	class="request-form__item form__item _req" placeholder="Телефон *" type="tel" name="usertel" id="usertel">
+                            <input	class="request-form__item form__item"  placeholder="E-mail"type="email" name="usermail" id="usermail">
+                            <button class="request-form__button form__button" type="submit">Отправить заявку<!-- <span> ⟶</span> --></button>
                         </form>
                     </div>
-                    <div class="request-form__note note">By clicking on the button you agree with the privacy policy </div>
+                    <div class="request-form__note note">Нажимая на кнопку Вы соглашаетесь с политикой конфиденциальности </div>
                 </div>
             </div>
             
         </div>
     </div>
 </section>
-<section class="cost-calc contacts-gt">
-    <div class="container">
-        <h3 class="cost-calc__title _form-title">
-            @@ctitle<br/><span class="_form-sub-title">@@csubtitle</span>
-        </h3>
-        <div class="cost-calc__form ">
-            <form action="#" class="form">
-                <input	class="cost-calc__item form__item _req" placeholder="Name *" type="text" name="userName" id="username">
-                <input	class="cost-calc__item form__item _req" placeholder="Telephone number *" type="number" name="userTel" id="usertel">
-                <input	class="cost-calc__item form__item" placeholder="E-mail"type="email" name="userMail" id="usermail">
-                <button class="cost-calc__button form__button" type="submit">@@sendbutton</button>
-            </form>
+
         </div>
-        <div class="request-form__note note">By clicking on the button you agree with the privacy policy </div>
-    </div>
-</section>
-		</main>
-		<footer class="footer">
+      </main>
+      <footer class="footer">
     <div class="container">
         <div class="footer__content">
             <div class="footer__logo">
-                <img src="../img/logo/logo_small.svg" alt="logo">
+                <img src="../img/logo/logo.webp" alt="logo">
             </div>
             <nav class="footer__menu">
                 <ul class="footer__menu-list">
@@ -432,31 +942,62 @@ then we are the ones you need.</span>
                         <a href="it.html">IT</a>
                     </li>
                     <li class="footer__menu-item">
-                        <a href="marketing.html">Marketing</a>
+                        <a href="marketing.html">Маркетинг</a>
                     </li>
                     <li class="footer__menu-item">
-                        <a href="design.html">Design</a>
+                        <a href="design.html">Дизайн</a>
                     </li>
                     <li class="footer__menu-item">
-                        <a href="copyright.html">Copyright</a>
+                        <a href="copyright.html">Копирайтинг</a>
                     </li>
                     <li class="footer__menu-itemc">
                         <select name="lang-select" id="lang-select">
                             <option value="EN">EN</option>
                             <option value="RU">RU</option>
+                            <option value="UK">UK</option>
                         </select>
                     </li>
                 </ul>
             </nav>
             <div class="footer__confidential">
-                Privacy Policy<br />
+                Политика конфиденциальности<br />
                 Copyright © 2022  «Frostarius Studio»
             </div>
         </div>
     </div>
     <div class="cover"></div>
 </footer>
-	
-		
-</body>
+
+      <img
+        src="../img/bumbles/main/Ellipce1_left.svg"
+        alt="graphic ellipse"
+        class="bundle bundle-main-1 bundle-left"
+      />
+      <img
+        src="../img/bumbles/main/Ellipce2_right.svg"
+        alt="graphic ellipse"
+        class="bundle bundle-main-2 bundle-right"
+      />
+      <img
+        src="../img/bumbles/main/Ellipse3_right.svg"
+        alt="graphic ellipse"
+        class="bundle bundle-main-3 bundle-right"
+      />
+      <img
+        src="../img/bumbles/main/Ellipse4_right.svg"
+        alt="graphic ellipse"
+        class="bundle bundle-main-4 bundle-right"
+      />
+      <img
+        src="../img/bumbles/main/Ellipse5_left.svg"
+        alt="graphic ellipse"
+        class="bundle bundle-main-5 bundle-left"
+      />
+      <img
+        src="../img/bumbles/main/Ellipse6_right.svg"
+        alt="graphic ellipse"
+        class="bundle bundle-main-6 bundle-right"
+      />
+    </div>
+  </body>
 </html>

@@ -1,143 +1,156 @@
-
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		@@include('../html/en/head.html', {
-			"title": "Design"
-		})
-        <style>
-           @media (min-width: 1100px) {
-                .head__logo img {
-                width: 320px;
-            }
-            }
-            .head__logo  {
-                padding-left: 10px;
-            }
+<html lang="ru">
+  <head>
+    @@include('../html/en/head.html', { "title": "Design" })
+    <style>
+      .map {
+        display: flex;
+      }
+      .map__portfolio,
+      .map__about,
+      .map__design,
+      .map__marketing,
+      .map__it,
+      .map__copyright {
+        display: none;
+      }
+      .map__design {
+        display: inline;
+      }
+      .map {
+        display: flex;
+      }
+      .menu-block {
+        display: none;
+      }
+
+      .design-text-add {
+        display: inline;
+      }
+      @media (max-width: 768px) {
         .map {
-            display: block;
-            padding-right: 10px;
-        }
-    
-            .map__portfolio,.map__about,.map__design,.map__marketing,.map__it,.map__copyright {
-            display: none;
-        }
-        .map__design {
-            display: inline;
-        }
-            .map {
-            display: block;
+          display: none;
         }
         .menu-block {
-            display: none;
+          display: flex;
         }
-		.cost-calc {
-			display: block;
-		}
-            .design-text-add {
-                display: inline;
-            }
-            @media (max-width: 768px) {
-            .map {
-                display: none;
-            }
-            .menu-block {
-            display: flex;
+      }
+      .fullscreen__title img {
+        width: 100%;
+        height: 100%;
+        transform: translate(0, 25%);
+      }
+      @media (max-width: 480px) {
+        .fullscreen__title img {
+          transform: scale(1.2) translate(0, 25%);
         }
-            .cost-calc {
-                display: none;
-            }
-            .contact-block {
-			display: block;
-		}
-        }
-        </style>
-	</head>
-    
-<body>
-    <div class="fullscreen">
-        <div class="fullscreen__title design">
-            <img  src="../img/fullscreen/design.svg" alt="fullscreen picture">
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrapper overflow-hidden">
+      <div class="preloader">
+        <div class="loadingio-spinner-rolling-pqw8hj4rez">
+          <div class="ldio-rklc9w8a3r7">
+            <div></div>
+          </div>
         </div>
-            <div class="container">
-                <div class="fullscreen__header">
-                    <header class="header">
-                        @@include('../html/en/header.html')
-                    </header>
+      </div>
+      <div class="fullscreen">
+        <img
+          class="fullscreen__background fullscreen__background-picture marketing"
+          src="../img/video-stop/bubble stop.webp"
+          alt="fullscreen picture"
+        />
+        <div class="fullscreen__title">
+          <img src="../img/fullscreen/design-sign.png" alt="logo" />
+        </div>
+        <video
+          autoplay
+          muted
+          loop
+          class="fullscreen__background"
+          preload="auto"
+        >
+          <source type="video/webm" src="../files/video/design.webm" />
+          <source type="video/mp4" src="../files/video/design.mp4">
+        </video>
+        <div class="fullscreen__header">
+          <div class="container">
+            <header class="header">@@include('../html/en/header.html')</header>
+          </div>
+        </div>
+      </div>
+      <main>
+        <section class="trust">
+          <div class="container">
+            <h2 class="trust__title section-title">
+              Что вы получаете, когда выбираете нас?
+            </h2>
+            <div class="trust__content">
+              <div class="trust__items trust__items-left">
+                <div class="trust__item left">
+                    <img loading="lazy" class='trust__design-1' src="../img/trust/design_1.svg"  alt="picture">
+                  <div class="trust__text-block">
+                    <p class="trust__item-text">
+                      <strong>Бесконечно генерируем</strong> новые идеи, не
+                      отстаем от трендов и
+                      <strong>создаем уникальный дизайн</strong>
+                    </p>
+                  </div>
                 </div>
-                <div class="fullscreen__go-btn">
-                        @@include('../html/en/connect-btn.html')
+              </div>
+              <div class="trust__items trust__items-right">
+                <div class="trust__item right">
+                  <div class="trust__text-block">
+                    <p class="trust__item-text">
+                      Мы учитываем
+                      <strong>сценарии действий пользователя</strong>, создавая
+                      интерфейсы, в которых
+                      <strong>не придется часами искать нужную страницу</strong>
+                    </p>
+                  </div>
+                  <img loading="lazy" class='trust__design-2' src="../img/trust/design_2.svg" alt="picture">
                 </div>
+              </div>
+              <div class="trust__items trust__items-left">
+                <div class="trust__item left">
+                    <img loading="lazy" class='trust__design-3' src="../img/trust/design_3.svg" alt="picture">
+                  <div class="trust__text-block">
+                    <p class="trust__item-text">
+                      <strong>Грамотный подбор шрифтов</strong> позволяет нам
+                      <strong>подчеркнуть концепцию</strong> сайта в каждом
+                      написаном предложении
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="trust__items trust__items-right">
+                <div class="trust__item right">
+                  <div class="trust__text-block">
+                    <p class="trust__item-text">
+                      <strong>Правильное размещение</strong> объектов в
+                      структуре сайта, что
+                      <strong
+                        >позволяет выделять различную информацию в пределах
+                        одной страницы</strong
+                      >
+                    </p>
+                  </div>
+                  <img loading="lazy" class='trust__design-4' src="../img/trust/design_4.svg" alt="picture">
+                </div>
+              </div>
             </div>
-    </div>
-    <main>
-        <section class="advantages">
-            <div class="container">
-                <h1 class="advantages__title">What do you get by choosing us:</h1>
-                <ul class="advantages__list">
-                    <li class="advantages__item">
-                        <div class="advantages__item-img">
-                            <img src="../img/advantages/design/1.svg" alt="design picture">
-                        </div>
-                        <p class="advantages__item-text">
-									We endlessly generate new ideas, keep up with trends and create a unique design
-                        </p>
-                    </li>
-                    <li class="advantages__item">
-                        <div class="advantages__item-img">
-                            <img src="../img/advantages/design/2.svg" alt="design picture">
-                        </div>
-                        <p class="advantages__item-text">
-                           Proper placement of objects in the site structure, which allows you to highlight various information within one page
-                        </p>
-                    </li>
-                    <li class="advantages__item">
-                        <div class="advantages__item-img">
-                            <img src="../img/advantages/design/3.svg" alt="design picture">
-                        </div>
-                        <p class="advantages__item-text">
-									When developing a project, we take into account the scenarios of user actions. So we create interfaces in which you do not have to search for hours for the right page  
-                        </p>
-                    </li>
-                    <li class="advantages__item">
-                        <div class="advantages__item-img">
-                            <img src="../img/advantages/design/4.svg" alt="design picture">
-                        </div>
-                        <p class="advantages__item-text">
-									Simplifying the design so that the user is not distracted by unnecessary objects, instead absorbs the informative content of the site
-                        </p>
-                    </li>
-                    <li class="advantages__item">
-                        <div class="advantages__item-img">
-                            <img src="../img/advantages/design/5.svg" alt="design picture">
-                        </div>
-                        <p class="advantages__item-text">
-                           The process of creating a new design without using ready-made templates
-                        </p>
-                    </li>
-                    <li class="advantages__item">
-                        <div class="advantages__item-img">
-                            <img src="../img/advantages/design/6.svg" alt="design picture">
-                        </div>
-                        <p class="advantages__item-text">
-                           Proper selection of fonts allows you to customize the resources in each sentence.
-                        </p>
-                    </li>
-                </ul>
-            </div>
+          </div>
         </section>
         <section class="projects">
-            @@include('../html/en/projects.html')
+          @@include('../html/en/projects.html')
         </section>
-        
-        @@include('../html/en/contacts.html', {
-            "ctitle": "Leave a request to calculate",
-            "csubtitle": "the cost of your project",
-            "sendbutton": "Calculate"
-        })
-	</main>
-	@@include('../html/en/footer.html')
 
-</body> 
-
+        @@include('../html/en/contacts.html', { "ctitle": "Оставьте заявку для расчета", "csubtitle": "стоимости вашего проекта", "sendbutton": "Рассчитать стоимость" })
+      </main>
+      @@include('../html/en/footer.html')
+    </div>
+  </body>
 </html>

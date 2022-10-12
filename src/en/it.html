@@ -1,146 +1,153 @@
-
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		@@include('../html/en/head.html', {
-			"title": "IT"
-		})
-        <style>
-          @media (min-width: 1100px) {
-                .head__logo img {
-                width: 320px;
-            }
-            }
-            .head__logo  {
-                padding-left: 10px;
-            }
+<html lang="ru">
+  <head>
+    @@include('../html/en/head.html', { "title": "IT" })
+    <style>
+      .map {
+        display: flex;
+      }
+      .menu-block {
+        display: none;
+      }
+
+
+      .it-text-add {
+        display: inline;
+      }
+
+      @media (max-width: 768px) {
         .map {
-            display: block;
-            padding-right: 10px;
-        }
-        .map {
-            display: block;
+          display: none;
         }
         .menu-block {
-            display: none;
+          display: flex;
         }
-        
-		.cost-calc {
-			display: block;
-		}
-            .it-text-add {
-                display: inline;
-            }
+      }
 
-        @media (max-width: 768px) {
-            .map {
-                display: none;
-            }
-            .menu-block {
-            display: flex;
+      .map__portfolio,
+      .map__about,
+      .map__design,
+      .map__marketing,
+      .map__it,
+      .map__copyright {
+        display: none;
+      }
+      .map__it {
+        display: inline;
+      }
+      .fullscreen__title img {
+        width: 100%;
+        height: 100%;
+      }
+      @media (max-width: 480px) {
+        .fullscreen__title img {
+          transform: scale(1.3);
         }
-            .cost-calc {
-                display: none;
-            }
-            .contact-block {
-			display: block;
-		}
-        }
-         
-        .map__portfolio,.map__about,.map__design,.map__marketing,.map__it,.map__copyright {
-            display: none;
-        }
-        .map__it {
-            display: inline;
-        }
-        </style>
-	</head>
-<body>
-    <div class="fullscreen">
-        <img class="fullscreen__background" src="../img/fullscreen/ITbackground.svg" alt="fullscreen picture">
-        <div class="fullscreen__title">
-            <img  src="../img/fullscreen/ITtext.svg" alt="IT лого">
+      }
+      .fullscreen__background {
+        background: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper overflow-hidden">
+      <div class="preloader">
+        <div class="loadingio-spinner-rolling-pqw8hj4rez">
+          <div class="ldio-rklc9w8a3r7">
+            <div></div>
+          </div>
         </div>
-            <div class="container">
-                <div class="fullscreen__header">
-                    <header class="header">
-                        @@include('../html/en/header.html')
-                    </header>
+      </div>
+      <div class="fullscreen">
+        <img
+        class="fullscreen__background fullscreen__background-picture IT"
+        src="../img/video-stop/plate-stop.jpg"
+        alt="full screen picture"
+      />
+      <video
+          autoplay
+          muted
+          loop
+          class="fullscreen__background"
+          preload="auto"
+        >
+          <source type="video/webm" src="../files/video/IT.webm" />
+          <source type="video/mp4" src="../files/video/IT.mp4">
+        </video>
+        <div class="fullscreen__title">
+          <img src="../img/fullscreen/IT-sign.png" alt="IT Logo" />
+        </div>
+        
+        <div class="fullscreen__header">
+          <div class="container">
+            <header class="header">@@include('../html/en/header.html')</header>
+          </div>
+        </div>
+      </div>
+      <main>
+        <section class="trust">
+          <div class="container">
+            <h2 class="trust__title section-title">
+              Что вы получаете, когда выбираете нас?
+            </h2>
+            <div class="trust__content">
+              <div class="trust__items trust__items-left">
+                <div class="trust__item left">
+                    <img loading="lazy" class='trust__it-1' src="../img/trust/it_1.svg" alt="picture">
+                  <div class="trust__text-block">
+                    <p class="trust__item-text">
+                      Глубокая настройка <strong>каждого элемента</strong> вашей
+                      сети, под определенный функционал продукта
+                    </p>
+                  </div>
                 </div>
-                <div class="fullscreen__go-btn">
-                        @@include('../html/en/connect-btn.html')
+              </div>
+              <div class="trust__items trust__items-right">
+                <div class="trust__item right">
+                  <div class="trust__text-block">
+                    <p class="trust__item-text">
+                      Взаимодействие <strong>специалистов с клиентом</strong> на
+                      протяжении <strong>всего цикла</strong> работы над
+                      проектом
+                    </p>
+                  </div>
+                  <img loading="lazy" class='trust__it-2' src="../img/trust/it_2.svg" alt="picture">
                 </div>
+              </div>
+              <div class="trust__items trust__items-left">
+                <div class="trust__item left">
+                    <img loading="lazy" class='trust__it-3' src="../img/trust/it_3.svg" alt="picture">
+                  <div class="trust__text-block">
+                    <p class="trust__item-text">
+                      Использование самых
+                      <strong>актуальных методов защиты</strong> при работе с
+                      данными клиента
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="trust__items trust__items-right">
+                <div class="trust__item right">
+                  <div class="trust__text-block">
+                    <p class="trust__item-text">
+                      Использование <strong>облачных сервисов</strong> хранения
+                      информации, что повышает
+                      <strong>безопасность вашего ресурса</strong>
+                    </p>
+                  </div>
+                  <img loading="lazy" class='trust__it-4' src="../img/trust/it_4.svg" alt="picture">
+                </div>
+              </div>
             </div>
-    </div>
-    <main>
-        <section class="advantages">
-            <div class="container">
-                <h1 class="advantages__title">What do you get by choosing us:</h1>
-                <ul class="advantages__list">
-                    <li class="advantages__item">
-                        <div class="advantages__item-img">
-                            <img src="../img/advantages/it/1.svg" alt="IT picture">
-                        </div>
-                        <p class="advantages__item-text">
-                            A clear selection of tools to work with your requests
-                        </p>
-                    </li>
-                    <li class="advantages__item">
-                        <div class="advantages__item-img">
-                            <img src="../img/advantages/it/2.svg" alt="IT picture">
-                        </div>
-                        <p class="advantages__item-text">
-                            Deep customization of each element of your network, for a specific product functionality
-                        </p>
-                    </li>
-                    <li class="advantages__item">
-                        <div class="advantages__item-img">
-                            <img src="../img/advantages/it/3.svg" alt="IT picture">
-                        </div>
-                        <p class="advantages__item-text">
-                            Implementation of advanced IT technologies and programming languages to achieve the greatest efficiency
-                        </p>
-                    </li>
-                    <li class="advantages__item">
-                        <div class="advantages__item-img">
-                            <img src="../img/advantages/it/4.svg" alt="IT picture">
-                        </div>
-                        <p class="advantages__item-text">
-                            Interaction of a specialist with a client throughout the entire cycle of work on a project
-                        </p>
-                    </li>
-                    <li class="advantages__item">
-                        <div class="advantages__item-img">
-                            <img src="../img/advantages/it/5.svg" alt="IT picture">
-                        </div>
-                        <p class="advantages__item-text">
-                            The use of cloud storage services, which increases the security of your resource
-                        </p>
-                    </li>
-                    <li class="advantages__item">
-                        <div class="advantages__item-img">
-                            <img src="../img/advantages/it/6.svg" alt="IT picture">
-                        </div>
-                        <p class="advantages__item-text">
-                            Using the most up-to-date security methods when working with customer data
-                        </p>
-                    </li>
-                </ul>
-            </div>
+          </div>
         </section>
         <section class="projects">
-            @@include('../html/en/projects.html')
+          @@include('../html/en/projects.html')
         </section>
-        
-        @@include('../html/en/contacts.html', {
-            "ctitle": "Leave a request to calculate",
-            "csubtitle": "the cost of your project",
-            "sendbutton": "Calculate"
-        })
-	</main>
-	@@include('../html/en/footer.html')
-    
-</body> 
 
+        @@include('../html/en/contacts.html', { "ctitle": "Оставьте заявку для расчета", "csubtitle": "стоимости вашего проекта", "sendbutton": "Рассчитать стоимость" })
+      </main>
+      @@include('../html/en/footer.html')
+    </div>
+  </body>
 </html>
-	

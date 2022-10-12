@@ -15,11 +15,14 @@
 	<script>
 	function mshow() {
 		const	mview = document.querySelector('.menu-block');
-				mview.style.left = '0';
+				document.querySelector('.wrapper').classList.add('overflow-hidden');
+				mview.style.left = '0%';
+				
 			}
 	function mclose() {
 		const	mview = document.querySelector('.menu-block');
-				mview.style.left = '-1000px';
+				document.querySelector('.wrapper').classList.remove('overflow-hidden');
+				mview.style.left = '-100%';
 			}
 	</script>
 	
@@ -33,20 +36,31 @@
       .trust .container {
         max-width: 1340px;
       }
+      .swiper-slide {
+  height: auto;
+}
     </style>
     <script defer src="../js/titl.js"></script>
   </head>
   <body>
-    <div class="wrapper">
+    
+    <div class="wrapper overflow-hidden">
+      <div class="preloader">
+        <div class="loadingio-spinner-rolling-pqw8hj4rez">
+          <div class="ldio-rklc9w8a3r7">
+            <div></div>
+          </div>
+        </div>
+      </div>
       <header class="header">
         <div class="container"><div class="header__block">
     <nav class="nav">
         <div class="head">
             <a href="main.html"><div class="head__logo">
-                <img src="../img/logo/logo.svg" alt="logo">
+                <img src="../img/logo/logo.webp" alt="logo">
             </div></a>
             <div class="head__burger-button" onclick="mshow()">
-                <img src="../img/buttons/menu-burger.svg" alt="меню">
+                <img src="../img/buttons/menu-burger.svg" alt="menu">
             </div>
         </div>
         
@@ -72,10 +86,10 @@
                     <div class="container">
                         <div class="head">
                             <div class="head__logo">
-                                <img src="../img/logo/logo.svg" alt="logo">
+                                <img src="../img/logo/logo.webp" alt="logo">
                             </div>
                             <div class="head__burger-button" onclick="mclose()">
-                                <img src="../img/buttons/menu-burger-close.svg" alt="меню">
+                                <img src="../img/buttons/menu-burger-close.svg" alt="menu">
                             </div>
                         </div>
                     </div>
@@ -170,12 +184,15 @@
             <div class="cards-container cards-slider swiper-container">
               <div class="cards swiper-wrapper">
                 <a href="./it.html" class="card swiper-slide">
-                  <h2 class="card__title">IT</h2>
+                  <div class="card__body">
+                    <div class="card__background-wrapper">
+                      <div class="card__content">
+                        <h2 class="card__title">IT</h2>
                   <div class="card__item">
                     <img
                       loading="lazy"
-                      src="../img/cards/0/card-item__img.svg"
-                      alt=""
+                      src="../img/cards/0/card-item__img.png"
+                      alt="picture"
                       class="card-item__img"
                     />
                     <div class="card-item__circle"></div>
@@ -184,8 +201,8 @@
                   <div class="card__item">
                     <img
                       loading="lazy"
-                      src="../img/cards/0/card-item__img.svg"
-                      alt=""
+                      src="../img/cards/0/card-item__img.png"
+                      alt="picture"
                       class="card-item__img"
                     />
                     <div class="card-item__circle"></div>
@@ -194,8 +211,8 @@
                   <div class="card__item">
                     <img
                       loading="lazy"
-                      src="../img/cards/0/card-item__img.svg"
-                      alt=""
+                      src="../img/cards/0/card-item__img.png"
+                      alt="picture"
                       class="card-item__img"
                     />
                     <div class="card-item__circle"></div>
@@ -204,8 +221,8 @@
                   <div class="card__item">
                     <img
                       loading="lazy"
-                      src="../img/cards/0/card-item__img.svg"
-                      alt=""
+                      src="../img/cards/0/card-item__img.png"
+                      alt="picture"
                       class="card-item__img"
                     />
                     <div class="card-item__circle"></div>
@@ -214,8 +231,8 @@
                   <div class="card__item">
                     <img
                       loading="lazy"
-                      src="../img/cards/0/card-item__img.svg"
-                      alt=""
+                      src="../img/cards/0/card-item__img.png"
+                      alt="picture"
                       class="card-item__img"
                     />
                     <div class="card-item__circle"></div>
@@ -224,21 +241,27 @@
                   <div class="card__item">
                     <img
                       loading="lazy"
-                      src="../img/cards/0/card-item__img.svg"
-                      alt=""
+                      src="../img/cards/0/card-item__img.png"
+                      alt="picture"
                       class="card-item__img"
                     />
                     <div class="card-item__circle"></div>
                     <p class="card-item__text">Цифровые системы</p>
                   </div>
+                      </div>
+                    </div>
+                  </div>
                 </a>
                 <a href="./marketing.html" class="card swiper-slide">
-                  <h2 class="card__title">Marketing</h2>
+                  <div class="card__body">
+                    <div class="card__background-wrapper">
+                      <div class="card__content">
+                        <h2 class="card__title">Marketing</h2>
                   <div class="card__item">
                     <img
                       loading="lazy"
-                      src="../img/cards/1/card-item__img.svg"
-                      alt=""
+                      src="../img/cards/1/card-item__img.png"
+                      alt="picture"
                       class="card-item__img"
                     />
                     <div class="card-item__circle"></div>
@@ -247,8 +270,8 @@
                   <div class="card__item">
                     <img
                       loading="lazy"
-                      src="../img/cards/1/card-item__img.svg"
-                      alt=""
+                      src="../img/cards/1/card-item__img.png"
+                      alt="picture"
                       class="card-item__img"
                     />
                     <div class="card-item__circle"></div>
@@ -257,8 +280,8 @@
                   <div class="card__item">
                     <img
                       loading="lazy"
-                      src="../img/cards/1/card-item__img.svg"
-                      alt=""
+                      src="../img/cards/1/card-item__img.png"
+                      alt="picture"
                       class="card-item__img"
                     />
                     <div class="card-item__circle"></div>
@@ -267,8 +290,8 @@
                   <div class="card__item">
                     <img
                       loading="lazy"
-                      src="../img/cards/1/card-item__img.svg"
-                      alt=""
+                      src="../img/cards/1/card-item__img.png"
+                      alt="picture"
                       class="card-item__img"
                     />
                     <div class="card-item__circle"></div>
@@ -279,21 +302,27 @@
                   <div class="card__item">
                     <img
                       loading="lazy"
-                      src="../img/cards/1/card-item__img.svg"
-                      alt=""
+                      src="../img/cards/1/card-item__img.png"
+                      alt="picture"
                       class="card-item__img"
                     />
                     <div class="card-item__circle"></div>
                     <p class="card-item__text">Контекстная реклама</p>
                   </div>
+                      </div>
+                    </div>
+                  </div>
                 </a>
                 <a href="./design.html" class="card swiper-slide">
-                  <h2 class="card__title">Design</h2>
+                  <div class="card__body">
+                    <div class="card__background-wrapper">
+                      <div class="card__content">
+                        <h2 class="card__title">Design</h2>
                   <div class="card__item">
                     <img
                       loading="lazy"
-                      src="../img/cards/2/card-item__img.svg"
-                      alt=""
+                      src="../img/cards/2/card-item__img.png"
+                      alt="picture"
                       class="card-item__img"
                     />
                     <div class="card-item__circle"></div>
@@ -302,8 +331,8 @@
                   <div class="card__item">
                     <img
                       loading="lazy"
-                      src="../img/cards/2/card-item__img.svg"
-                      alt=""
+                      src="../img/cards/2/card-item__img.png"
+                      alt="picture"
                       class="card-item__img"
                     />
                     <div class="card-item__circle"></div>
@@ -312,8 +341,8 @@
                   <div class="card__item">
                     <img
                       loading="lazy"
-                      src="../img/cards/2/card-item__img.svg"
-                      alt=""
+                      src="../img/cards/2/card-item__img.png"
+                      alt="picture"
                       class="card-item__img"
                     />
                     <div class="card-item__circle"></div>
@@ -322,8 +351,8 @@
                   <div class="card__item">
                     <img
                       loading="lazy"
-                      src="../img/cards/2/card-item__img.svg"
-                      alt=""
+                      src="../img/cards/2/card-item__img.png"
+                      alt="picture"
                       class="card-item__img"
                     />
                     <div class="card-item__circle"></div>
@@ -332,8 +361,8 @@
                   <div class="card__item">
                     <img
                       loading="lazy"
-                      src="../img/cards/2/card-item__img.svg"
-                      alt=""
+                      src="../img/cards/2/card-item__img.png"
+                      alt="picture"
                       class="card-item__img"
                     />
                     <div class="card-item__circle"></div>
@@ -342,21 +371,27 @@
                   <div class="card__item">
                     <img
                       loading="lazy"
-                      src="../img/cards/2/card-item__img.svg"
-                      alt=""
+                      src="../img/cards/2/card-item__img.png"
+                      alt="picture"
                       class="card-item__img"
                     />
                     <div class="card-item__circle"></div>
                     <p class="card-item__text">Product дизайн</p>
                   </div>
+                      </div>
+                    </div>
+                  </div>
                 </a>
                 <a href="./copyright.html" class="card swiper-slide">
-                  <h2 class="card__title">Copyright</h2>
+                  <div class="card__body">
+                    <div class="card__background-wrapper">
+                      <div class="card__content">
+                        <h2 class="card__title">Copyright</h2>
                   <div class="card__item">
                     <img
                       loading="lazy"
-                      src="../img/cards/3/card-item__img.svg"
-                      alt=""
+                      src="../img/cards/3/card-item__img.png"
+                      alt="picture"
                       class="card-item__img"
                     />
                     <div class="card-item__circle"></div>
@@ -365,8 +400,8 @@
                   <div class="card__item">
                     <img
                       loading="lazy"
-                      src="../img/cards/3/card-item__img.svg"
-                      alt=""
+                      src="../img/cards/3/card-item__img.png"
+                      alt="picture"
                       class="card-item__img"
                     />
                     <div class="card-item__circle"></div>
@@ -375,8 +410,8 @@
                   <div class="card__item">
                     <img
                       loading="lazy"
-                      src="../img/cards/3/card-item__img.svg"
-                      alt=""
+                      src="../img/cards/3/card-item__img.png"
+                      alt="picture"
                       class="card-item__img"
                     />
                     <div class="card-item__circle"></div>
@@ -385,8 +420,8 @@
                   <div class="card__item">
                     <img
                       loading="lazy"
-                      src="../img/cards/3/card-item__img.svg"
-                      alt=""
+                      src="../img/cards/3/card-item__img.png"
+                      alt="picture"
                       class="card-item__img"
                     />
                     <div class="card-item__circle"></div>
@@ -395,8 +430,8 @@
                   <div class="card__item">
                     <img
                       loading="lazy"
-                      src="../img/cards/3/card-item__img.svg"
-                      alt=""
+                      src="../img/cards/3/card-item__img.png"
+                      alt="picture"
                       class="card-item__img"
                     />
                     <div class="card-item__circle"></div>
@@ -405,12 +440,15 @@
                   <div class="card__item">
                     <img
                       loading="lazy"
-                      src="../img/cards/3/card-item__img.svg"
-                      alt=""
+                      src="../img/cards/3/card-item__img.png"
+                      alt="picture"
                       class="card-item__img"
                     />
                     <div class="card-item__circle"></div>
                     <p class="card-item__text">LSI</p>
+                  </div>
+                      </div>
+                    </div>
                   </div>
                 </a>
               </div>
@@ -443,75 +481,84 @@
             </div>
             <div class="cards cards-noslider">
               <a href="./it.html" class="card" data-tilt>
-                <h2 class="card__title">IT</h2>
-                <div class="card__item">
-                  <img
-                    loading="lazy"
-                    src="../img/cards/0/card-item__img.svg"
-                    alt=""
-                    class="card-item__img"
-                  />
-                  <div class="card-item__circle"></div>
-                  <p class="card-item__text">Сайты под ключ</p>
-                </div>
-                <div class="card__item">
-                  <img
-                    loading="lazy"
-                    src="../img/cards/0/card-item__img.svg"
-                    alt=""
-                    class="card-item__img"
-                  />
-                  <div class="card-item__circle"></div>
-                  <p class="card-item__text">Приложения для ios и android</p>
-                </div>
-                <div class="card__item">
-                  <img
-                    loading="lazy"
-                    src="../img/cards/0/card-item__img.svg"
-                    alt=""
-                    class="card-item__img"
-                  />
-                  <div class="card-item__circle"></div>
-                  <p class="card-item__text">Боты</p>
-                </div>
-                <div class="card__item">
-                  <img
-                    loading="lazy"
-                    src="../img/cards/0/card-item__img.svg"
-                    alt=""
-                    class="card-item__img"
-                  />
-                  <div class="card-item__circle"></div>
-                  <p class="card-item__text">Парсинг данных</p>
-                </div>
-                <div class="card__item">
-                  <img
-                    loading="lazy"
-                    src="../img/cards/0/card-item__img.svg"
-                    alt=""
-                    class="card-item__img"
-                  />
-                  <div class="card-item__circle"></div>
-                  <p class="card-item__text">Софт</p>
-                </div>
-                <div class="card__item">
-                  <img
-                    loading="lazy"
-                    src="../img/cards/0/card-item__img.svg"
-                    alt=""
-                    class="card-item__img"
-                  />
-                  <div class="card-item__circle"></div>
-                  <p class="card-item__text">Цифровые системы</p>
+                <div class="card__body">
+                  <div class="card__background-wrapper">
+                    <div class="card__content">
+                      <h2 class="card__title">IT</h2>
+                      <div class="card__item">
+                        <img
+                          loading="lazy"
+                          src="../img/cards/0/card-item__img.png"
+                          alt="picture"
+                          class="card-item__img"
+                        />
+                        <div class="card-item__circle"></div>
+                        <p class="card-item__text">Сайты под ключ</p>
+                      </div>
+                      <div class="card__item">
+                        <img
+                          loading="lazy"
+                          src="../img/cards/0/card-item__img.png"
+                          alt="picture"
+                          class="card-item__img"
+                        />
+                        <div class="card-item__circle"></div>
+                        <p class="card-item__text">Приложения для ios и android</p>
+                      </div>
+                      <div class="card__item">
+                        <img
+                          loading="lazy"
+                          src="../img/cards/0/card-item__img.png"
+                          alt="picture"
+                          class="card-item__img"
+                        />
+                        <div class="card-item__circle"></div>
+                        <p class="card-item__text">Боты</p>
+                      </div>
+                      <div class="card__item">
+                        <img
+                          loading="lazy"
+                          src="../img/cards/0/card-item__img.png"
+                          alt="picture"
+                          class="card-item__img"
+                        />
+                        <div class="card-item__circle"></div>
+                        <p class="card-item__text">Парсинг данных</p>
+                      </div>
+                      <div class="card__item">
+                        <img
+                          loading="lazy"
+                          src="../img/cards/0/card-item__img.png"
+                          alt="picture"
+                          class="card-item__img"
+                        />
+                        <div class="card-item__circle"></div>
+                        <p class="card-item__text">Софт</p>
+                      </div>
+                      <div class="card__item">
+                        <img
+                          loading="lazy"
+                          src="../img/cards/0/card-item__img.png"
+                          alt="picture"
+                          class="card-item__img"
+                        />
+                        <div class="card-item__circle"></div>
+                        <p class="card-item__text">Цифровые системы</p>
+                      </div>
+                     </div>
+                  </div>
                 </div>
               </a>
               <a href="./marketing.html" class="card" data-tilt>
-                <h2 class="card__title">Marketing</h2>
+                <div class="card__body">
+                  <div class="card__background-wrapper">
+                    <div class="card__content">
+                      <h2 class="card__title">Marketing</h2>
                 <div class="card__item">
                   <img
                     loading="lazy"
-                    src="../img/cards/1/card-item__img.svg"
-                    alt=""
+                    src="../img/cards/1/card-item__img.png"
+                    alt="picture"
                     class="card-item__img"
                   />
                   <div class="card-item__circle"></div>
@@ -520,8 +567,8 @@
                 <div class="card__item">
                   <img
                     loading="lazy"
-                    src="../img/cards/1/card-item__img.svg"
-                    alt=""
+                    src="../img/cards/1/card-item__img.png"
+                    alt="picture"
                     class="card-item__img"
                   />
                   <div class="card-item__circle"></div>
@@ -530,8 +577,8 @@
                 <div class="card__item">
                   <img
                     loading="lazy"
-                    src="../img/cards/1/card-item__img.svg"
-                    alt=""
+                    src="../img/cards/1/card-item__img.png"
+                    alt="picture"
                     class="card-item__img"
                   />
                   <div class="card-item__circle"></div>
@@ -540,8 +587,8 @@
                 <div class="card__item">
                   <img
                     loading="lazy"
-                    src="../img/cards/1/card-item__img.svg"
-                    alt=""
+                    src="../img/cards/1/card-item__img.png"
+                    alt="picture"
                     class="card-item__img"
                   />
                   <div class="card-item__circle"></div>
@@ -550,21 +597,27 @@
                 <div class="card__item">
                   <img
                     loading="lazy"
-                    src="../img/cards/1/card-item__img.svg"
-                    alt=""
+                    src="../img/cards/1/card-item__img.png"
+                    alt="picture"
                     class="card-item__img"
                   />
                   <div class="card-item__circle"></div>
                   <p class="card-item__text">Контекстная реклама</p>
                 </div>
+                    </div>
+                  </div>
+                </div>
               </a>
               <a href="./design.html" class="card" data-tilt>
-                <h2 class="card__title">Design</h2>
+                <div class="card__body">
+                  <div class="card__background-wrapper">
+                    <div class="card__content">
+                      <h2 class="card__title">Design</h2>
                 <div class="card__item">
                   <img
                     loading="lazy"
-                    src="../img/cards/2/card-item__img.svg"
-                    alt=""
+                    src="../img/cards/2/card-item__img.png"
+                    alt="picture"
                     class="card-item__img"
                   />
                   <div class="card-item__circle"></div>
@@ -573,8 +626,8 @@
                 <div class="card__item">
                   <img
                     loading="lazy"
-                    src="../img/cards/2/card-item__img.svg"
-                    alt=""
+                    src="../img/cards/2/card-item__img.png"
+                    alt="picture"
                     class="card-item__img"
                   />
                   <div class="card-item__circle"></div>
@@ -583,8 +636,8 @@
                 <div class="card__item">
                   <img
                     loading="lazy"
-                    src="../img/cards/2/card-item__img.svg"
-                    alt=""
+                    src="../img/cards/2/card-item__img.png"
+                    alt="picture"
                     class="card-item__img"
                   />
                   <div class="card-item__circle"></div>
@@ -593,8 +646,8 @@
                 <div class="card__item">
                   <img
                     loading="lazy"
-                    src="../img/cards/2/card-item__img.svg"
-                    alt=""
+                    src="../img/cards/2/card-item__img.png"
+                    alt="picture"
                     class="card-item__img"
                   />
                   <div class="card-item__circle"></div>
@@ -603,8 +656,8 @@
                 <div class="card__item">
                   <img
                     loading="lazy"
-                    src="../img/cards/2/card-item__img.svg"
-                    alt=""
+                    src="../img/cards/2/card-item__img.png"
+                    alt="picture"
                     class="card-item__img"
                   />
                   <div class="card-item__circle"></div>
@@ -613,21 +666,27 @@
                 <div class="card__item">
                   <img
                     loading="lazy"
-                    src="../img/cards/2/card-item__img.svg"
-                    alt=""
+                    src="../img/cards/2/card-item__img.png"
+                    alt="picture"
                     class="card-item__img"
                   />
                   <div class="card-item__circle"></div>
                   <p class="card-item__text">Product дизайн</p>
                 </div>
+                    </div>
+                  </div>
+                </div>
               </a>
               <a href="./copyright.html" class="card" data-tilt>
-                <h2 class="card__title">Copyright</h2>
+                <div class="card__body">
+                  <div class="card__background-wrapper">
+                    <div class="card__content">
+                      <h2 class="card__title">Copyright</h2>
                 <div class="card__item">
                   <img
                     loading="lazy"
-                    src="../img/cards/3/card-item__img.svg"
-                    alt=""
+                    src="../img/cards/3/card-item__img.png"
+                    alt="picture"
                     class="card-item__img"
                   />
                   <div class="card-item__circle"></div>
@@ -636,8 +695,8 @@
                 <div class="card__item">
                   <img
                     loading="lazy"
-                    src="../img/cards/3/card-item__img.svg"
-                    alt=""
+                    src="../img/cards/3/card-item__img.png"
+                    alt="picture"
                     class="card-item__img"
                   />
                   <div class="card-item__circle"></div>
@@ -646,8 +705,8 @@
                 <div class="card__item">
                   <img
                     loading="lazy"
-                    src="../img/cards/3/card-item__img.svg"
-                    alt=""
+                    src="../img/cards/3/card-item__img.png"
+                    alt="picture"
                     class="card-item__img"
                   />
                   <div class="card-item__circle"></div>
@@ -656,8 +715,8 @@
                 <div class="card__item">
                   <img
                     loading="lazy"
-                    src="../img/cards/3/card-item__img.svg"
-                    alt=""
+                    src="../img/cards/3/card-item__img.png"
+                    alt="picture"
                     class="card-item__img"
                   />
                   <div class="card-item__circle"></div>
@@ -666,8 +725,8 @@
                 <div class="card__item">
                   <img
                     loading="lazy"
-                    src="../img/cards/3/card-item__img.svg"
-                    alt=""
+                    src="../img/cards/3/card-item__img.png"
+                    alt="picture"
                     class="card-item__img"
                   />
                   <div class="card-item__circle"></div>
@@ -676,12 +735,15 @@
                 <div class="card__item">
                   <img
                     loading="lazy"
-                    src="../img/cards/3/card-item__img.svg"
-                    alt=""
+                    src="../img/cards/3/card-item__img.png"
+                    alt="picture"
                     class="card-item__img"
                   />
                   <div class="card-item__circle"></div>
                   <p class="card-item__text">LSI</p>
+                </div>
+                    </div>
+                  </div>
                 </div>
               </a>
             </div>
@@ -696,19 +758,19 @@
     <div class="our-projects-block-component our-projects-block-top">
     
       <div class="our-projects-block-images our-projects-block-images-top">
-        <a href="./portfolio.html#p-1" class="our-projects-picture-block picture-small">
-          <img  data-src="../img/our-projects/1.jpg"  src="../img/lazy/lazy.png"  alt="картинка проект"/>
+        <a href="./portfolio.html#p-2" class="our-projects-picture-block picture-small">
+          <img  data-src="../img/our-projects/1.jpg"  src="../img/lazy/lazy.png"  alt="picture project"/>
         </a>
         <a href="./portfolio.html#p-10" class="our-projects-picture-block picture-big">
-          <img  data-src="../img/our-projects/2.jpg"  src="../img/lazy/lazy.png"  alt="картинка проект"/>
+          <img  data-src="../img/our-projects/2.jpg"  src="../img/lazy/lazy.png"  alt="picture project"/>
         </a>
       </div>
       <div class="our-projects-block-images our-projects-block-images-bottom">
-        <a href="./portfolio.html#p-3" class="our-projects-picture-block picture-big">
-          <img  data-src="../img/our-projects/3.jpg"  src="../img/lazy/lazy.png"  alt="картинка проект"/>
+        <a href="./portfolio.html#p-13" class="our-projects-picture-block picture-big">
+          <img  data-src="../img/our-projects/3.jpg"  src="../img/lazy/lazy.png"  alt="picture project"/>
         </a>
         <a href="./portfolio.html#p-9" class="our-projects-picture-block picture-small">
-          <img  data-src="../img/our-projects/4.jpg" src="../img/lazy/lazy.png" alt="картинка проект"/>
+          <img  data-src="../img/our-projects/4.jpg" src="../img/lazy/lazy.png" alt="picture project"/>
         </a>
       </div>
     </div>
@@ -743,7 +805,7 @@
             <div class="trust__content">
               <div class="trust__items trust__items-left">
                 <div class="trust__item left">
-                  <img loading="lazy" class='trust__main-1' src="../img/trust/main_1.svg" alt="">
+                  <img loading="lazy" class='trust__main-1' src="../img/trust/main_1.svg" alt="picture">
                   <div class="trust__text-block">
                     <p class="trust__item-text">
                       Разрабатываем максимально
@@ -763,12 +825,12 @@
                       долгосрочной стратегии
                     </p>
                   </div>
-                  <img loading="lazy" class='trust__main-2' src="../img/trust/main_2.svg" alt="">
+                  <img loading="lazy" class='trust__main-2' src="../img/trust/main_2.svg" alt="picture">
                 </div>
               </div>
               <div class="trust__items trust__items-left">
                 <div class="trust__item left">
-                  <img loading="lazy" class='trust__main-3' src="../img/trust/main_3.svg" alt="">
+                  <img loading="lazy" class='trust__main-3' src="../img/trust/main_3.svg" alt="picture">
                   <div class="trust__text-block">
                     <p class="trust__item-text">
                       Помогаем разработать
@@ -788,7 +850,7 @@
                       <strong>эффективные методы работы</strong> с клиентами
                     </p>
                   </div>
-                  <img loading="lazy" class='trust__main-4' src="../img/trust/main_4.svg" alt="">
+                  <img loading="lazy" class='trust__main-4' src="../img/trust/main_4.svg" alt="picture">
                 </div>
               </div>
             </div>
@@ -854,7 +916,7 @@
                         <form action="request-form" class="form" id="contact-form">
                             <input	class="request-form__item form__item _req" placeholder="Имя *" type="text" name="username" id="username">
                             <input	class="request-form__item form__item _req" placeholder="Телефон *" type="tel" name="usertel" id="usertel">
-                            <input	class="request-form__item form__item" style="box-shadow: 0 5px 5px rgba(207, 15, 24, 0.75)" placeholder="E-mail"type="email" name="usermail" id="usermail">
+                            <input	class="request-form__item form__item"  placeholder="E-mail"type="email" name="usermail" id="usermail">
                             <button class="request-form__button form__button" type="submit">Отправить заявку<!-- <span> ⟶</span> --></button>
                         </form>
                     </div>
@@ -872,7 +934,7 @@
     <div class="container">
         <div class="footer__content">
             <div class="footer__logo">
-                <img src="../img/logo/logo_small.svg" alt="logo">
+                <img src="../img/logo/logo.webp" alt="logo">
             </div>
             <nav class="footer__menu">
                 <ul class="footer__menu-list">
@@ -892,6 +954,7 @@
                         <select name="lang-select" id="lang-select">
                             <option value="RU">RU</option>
                             <option value="EN">EN</option>
+                            <option value="UK">UK</option>
                         </select>
                     </li>
                 </ul>

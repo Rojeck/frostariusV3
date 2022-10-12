@@ -16,11 +16,14 @@
 	<script>
 	function mshow() {
 		const	mview = document.querySelector('.menu-block');
-				mview.style.left = '0';
+				document.querySelector('.wrapper').classList.add('overflow-hidden');
+				mview.style.left = '0%';
+				
 			}
 	function mclose() {
 		const	mview = document.querySelector('.menu-block');
-				mview.style.left = '-1000px';
+				document.querySelector('.wrapper').classList.remove('overflow-hidden');
+				mview.style.left = '-100%';
 			}
 	</script>
 	
@@ -71,10 +74,10 @@
     <nav class="nav">
         <div class="head">
             <a href="main.html"><div class="head__logo">
-                <img src="../img/logo/logo.svg" alt="logo">
+                <img src="../img/logo/logo.webp" alt="logo">
             </div></a>
             <div class="head__burger-button" onclick="mshow()">
-                <img src="../img/buttons/menu-burger.svg" alt="меню">
+                <img src="../img/buttons/menu-burger.svg" alt="menu">
             </div>
         </div>
         
@@ -100,10 +103,10 @@
                     <div class="container">
                         <div class="head">
                             <div class="head__logo">
-                                <img src="../img/logo/logo.svg" alt="logo">
+                                <img src="../img/logo/logo.webp" alt="logo">
                             </div>
                             <div class="head__burger-button" onclick="mclose()">
-                                <img src="../img/buttons/menu-burger-close.svg" alt="меню">
+                                <img src="../img/buttons/menu-burger-close.svg" alt="menu">
                             </div>
                         </div>
                     </div>
@@ -294,6 +297,34 @@
                     <div class="swiper-lazy-preloader"></div>
                   </a>
                 </div>
+                <div class="portfolio__item swiper-slide">
+                  <a
+                    target="_blank"
+                    href="https://www.behance.net/gallery/149522327/Digital-studio"
+                  >
+                    <img
+                      class="swiper-lazy"
+                      src="../img/lazy/lazy.png"
+                      data-src="../img/portfolio/7.jpg"
+                      alt="project picture"
+                    />
+                    <div class="swiper-lazy-preloader"></div>
+                  </a>
+                </div>
+                <div class="portfolio__item swiper-slide">
+                  <a
+                    target="_blank"
+                    href="https://www.behance.net/gallery/149471339/Photo-studio-Web-site"
+                  >
+                    <img
+                      class="swiper-lazy"
+                      src="../img/lazy/lazy.png"
+                      data-src="../img/portfolio/13.jpg"
+                      alt="project picture"
+                    />
+                    <div class="swiper-lazy-preloader"></div>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -332,7 +363,7 @@
                         <form action="request-form" class="form" id="contact-form">
                             <input	class="request-form__item form__item _req" placeholder="Имя *" type="text" name="username" id="username">
                             <input	class="request-form__item form__item _req" placeholder="Телефон *" type="tel" name="usertel" id="usertel">
-                            <input	class="request-form__item form__item" style="box-shadow: 0 5px 5px rgba(207, 15, 24, 0.75)" placeholder="E-mail"type="email" name="usermail" id="usermail">
+                            <input	class="request-form__item form__item"  placeholder="E-mail"type="email" name="usermail" id="usermail">
                             <button class="request-form__button form__button" type="submit">Отправить заявку<!-- <span> ⟶</span> --></button>
                         </form>
                     </div>
@@ -350,7 +381,7 @@
     <div class="container">
         <div class="footer__content">
             <div class="footer__logo">
-                <img src="../img/logo/logo_small.svg" alt="logo">
+                <img src="../img/logo/logo.webp" alt="logo">
             </div>
             <nav class="footer__menu">
                 <ul class="footer__menu-list">
@@ -370,6 +401,7 @@
                         <select name="lang-select" id="lang-select">
                             <option value="RU">RU</option>
                             <option value="EN">EN</option>
+                            <option value="UK">UK</option>
                         </select>
                     </li>
                 </ul>

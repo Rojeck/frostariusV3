@@ -1,94 +1,83 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
+  <head>
     <head>
-		
+      
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<link rel="stylesheet" href="../css/style.min.css">
-	<title>Potrfolio</title>
-	<script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
+	<title>Portfolio</title>
+	<link rel="shortcut icon" type="image/png" href="../img/logo/favico.png">
 	<script defer src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-	<script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 	<script defer src="../js/app.min.js"></script>
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
-	<script type="text/javascript">
-		
-
-        (function() {
-            emailjs.init('xYfxmlDugTPe5ZvtX');
-        })();
-    </script>
-
+	<script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
 	<script>
 	function mshow() {
 		const	mview = document.querySelector('.menu-block');
-				mview.style.left = '0';
+				document.querySelector('.wrapper').classList.add('overflow-hidden');
+				mview.style.left = '0%';
+				
 			}
 	function mclose() {
 		const	mview = document.querySelector('.menu-block');
-				mview.style.left = '-1000px';
+				document.querySelector('.wrapper').classList.remove('overflow-hidden');
+				mview.style.left = '-100%';
 			}
 	</script>
 	
-        <style>
-
-            .head__logo img {
-                width: 300px;
-            }
+      <style>
         .map {
-            display: block;
+          display: flex;
         }
         .menu-block {
-            display: none;
+          display: none;
         }
-        
-		.cost-calc {
-			display: block;
-		}
-            .it-text-add {
-                display: inline;
-            }
+        .it-text-add {
+          display: inline;
+        }
 
         @media (max-width: 768px) {
-            .map {
-                display: none;
-            }
-            .menu-block {
-            display: flex;
-        }
-            .cost-calc {
-                display: none;
-            }
-            .contact-block {
-			display: block;
-		}
-        }
-        .map__portfolio,.map__about,.map__design,.map__marketing,.map__it,.map__copyright,.map__services {
+          .map {
             display: none;
+          }
+          .menu-block {
+            display: flex;
+          }
+        }
+        .map__portfolio,
+        .map__about,
+        .map__design,
+        .map__marketing,
+        .map__it,
+        .map__copyright,
+        .map__services {
+          display: none;
         }
         .map__portfolio {
-            display: inline;
+          display: inline;
         }
         .cover {
-            display: none;
+          display: none;
         }
-        </style>
-	</head>
-</head>
-<body>
-    <header class="header">
-        <div class="container">
-            <div class="header__block">
+        .header {
+          padding-bottom: 0px;
+        }
+      </style>
+    </head>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="container"><div class="header__block">
     <nav class="nav">
         <div class="head">
             <a href="main.html"><div class="head__logo">
-                <img src="../img/logo/logo.svg" alt="logo">
+                <img src="../img/logo/logo.webp" alt="logo">
             </div></a>
             <div class="head__burger-button" onclick="mshow()">
-                <img src="../img/buttons/menu-burger.svg" alt="меню">
+                <img src="../img/buttons/menu-burger.svg" alt="menu">
             </div>
         </div>
         
@@ -114,10 +103,10 @@
                     <div class="container">
                         <div class="head">
                             <div class="head__logo">
-                                <img src="../img/logo/logo.svg" alt="logo">
+                                <img src="../img/logo/logo.webp" alt="logo">
                             </div>
                             <div class="head__burger-button" onclick="mclose()">
-                                <img src="../img/buttons/menu-burger-close.svg" alt="меню">
+                                <img src="../img/buttons/menu-burger-close.svg" alt="menu">
                             </div>
                         </div>
                     </div>
@@ -160,144 +149,239 @@
         <!-- additional block for mobile view //-->
     </nav>
 </div>
-
-        </div>
-    </header>
-    <main>
+</div>
+      </header>
+      <main>
         <section class="portfolio">
-            <div class="container">
-                <h1 class="portfolio__title">Our portfolio</h1>
-                <div class="portfolio__content">
-                    <div class="portfolio__item">
-                        <a href="">
-                            <img src="../img/portfolio/1.png" alt="">
-                        </a>
-                    </div>
-                    <div class="portfolio__item">
-                        <a href="">
-                            <img src="../img/portfolio/2.png" alt="">
-                        </a>
-                    </div>
-                    <div class="portfolio__item">
-                        <a href="">
-                            <img src="../img/portfolio/3.png" alt="">
-                        </a>
-                    </div>
-                    <div class="portfolio__item">
-                        <a href="">
-                            <img src="../img/portfolio/4.png" alt="">
-                        </a>
-                    </div>
-                    <div class="portfolio__item">
-                        <a href="">
-                            <img src="../img/portfolio/5.png" alt="">
-                        </a>
-                    </div>
-                    <div class="portfolio__item">
-                        <a href="">
-                            <img src="../img/portfolio/6.png" alt="">
-                        </a>
-                    </div>
-                    <div class="portfolio__item">
-                        <a href="">
-                            <img src="../img/portfolio/7.png" alt="">
-                        </a>
-                    </div>
-                    <div class="portfolio__item">
-                        <a href="">
-                            <img src="../img/portfolio/8.png" alt="">
-                        </a>
-                    </div>
-                    <div class="portfolio__item">
-                        <a href="">
-                            <img src="../img/portfolio/9.png" alt="">
-                        </a>
-                    </div>
-                    <div class="portfolio__item">
-                        <a href="">
-                            <img src="../img/portfolio/10.png" alt="">
-                        </a>
-                    </div>
-                    <div class="portfolio__item portfolio__item-empty">
-                    </div>
-                    <div  class="portfolio__item g-last-item">
-                        <div  class="g-last-item__content">
-                            <img data-goto="#gt-contacts" src="../img/portfolio/mask-group.svg" alt="">
-                            
-                        </div>
-                        <div data-goto="#gt-contacts" class="g-last-item__text">want to be here</div>
-                    </div>
+          <div class="container">
+
+            <div class="portfolio__content swiper-container">
+              <div class="portfolio__items swiper-wrapper">
+                <div class="portfolio__item swiper-slide">
+                  <a
+                    target="_blank"
+                    href="https://www.behance.net/gallery/150762881/Air-Conditioner-Company-Landing-page"
+                  >
+                    <img
+                      class="swiper-lazy"
+                      src="../img/lazy/lazy.png"
+                      data-src="../img/portfolio/1.jpg"
+                      alt="project picture"
+                    />
+                    <div class="swiper-lazy-preloader"></div>
+                  </a>
                 </div>
+                <div class="portfolio__item swiper-slide">
+                  <a
+                    target="_blank"
+                    href="https://www.behance.net/gallery/150243001/Architecture-Studio-Web-site"
+                  >
+                    <img
+                      class="swiper-lazy"
+                      src="../img/lazy/lazy.png"
+                      data-src="../img/portfolio/2.jpg"
+                      alt="project picture"
+                    />
+                    <div class="swiper-lazy-preloader"></div>
+                  </a>
+                </div>
+                <div class="portfolio__item swiper-slide">
+                  <a
+                    target="_blank"
+                    href="https://www.behance.net/gallery/150243257/Architecture-Design-Studio"
+                  >
+                    <img
+                      class="swiper-lazy"
+                      src="../img/lazy/lazy.png"
+                      data-src="../img/portfolio/3.jpg"
+                      alt="project picture"
+                    />
+                    <div class="swiper-lazy-preloader"></div>
+                  </a>
+                </div>
+                <div class="portfolio__item swiper-slide">
+                  <a
+                    target="_blank"
+                    href="https://www.behance.net/gallery/150051653/Interior-design-studio"
+                  >
+                    <img
+                      class="swiper-lazy"
+                      src="../img/lazy/lazy.png"
+                      data-src="../img/portfolio/4.jpg"
+                      alt="project picture"
+                    />
+                    <div class="swiper-lazy-preloader"></div>
+                  </a>
+                </div>
+                <div class="portfolio__item swiper-slide">
+                  <a
+                    target="_blank"
+                    href="https://www.behance.net/gallery/149471339/Photo-studio-Web-site"
+                  >
+                    <img
+                      class="swiper-lazy"
+                      src="../img/lazy/lazy.png"
+                      data-src="../img/portfolio/5.jpg"
+                      alt="project picture"
+                    />
+                    <div class="swiper-lazy-preloader"></div>
+                  </a>
+                </div>
+                <div class="portfolio__item swiper-slide">
+                  <a
+                    target="_blank"
+                    href="https://www.behance.net/gallery/149470839/Hotel-Lalalend-Landing-page"
+                  >
+                    <img
+                      class="swiper-lazy"
+                      src="../img/lazy/lazy.png"
+                      data-src="../img/portfolio/6.jpg"
+                      alt="project picture"
+                    />
+                    <div class="swiper-lazy-preloader"></div>
+                  </a>
+                </div>
+                <div class="portfolio__item swiper-slide">
+                  <a
+                    target="_blank"
+                    href="https://www.behance.net/gallery/149518123/Furniture-Studio"
+                  >
+                    <img
+                      class="swiper-lazy"
+                      src="../img/lazy/lazy.png"
+                      data-src="../img/portfolio/8.jpg"
+                      alt="project picture"
+                    />
+                    <div class="swiper-lazy-preloader"></div>
+                  </a>
+                </div>
+                <div class="portfolio__item swiper-slide">
+                  <a
+                    target="_blank"
+                    href="https://www.behance.net/gallery/149471549/Beauty-salon-Landing-page"
+                  >
+                    <img
+                      class="swiper-lazy"
+                      src="../img/lazy/lazy.png"
+                      data-src="../img/portfolio/9.jpg"
+                      alt="project picture"
+                    />
+                    <div class="swiper-lazy-preloader"></div>
+                  </a>
+                </div>
+                <div class="portfolio__item swiper-slide">
+                  <a
+                    target="_blank"
+                    href="https://www.behance.net/gallery/149471657/Digital-agency"
+                  >
+                    <img
+                      class="swiper-lazy"
+                      src="../img/lazy/lazy.png"
+                      data-src="../img/portfolio/10.jpg"
+                      alt="project picture"
+                    />
+                    <div class="swiper-lazy-preloader"></div>
+                  </a>
+                </div>
+                <div class="portfolio__item swiper-slide">
+                  <a
+                    target="_blank"
+                    href="https://www.behance.net/gallery/150887377/IT-Company-Landing-page"
+                  >
+                    <img
+                      class="swiper-lazy"
+                      src="../img/lazy/lazy.png"
+                      data-src="../img/portfolio/11.jpg"
+                      alt="project picture"
+                    />
+                    <div class="swiper-lazy-preloader"></div>
+                  </a>
+                </div>
+                <div class="portfolio__item swiper-slide">
+                  <a
+                    target="_blank"
+                    href="https://www.behance.net/gallery/149522327/Digital-studio"
+                  >
+                    <img
+                      class="swiper-lazy"
+                      src="../img/lazy/lazy.png"
+                      data-src="../img/portfolio/7.jpg"
+                      alt="project picture"
+                    />
+                    <div class="swiper-lazy-preloader"></div>
+                  </a>
+                </div>
+                <div class="portfolio__item swiper-slide">
+                  <a
+                    target="_blank"
+                    href="https://www.behance.net/gallery/149471339/Photo-studio-Web-site"
+                  >
+                    <img
+                      class="swiper-lazy"
+                      src="../img/lazy/lazy.png"
+                      data-src="../img/portfolio/13.jpg"
+                      alt="project picture"
+                    />
+                    <div class="swiper-lazy-preloader"></div>
+                  </a>
+                </div>
+              </div>
             </div>
+          </div>
+          <div class="pagination"></div>
         </section>
 
-       <div id="gt-contacts">
-        <section  class="contact-block contacts-gt">
+        <div id="gt-contacts">
+          <section  class="contact-block contacts-gt" id="contacts">
+    <span class="contact-block__background-line"></span>
     <div class="container">
         <div  class="contacts">
             <div class="adress-block">
-                <h3 class="adress-block__title form-title">Contact Us</h3>
+                <h3 class="adress-block__title form-title">Наши контакты</h3>
                 <address class="adress-block__adress">
-                    <p class="tel"><a href="tel:+995558925473">+995 558 92 54 73</a></p>
-                    <p class="tel"><a href="tel:+995556748987">+995 556 74 89 87</a></p>
+                    <p class="tel"><a href="tel:+995558925473">+995 (558) 92 54 73</a></p>
+                    <p class="tel"><a href="tel:+995556748987">+995 (568) 74 89 87</a></p>
+                    <p class="tel"><a href="tel:+380997217015">+380 (99) 721 7015</a></p>
                     <p class="mail"><a href="mailto:frostarius@workmail.com">frostarius@workmail.com</a></p>
                 </address>
                 <div class="adress-block__social">
                     <ul class="adress-block__social-list">
-                        <li class="adress-block__social-item"><a href="https://www.instagram.com/frostarius/"><img src="../img/svgicons/instagram.svg" alt="instagram"></a></li>
-                        <li class="adress-block__social-item"><a href="https://www.facebook.com/frostarius"><img src="../img/svgicons/facebook.svg" alt="facebook"></a></li>
-                        <li class="adress-block__social-item"><a href="https://www.linkedin.com/in/frostarius/"><img src="../img/svgicons/linkedin.svg" alt="linkedin"></a></li>
-                        <li class="adress-block__social-item"><a href="https://t.me/Frostarius"><img src="../img/svgicons/telegram.svg" alt="telegram"></a></li>
-                        <li class="adress-block__social-item"><a href="https://instagram.com"><img src="../img/svgicons/whatsup.svg" alt="whatsup"></a></li>
-                        <li class="adress-block__social-item"><a href="https://www.behance.net/Frostarius"><img src="../img/svgicons/be.svg" alt="behance"></a></li>
+                        <li class="adress-block__social-item"><a target="_blank" href="https://www.instagram.com/frostarius/"><img src="../img/svgicons/instagram.svg" alt="instagram"></a></li>
+                        <li class="adress-block__social-item"><a target="_blank" href="https://www.facebook.com/frostarius"><img src="../img/svgicons/facebook.svg" alt="facebook"></a></li>
+                        <li class="adress-block__social-item"><a target="_blank" href="https://www.linkedin.com/in/frostarius/"><img src="../img/svgicons/linkedin.svg" alt="linkedin"></a></li>
+                        <li class="adress-block__social-item"><a target="_blank" href="https://t.me/Frostarius"><img src="../img/svgicons/telegram.svg" alt="telegram"></a></li>
+                        <li class="adress-block__social-item"><a target="_blank" href="https://instagram.com"><img src="../img/svgicons/whatsup.svg" alt="whatsup"></a></li>
+                        <li class="adress-block__social-item"><a target="_blank" href="https://www.behance.net/Frostarius"><img src="../img/svgicons/be.svg" alt="behance"></a></li>
                     </ul>
                 </div>
             </div>
             <div class="request-form">
-                <div class="request-form__close-btn hidden">
-                    <img src="../img/buttons/close-square.svg" alt="close">
-                </div>
                 <div class="request-form__content">
-                    <div class="request-form__title _form-title">Leave a request</div>
-                    <div class="request-form__sub-title _form-sub-title">And we will contact you within 30 minutes</div>
+                    <div class="request-form__title _form-title">Оставьте заявку</div>
+                    <div class="request-form__sub-title _form-sub-title">И мы свяжемся с вами в течение 30 минут</div>
                     <div class="request-form__form">
                         <form action="request-form" class="form" id="contact-form">
-                            <input	class="request-form__item form__item _req" placeholder="Name *" type="text" name="username" id="username">
-                            <input	class="request-form__item form__item _req" placeholder="Telephone number *" type="tel" name="usertel" id="usertel">
-                            <input	class="request-form__item form__item" placeholder="E-mail"type="email" name="usermail" id="usermail">
-                            <button class="request-form__button form__button" type="submit">Send</button>
+                            <input	class="request-form__item form__item _req" placeholder="Имя *" type="text" name="username" id="username">
+                            <input	class="request-form__item form__item _req" placeholder="Телефон *" type="tel" name="usertel" id="usertel">
+                            <input	class="request-form__item form__item"  placeholder="E-mail"type="email" name="usermail" id="usermail">
+                            <button class="request-form__button form__button" type="submit">Отправить заявку<!-- <span> ⟶</span> --></button>
                         </form>
                     </div>
-                    <div class="request-form__note note">By clicking on the button you agree with the privacy policy </div>
+                    <div class="request-form__note note">Нажимая на кнопку Вы соглашаетесь с политикой конфиденциальности </div>
                 </div>
             </div>
             
         </div>
     </div>
 </section>
-<section class="cost-calc contacts-gt">
-    <div class="container">
-        <h3 class="cost-calc__title _form-title">
-            Leave a request and we will contact you within 30 minutes<br/><span class="_form-sub-title"></span>
-        </h3>
-        <div class="cost-calc__form ">
-            <form action="#" class="form">
-                <input	class="cost-calc__item form__item _req" placeholder="Name *" type="text" name="userName" id="username">
-                <input	class="cost-calc__item form__item _req" placeholder="Telephone number *" type="number" name="userTel" id="usertel">
-                <input	class="cost-calc__item form__item" placeholder="E-mail"type="email" name="userMail" id="usermail">
-                <button class="cost-calc__button form__button" type="submit">Send</button>
-            </form>
+
         </div>
-        <div class="request-form__note note">By clicking on the button you agree with the privacy policy </div>
-    </div>
-</section>
-       </div>
-    </main>
-        <footer class="footer">
+      </main>
+      <footer class="footer">
     <div class="container">
         <div class="footer__content">
             <div class="footer__logo">
-                <img src="../img/logo/logo_small.svg" alt="logo">
+                <img src="../img/logo/logo.webp" alt="logo">
             </div>
             <nav class="footer__menu">
                 <ul class="footer__menu-list">
@@ -305,30 +389,31 @@
                         <a href="it.html">IT</a>
                     </li>
                     <li class="footer__menu-item">
-                        <a href="marketing.html">Marketing</a>
+                        <a href="marketing.html">Маркетинг</a>
                     </li>
                     <li class="footer__menu-item">
-                        <a href="design.html">Design</a>
+                        <a href="design.html">Дизайн</a>
                     </li>
                     <li class="footer__menu-item">
-                        <a href="copyright.html">Copyright</a>
+                        <a href="copyright.html">Копирайтинг</a>
                     </li>
                     <li class="footer__menu-itemc">
                         <select name="lang-select" id="lang-select">
                             <option value="EN">EN</option>
                             <option value="RU">RU</option>
+                            <option value="UK">UK</option>
                         </select>
                     </li>
                 </ul>
             </nav>
             <div class="footer__confidential">
-                Privacy Policy<br />
+                Политика конфиденциальности<br />
                 Copyright © 2022  «Frostarius Studio»
             </div>
         </div>
     </div>
     <div class="cover"></div>
 </footer>
-   
-</body>
+    </div>
+  </body>
 </html>

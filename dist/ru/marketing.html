@@ -15,11 +15,14 @@
 	<script>
 	function mshow() {
 		const	mview = document.querySelector('.menu-block');
-				mview.style.left = '0';
+				document.querySelector('.wrapper').classList.add('overflow-hidden');
+				mview.style.left = '0%';
+				
 			}
 	function mclose() {
 		const	mview = document.querySelector('.menu-block');
-				mview.style.left = '-1000px';
+				document.querySelector('.wrapper').classList.remove('overflow-hidden');
+				mview.style.left = '-100%';
 			}
 	</script>
 	
@@ -46,7 +49,21 @@
         display: inline;
       }
 
+      .fullscreen__title img {
+        width: 100%;
+        height: 100%;
+        transform: scale(1)
+      }
+      @media (max-width: 920px) {
+        .fullscreen__title img {
+          transform: scale(1.2)
+        }
+      }
       @media (max-width: 768px) {
+        .fullscreen__title img {
+          transform: scale(1.4);
+  
+        }
         .map {
           display: none;
         }
@@ -54,31 +71,28 @@
           display: flex;
         }
       }
-      .fullscreen__title img {
-        width: 100%;
-        height: 100%;
-        transform: scale(1.5);
-      }
-      @media (max-width: 768px) {
-        .fullscreen__title img {
-          transform: scale(2);
-        }
-      }
       @media (max-width: 480px) {
         .fullscreen__title img {
-          transform: scale(2.5);
+          transform: scale(1.7)
         }
       }
     </style>
   </head>
 
   <body>
-    <div class="wrapper">
+    <div class="wrapper overflow-hidden">
+      <div class="preloader">
+        <div class="loadingio-spinner-rolling-pqw8hj4rez">
+          <div class="ldio-rklc9w8a3r7">
+            <div></div>
+          </div>
+        </div>
+      </div>
       <div class="fullscreen">
         <img
           class="fullscreen__background fullscreen__background-picture marketing"
-          src="../img/video-stop/sphera stop.png"
-          alt="картинка на весь экран"
+          src="../img/video-stop/sphera stop.webp"
+          alt="fullscreen logo"
         />
         <video
           autoplay
@@ -90,10 +104,10 @@
           <source type="video/webm" src="../files/video/marketing.webm" />
           <source type="video/mp4" src="../files/video/marketing.mp4">
         </video>
-        <div class="fullscreen__title">
+        <div class="fullscreen__title fullscreen-bg-sign-bloor">
           <img
-            src="../img/fullscreen/marketingSign.svg"
-            alt="Marketing лого"
+            src="../img/fullscreen/marketingSign.png"
+            alt="Marketing logo"
           />
         </div>
         <div class="fullscreen__header">
@@ -102,10 +116,10 @@
     <nav class="nav">
         <div class="head">
             <a href="main.html"><div class="head__logo">
-                <img src="../img/logo/logo.svg" alt="logo">
+                <img src="../img/logo/logo.webp" alt="logo">
             </div></a>
             <div class="head__burger-button" onclick="mshow()">
-                <img src="../img/buttons/menu-burger.svg" alt="меню">
+                <img src="../img/buttons/menu-burger.svg" alt="menu">
             </div>
         </div>
         
@@ -131,10 +145,10 @@
                     <div class="container">
                         <div class="head">
                             <div class="head__logo">
-                                <img src="../img/logo/logo.svg" alt="logo">
+                                <img src="../img/logo/logo.webp" alt="logo">
                             </div>
                             <div class="head__burger-button" onclick="mclose()">
-                                <img src="../img/buttons/menu-burger-close.svg" alt="меню">
+                                <img src="../img/buttons/menu-burger-close.svg" alt="menu">
                             </div>
                         </div>
                     </div>
@@ -207,12 +221,12 @@
                       ресурса
                     </p>
                   </div>
-                  <img loading="lazy" class='trust__marketing-2' src="../img/trust/marketing_2.svg" alt="">
+                  <img loading="lazy" class='trust__marketing-2' src="../img/trust/marketing_2.svg" alt="picture">
                 </div>
               </div>
               <div class="trust__items trust__items-left">
                 <div class="trust__item left">
-                    <img loading="lazy" class='trust__marketing-3' src="../img/trust/marketing_3.svg" alt="">
+                    <img loading="lazy" class='trust__marketing-3' src="../img/trust/marketing_3.svg" alt="picture">
                   <div class="trust__text-block">
                     <p class="trust__item-text">
                       Оценка качества имеющегося контента и разработка
@@ -228,7 +242,7 @@
                       Построение эффективной стратегии продвижения бизнеса
                     </p>
                   </div>
-                  <img loading="lazy" class='trust__marketing-4' src="../img/trust/marketing_4.svg" alt="">
+                  <img loading="lazy" class='trust__marketing-4' src="../img/trust/marketing_4.svg" alt="picture">
                 </div>
               </div>
             </div>
@@ -243,19 +257,19 @@
     <div class="our-projects-block-component our-projects-block-top">
     
       <div class="our-projects-block-images our-projects-block-images-top">
-        <a href="./portfolio.html#p-1" class="our-projects-picture-block picture-small">
-          <img  data-src="../img/our-projects/1.jpg"  src="../img/lazy/lazy.png"  alt="картинка проект"/>
+        <a href="./portfolio.html#p-2" class="our-projects-picture-block picture-small">
+          <img  data-src="../img/our-projects/1.jpg"  src="../img/lazy/lazy.png"  alt="picture project"/>
         </a>
         <a href="./portfolio.html#p-10" class="our-projects-picture-block picture-big">
-          <img  data-src="../img/our-projects/2.jpg"  src="../img/lazy/lazy.png"  alt="картинка проект"/>
+          <img  data-src="../img/our-projects/2.jpg"  src="../img/lazy/lazy.png"  alt="picture project"/>
         </a>
       </div>
       <div class="our-projects-block-images our-projects-block-images-bottom">
-        <a href="./portfolio.html#p-3" class="our-projects-picture-block picture-big">
-          <img  data-src="../img/our-projects/3.jpg"  src="../img/lazy/lazy.png"  alt="картинка проект"/>
+        <a href="./portfolio.html#p-13" class="our-projects-picture-block picture-big">
+          <img  data-src="../img/our-projects/3.jpg"  src="../img/lazy/lazy.png"  alt="picture project"/>
         </a>
         <a href="./portfolio.html#p-9" class="our-projects-picture-block picture-small">
-          <img  data-src="../img/our-projects/4.jpg" src="../img/lazy/lazy.png" alt="картинка проект"/>
+          <img  data-src="../img/our-projects/4.jpg" src="../img/lazy/lazy.png" alt="picture project"/>
         </a>
       </div>
     </div>
@@ -315,7 +329,7 @@
                         <form action="request-form" class="form" id="contact-form">
                             <input	class="request-form__item form__item _req" placeholder="Имя *" type="text" name="username" id="username">
                             <input	class="request-form__item form__item _req" placeholder="Телефон *" type="tel" name="usertel" id="usertel">
-                            <input	class="request-form__item form__item" style="box-shadow: 0 5px 5px rgba(207, 15, 24, 0.75)" placeholder="E-mail"type="email" name="usermail" id="usermail">
+                            <input	class="request-form__item form__item"  placeholder="E-mail"type="email" name="usermail" id="usermail">
                             <button class="request-form__button form__button" type="submit">Отправить заявку<!-- <span> ⟶</span> --></button>
                         </form>
                     </div>
@@ -332,7 +346,7 @@
     <div class="container">
         <div class="footer__content">
             <div class="footer__logo">
-                <img src="../img/logo/logo_small.svg" alt="logo">
+                <img src="../img/logo/logo.webp" alt="logo">
             </div>
             <nav class="footer__menu">
                 <ul class="footer__menu-list">
@@ -352,6 +366,7 @@
                         <select name="lang-select" id="lang-select">
                             <option value="RU">RU</option>
                             <option value="EN">EN</option>
+                            <option value="UK">UK</option>
                         </select>
                     </li>
                 </ul>

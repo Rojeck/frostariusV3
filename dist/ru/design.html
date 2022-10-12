@@ -15,11 +15,14 @@
 	<script>
 	function mshow() {
 		const	mview = document.querySelector('.menu-block');
-				mview.style.left = '0';
+				document.querySelector('.wrapper').classList.add('overflow-hidden');
+				mview.style.left = '0%';
+				
 			}
 	function mclose() {
 		const	mview = document.querySelector('.menu-block');
-				mview.style.left = '-1000px';
+				document.querySelector('.wrapper').classList.remove('overflow-hidden');
+				mview.style.left = '-100%';
 			}
 	</script>
 	
@@ -39,7 +42,7 @@
         display: inline;
       }
       .map {
-        display: block;
+        display: flex;
       }
       .menu-block {
         display: none;
@@ -70,15 +73,22 @@
   </head>
 
   <body>
-    <div class="wrapper">
+    <div class="wrapper overflow-hidden">
+      <div class="preloader">
+        <div class="loadingio-spinner-rolling-pqw8hj4rez">
+          <div class="ldio-rklc9w8a3r7">
+            <div></div>
+          </div>
+        </div>
+      </div>
       <div class="fullscreen">
         <img
           class="fullscreen__background fullscreen__background-picture marketing"
-          src="../img/video-stop/bubble stop.png"
-          alt="картинка на весь экран"
+          src="../img/video-stop/bubble stop.webp"
+          alt="fullscreen picture"
         />
         <div class="fullscreen__title">
-          <img src="../img/fullscreen/design-sign.png" alt="лого" />
+          <img src="../img/fullscreen/design-sign.png" alt="logo" />
         </div>
         <video
           autoplay
@@ -96,10 +106,10 @@
     <nav class="nav">
         <div class="head">
             <a href="main.html"><div class="head__logo">
-                <img src="../img/logo/logo.svg" alt="logo">
+                <img src="../img/logo/logo.webp" alt="logo">
             </div></a>
             <div class="head__burger-button" onclick="mshow()">
-                <img src="../img/buttons/menu-burger.svg" alt="меню">
+                <img src="../img/buttons/menu-burger.svg" alt="menu">
             </div>
         </div>
         
@@ -125,10 +135,10 @@
                     <div class="container">
                         <div class="head">
                             <div class="head__logo">
-                                <img src="../img/logo/logo.svg" alt="logo">
+                                <img src="../img/logo/logo.webp" alt="logo">
                             </div>
                             <div class="head__burger-button" onclick="mclose()">
-                                <img src="../img/buttons/menu-burger-close.svg" alt="меню">
+                                <img src="../img/buttons/menu-burger-close.svg" alt="menu">
                             </div>
                         </div>
                     </div>
@@ -184,7 +194,7 @@
             <div class="trust__content">
               <div class="trust__items trust__items-left">
                 <div class="trust__item left">
-                    <img loading="lazy" class='trust__design-1' src="../img/trust/design_1.svg"  alt="">
+                    <img loading="lazy" class='trust__design-1' src="../img/trust/design_1.svg"  alt="picture">
                   <div class="trust__text-block">
                     <p class="trust__item-text">
                       <strong>Бесконечно генерируем</strong> новые идеи, не
@@ -204,12 +214,12 @@
                       <strong>не придется часами искать нужную страницу</strong>
                     </p>
                   </div>
-                  <img loading="lazy" class='trust__design-2' src="../img/trust/design_2.svg" alt="">
+                  <img loading="lazy" class='trust__design-2' src="../img/trust/design_2.svg" alt="picture">
                 </div>
               </div>
               <div class="trust__items trust__items-left">
                 <div class="trust__item left">
-                    <img loading="lazy" class='trust__design-3' src="../img/trust/design_3.svg" alt="">
+                    <img loading="lazy" class='trust__design-3' src="../img/trust/design_3.svg" alt="picture">
                   <div class="trust__text-block">
                     <p class="trust__item-text">
                       <strong>Грамотный подбор шрифтов</strong> позволяет нам
@@ -231,7 +241,7 @@
                       >
                     </p>
                   </div>
-                  <img loading="lazy" class='trust__design-4' src="../img/trust/design_4.svg" alt="">
+                  <img loading="lazy" class='trust__design-4' src="../img/trust/design_4.svg" alt="picture">
                 </div>
               </div>
             </div>
@@ -246,19 +256,19 @@
     <div class="our-projects-block-component our-projects-block-top">
     
       <div class="our-projects-block-images our-projects-block-images-top">
-        <a href="./portfolio.html#p-1" class="our-projects-picture-block picture-small">
-          <img  data-src="../img/our-projects/1.jpg"  src="../img/lazy/lazy.png"  alt="картинка проект"/>
+        <a href="./portfolio.html#p-2" class="our-projects-picture-block picture-small">
+          <img  data-src="../img/our-projects/1.jpg"  src="../img/lazy/lazy.png"  alt="picture project"/>
         </a>
         <a href="./portfolio.html#p-10" class="our-projects-picture-block picture-big">
-          <img  data-src="../img/our-projects/2.jpg"  src="../img/lazy/lazy.png"  alt="картинка проект"/>
+          <img  data-src="../img/our-projects/2.jpg"  src="../img/lazy/lazy.png"  alt="picture project"/>
         </a>
       </div>
       <div class="our-projects-block-images our-projects-block-images-bottom">
-        <a href="./portfolio.html#p-3" class="our-projects-picture-block picture-big">
-          <img  data-src="../img/our-projects/3.jpg"  src="../img/lazy/lazy.png"  alt="картинка проект"/>
+        <a href="./portfolio.html#p-13" class="our-projects-picture-block picture-big">
+          <img  data-src="../img/our-projects/3.jpg"  src="../img/lazy/lazy.png"  alt="picture project"/>
         </a>
         <a href="./portfolio.html#p-9" class="our-projects-picture-block picture-small">
-          <img  data-src="../img/our-projects/4.jpg" src="../img/lazy/lazy.png" alt="картинка проект"/>
+          <img  data-src="../img/our-projects/4.jpg" src="../img/lazy/lazy.png" alt="picture project"/>
         </a>
       </div>
     </div>
@@ -318,7 +328,7 @@
                         <form action="request-form" class="form" id="contact-form">
                             <input	class="request-form__item form__item _req" placeholder="Имя *" type="text" name="username" id="username">
                             <input	class="request-form__item form__item _req" placeholder="Телефон *" type="tel" name="usertel" id="usertel">
-                            <input	class="request-form__item form__item" style="box-shadow: 0 5px 5px rgba(207, 15, 24, 0.75)" placeholder="E-mail"type="email" name="usermail" id="usermail">
+                            <input	class="request-form__item form__item"  placeholder="E-mail"type="email" name="usermail" id="usermail">
                             <button class="request-form__button form__button" type="submit">Отправить заявку<!-- <span> ⟶</span> --></button>
                         </form>
                     </div>
@@ -335,7 +345,7 @@
     <div class="container">
         <div class="footer__content">
             <div class="footer__logo">
-                <img src="../img/logo/logo_small.svg" alt="logo">
+                <img src="../img/logo/logo.webp" alt="logo">
             </div>
             <nav class="footer__menu">
                 <ul class="footer__menu-list">
@@ -355,6 +365,7 @@
                         <select name="lang-select" id="lang-select">
                             <option value="RU">RU</option>
                             <option value="EN">EN</option>
+                            <option value="UK">UK</option>
                         </select>
                     </li>
                 </ul>

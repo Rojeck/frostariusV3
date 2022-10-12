@@ -1,3 +1,12 @@
-.number, .description__arrow, .connect-btn, .preview__title, .arrow, .map__list, .advantages__item-img {
-    user-select: none;
+.number,
+.description__arrow,
+.connect-btn,
+.preview__title,
+.arrow,
+.map__list,
+.advantages__item-img {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
